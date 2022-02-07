@@ -1,15 +1,131 @@
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="title" content="MCSR Allowed Mod List" />
-        <meta name="description" content="List of allowed mods Minecraft speedrunning."/>
-        <meta property="og:image" content="/icon.png" />
-        <title>MCSR Allowed Mod List</title>
-        <link rel="shortcut icon" href="/icon.png" type="image/png"/>
-        <script src="/mods.js"></script>
-        <base target="_blank" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </head>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="MCSR Allowed Mod List" />
+    <meta name="description" content="List of allowed mods Minecraft speedrunning." />
+    <meta property="og:image" content="./images/icon.png" />
+    <title>MCSR Allowed Mod List</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/materialize.css">
+    <link href="./stylesheet.css" rel="stylesheet">
+    <script src="./js/bin/materialize.min.js"></script>
+    <script src="./mods.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="custom-bg">
+        <img src="./images/end_crystal_bg.png" />
+    </div>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <span class="white-text" style="font-size: 1.5em; font-weight: bold; padding-left: 0.5em;">MCSR Mod List
+                    <small>by RedLime</small></span>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="https://discord.gg/jmdFn3C" target="_blank">MCSR Javacord</a></li>
+                    <li><a href="https://github.com/RedLime/MCSRMods" target="_blank">Github Repository</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="container">
+            <center><img src="./images/end_crystal.png" width="25%" style="margin: auto 0"></center>
+            <div style="font-size: 2.5em; text-align: center;">Minecraft SpeedRun Mods</div>
+            <div style="font-size: 1.5em; text-align: center;">Do not use Fabric API!</div>
+            </br>
+            <div class="row">
+                <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+                    <li class="tab"><a id="mod-version-18">1.18</a></li>
+                    <li class="tab"><a id="mod-version-17">1.17</a></li>
+                    <li class="tab"><a id="mod-version-16">1.16</a></li>
+                    <li class="tab"><a id="mod-version-15">1.15</a></li>
+                    <li class="tab"><a id="mod-version-14">1.14</a></li>
+                    <li class="tab"><a id="mod-version-13">1.13</a></li>
+                    <li class="tab"><a id="mod-version-12">1.12</a></li>
+                    <li class="tab"><a id="mod-version-11">1.11</a></li>
+                    <li class="tab"><a id="mod-version-10">1.10</a></li>
+                    <li class="tab"><a id="mod-version-9">1.9</a></li>
+                    <li class="tab"><a id="mod-version-8">1.8</a></li>
+                    <li class="tab"><a id="mod-version-7">1.7</a></li>
+                </ul>
+                <div class="col s12">
+                    <ul id="mods-tab" class="collapsible expandable">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    M.AutoInit();
+    var elem = document.querySelector('.collapsible.expandable');
+    var instance = M.Collapsible.init(elem, {
+        accordion: false
+    });
+
+    $('[id^="mod-version-"]').click(function() {
+        activeVersion(+($(this)[0].id.replace("mod-version-", '')), false);
+    });
+
+    $(document).ready(() => {
+        activeVersion(16, true);
+    })
+
+    function activeVersion(ver, clickable) {
+        if (clickable) {
+            document.getElementById('mod-version-'+ver).click();
+            return;
+        }
+        $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''))
+    }
+
+    function getElementFromModInfo(obj, version) {
+        const downloadBuild = obj.downloads.find(versionInfo => isContainsVersion(version, versionInfo.version));
+        return `<li>`+
+                    `<div class="collapsible-header">${obj.name}${downloadBuild.build ? `<small class="light-font" style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} <img src="${getModLoaderIconURL(obj.loader)}" class="text-img"/></div>` +
+                    `<div class="collapsible-body">` +
+                        `<div>Allowed MC Versions<br><big class="light-font">${obj.version.replace('*', 'All')}</big></div>` +
+                        (obj.description ? `<div>Description<br><small class="light-font">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
+                        `<div><a class="waves-effect waves-light btn" href="${downloadBuild.url}" target="_blank">Download${downloadBuild.direct ? " (Direct)" : ""}</a></div>` +
+                    `</div>` +
+                `</li>`;
+    }
+
+    function getModLoaderIconURL(loader) {
+        switch (loader) {
+            case 'fabric':
+                return 'https://fabricmc.net/assets/logo.png';
+            case 'optifine':
+                return 'https://i.imgur.com/eKIfz6R.png';
+            default: 
+                return '';
+        }
+    }
+
+    function isContainsVersion(versionNum, versionName) {
+        if (versionName == '*') return true;
+        
+        if (versionName.includes('-')) {
+            const targetVersion1 = versionName.split('-')[0];
+            const targetVersion2 = versionName.split('-')[1];
+            return isContainsVersion(versionNum, targetVersion1+"+") && isContainsVersion(versionNum, "~"+targetVersion2);
+        } else {
+            const targetVersion = +(versionName.split('.')[1].replace(/[^0-9]/g, ''));
+            if (versionName.includes('+')) {
+                return versionNum >= targetVersion;
+            }
+            if (versionName.includes('~')) {
+                return versionNum <= targetVersion;
+            }
+            return versionNum == targetVersion;
+        }
+
+        throw 'none format versionName';
+    }
+</script>
+
 </html>
