@@ -78,22 +78,35 @@
         activeVersion(+($(this)[0].id.replace("mod-version-", '')), false);
     });
 
-    $(document).ready(() => {
-        const params = new URLSearchParams(window.location.search);
-        if (params.has('version')) {
-            const version = params.get('version').split('.');
-            if (version.length > 1) {
-                activeVersion(+version[1], true);
-                return;
-            }
+    function getVersionCode(str) {
+        const version = str.split('.');
+        if (version.length > 1) {
+            return +version[1];
         }
-        activeVersion(16, true);
+        return 0;
+    }
+
+    function initPage() {
+        const params = new URLSearchParams(window.location.search);
+        activeVersion(params.has('version') ? getVersionCode(params.get('version')) : 16, true);
+    }
+
+    $(document).ready(() => {
+        initPage();
     })
 
+    $(window).on("popstate", function () {
+        initPage();
+    });
+
     function activeVersion(ver, clickable) {
+        const params = new URLSearchParams(window.location.search);
         if (clickable) {
             document.getElementById('mod-version-' + ver)?.click();
             return;
+        }
+        if (!(!params.has('version') && ver == 16) && !(params.has('version') && getVersionCode(params.get('version')) == ver)) {
+            history.pushState(null, null, window.location.origin + window.location.pathname + "?version=1." + ver);
         }
         $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''))
     }
