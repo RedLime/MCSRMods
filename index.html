@@ -16,18 +16,11 @@
 </head>
 
 <body>
-    <div class="custom-bg">
-        <img src="./images/end_crystal_bg.png" />
-    </div>
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <span class="white-text" style="font-size: 1.5em; font-weight: bold; padding-left: 0.5em;">MCSR Mod List
-                    <small>by RedLime</small></span>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://discord.gg/jmdFn3C" target="_blank">MCSR Javacord</a></li>
-                    <li><a href="https://github.com/RedLime/MCSRMods" target="_blank">Github Repository</a></li>
-                </ul>
+                <span class="white-text" style="font-size: 1.75em; font-weight: bold; padding-left: 1em;">MCSR Mod
+                    List</span>
             </div>
         </nav>
     </div>
@@ -35,8 +28,12 @@
         <div class="container">
             <center><img src="./images/end_crystal.png" width="25%" style="margin: auto 0"></center>
             <div style="font-size: 2.5em; text-align: center;">Minecraft SpeedRun Mods</div>
-            <div style="font-size: 1.5em; text-align: center;">Do not use Fabric API!</div>
+            <div style="font-size: 1.5em; text-align: center; color: rgb(255, 87, 87);">Do not use Fabric API!</div>
             </br>
+            <div style="text-align: center;">
+                <a class="waves-effect waves-light btn" href="http://bombch.us/DOOK" target="_blank">Mods & Optifine Rules Document</a>
+            </div>
+        </br>
             <div class="row">
                 <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
                     <li class="tab"><a id="mod-version-18">1.18</a></li>
@@ -53,12 +50,22 @@
                     <li class="tab"><a id="mod-version-7">1.7</a></li>
                 </ul>
                 <div class="col s12">
-                    <ul id="mods-tab" class="collapsible expandable">
+                    <ul id="mods-tab" class="collapsible">
                     </ul>
                 </div>
             </div>
         </div>
     </main>
+    <footer class="page-footer">
+        <div class="container">
+            <ul style="text-align: center; color: white;">
+                <li><a href="https://me.redlimerl.com/" target="_blank">Made by RedLime</a></li>
+                <li></li>
+                <li><a href="https://discord.gg/jmdFn3C" target="_blank">MCSR Javacord</a></li>
+                <li><a href="https://github.com/RedLime/MCSRMods" target="_blank">Github Repository</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 <script>
     M.AutoInit();
@@ -67,17 +74,25 @@
         accordion: false
     });
 
-    $('[id^="mod-version-"]').click(function() {
+    $('[id^="mod-version-"]').click(function () {
         activeVersion(+($(this)[0].id.replace("mod-version-", '')), false);
     });
 
     $(document).ready(() => {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('version')) {
+            const version = params.get('version').split('.');
+            if (version.length > 1 && Number.isSafeInteger(version[1])) {
+                activeVersion(+version[1], true);
+                return;
+            }
+        }
         activeVersion(16, true);
     })
 
     function activeVersion(ver, clickable) {
         if (clickable) {
-            document.getElementById('mod-version-'+ver).click();
+            document.getElementById('mod-version-' + ver)?.click();
             return;
         }
         $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''))
@@ -85,12 +100,29 @@
 
     function getElementFromModInfo(obj, version) {
         const downloadBuild = obj.downloads.find(versionInfo => isContainsVersion(version, versionInfo.version));
-        return `<li>`+
-                    `<div class="collapsible-header">${obj.name}${downloadBuild.build ? `<small class="light-font" style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} <img src="${getModLoaderIconURL(obj.loader)}" class="text-img"/></div>` +
+        const advancedBuild = obj.advanced.filter(versionInfo => isContainsVersion(version, versionInfo.version))
+            .map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (${versionInfo.summary})</a></div>`).join('');
+        const modLoaderIcons = obj.loader.map(loader => `<img title="${loader}" src="${getModLoaderIconURL(loader)}" class="text-img circle"/>`).join(" ");
+        
+        return `<li>` +
+                    //Mod Name & Version & Mod Loader
+                    `<div class="collapsible-header">${obj.name}${downloadBuild.build ? `<small class="light-font" style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} ${modLoaderIcons}</div>` +
+
                     `<div class="collapsible-body">` +
-                        `<div>Allowed MC Versions<br><big class="light-font">${obj.version.replace('*', 'All')}</big></div>` +
-                        (obj.description ? `<div>Description<br><small class="light-font">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
-                        `<div><a class="waves-effect waves-light btn" href="${downloadBuild.url}" target="_blank">Download${downloadBuild.direct ? " (Direct)" : ""}</a></div>` +
+                        //Allowed MC Versions
+                        `<div>Allowed MC Versions<br><big class="light-font description">${obj.version.replace('*', 'All')}</big></div>` +
+
+                        //Mod Description
+                        (obj.description ? `<div>Description<br><small class="light-font description">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
+
+                        //Incompatible mod list
+                        (obj.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You must be only use one of these : <b>${obj.name}</b>, ${obj.incompatible.join(', ')}</small></div>` : '') +
+
+                        //Download Button
+                        `<div><a class="light-font waves-effect waves-light btn" href="${downloadBuild.url}" target="_blank">Download${downloadBuild.summary ? ` (${downloadBuild.summary})` : ""}</a></div>` +
+
+                        //Advanced Downloads
+                        (advancedBuild ? `<div><details><summary style="cursor: pointer;">Advanced downloads</summary>${advancedBuild}</details></div>` : ``) +
                     `</div>` +
                 `</li>`;
     }
@@ -101,18 +133,22 @@
                 return 'https://fabricmc.net/assets/logo.png';
             case 'optifine':
                 return 'https://i.imgur.com/eKIfz6R.png';
-            default: 
+            case 'legacy-fabric':
+                return 'https://avatars.githubusercontent.com/u/62736781?s=200&v=4';
+            default:
                 return '';
         }
     }
 
     function isContainsVersion(versionNum, versionName) {
         if (versionName == '*') return true;
-        
-        if (versionName.includes('-')) {
+
+        if (versionName.includes(', ')) {
+            return versionName.split(', ').find(any => isContainsVersion(versionNum, any)) != null;
+        } else if (versionName.includes('-')) {
             const targetVersion1 = versionName.split('-')[0];
             const targetVersion2 = versionName.split('-')[1];
-            return isContainsVersion(versionNum, targetVersion1+"+") && isContainsVersion(versionNum, "~"+targetVersion2);
+            return isContainsVersion(versionNum, targetVersion1 + "+") && isContainsVersion(versionNum, "~" + targetVersion2);
         } else {
             const targetVersion = +(versionName.split('.')[1].replace(/[^0-9]/g, ''));
             if (versionName.includes('+')) {
