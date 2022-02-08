@@ -106,7 +106,7 @@
         
         return `<li>` +
                     //Mod Name & Version & Mod Loader
-                    `<div class="collapsible-header">${obj.name}${downloadBuild.build ? `<small class="light-font" style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} ${modLoaderIcons}</div>` +
+                    `<div class="collapsible-header light-font"><b>${obj.name}</b>${downloadBuild.build ? `<small style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} ${modLoaderIcons}</div>` +
 
                     `<div class="collapsible-body">` +
                         //Allowed MC Versions
