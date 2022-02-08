@@ -67,7 +67,7 @@ const ALLOW_MODS = [
     {
         "name": "OptiFabric",
         "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your 'mods' folder.",
-        "loader": ["fabric", "legacy-fabric", "optifine"],
+        "loader": ["fabric", "legacy-fabric"],
         "version": "1.14,~1.8",
         "downloads": [
             {
