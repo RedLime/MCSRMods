@@ -45,7 +45,7 @@ const ALLOW_MODS = [
             {
                 "version": "~1.13",
                 "summary": "for MultiMC",
-                "url": "https://jitpack.io/com/github/Legacy-Fabric/fabric-installer/-SNAPSHOT/fabric-installer--SNAPSHOT.jar"
+                "url": "https://github.com/Grayray75/LegacyFabric-MultiMC"
             }
         ],
         "incompatible": []
