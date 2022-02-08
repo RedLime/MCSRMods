@@ -82,7 +82,6 @@
         const params = new URLSearchParams(window.location.search);
         if (params.has('version')) {
             const version = params.get('version').split('.');
-            console.log(version);
             if (version.length > 1) {
                 activeVersion(+version[1], true);
                 return;
