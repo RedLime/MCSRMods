@@ -10,7 +10,7 @@
  * (1.15+)     = 1.15 and above
  * (~1.12)     = 1.12 and below
  * (1.7-1.12)  = From 1.7 to 1.12
- * (1.15, 1.16) = 1.15 and 1.16
+ * (1.15,1.16) = 1.15 and 1.16
  */
 
 
@@ -59,6 +59,24 @@ const ALLOW_MODS = [
             {
                 "version": "~1.14",
                 "url": "https://optifine.net/downloads"
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "OptiFabric",
+        "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your 'mods' folder.",
+        "loader": ["fabric", "legacy-fabric", "optifine"],
+        "version": "1.14,~1.8",
+        "downloads": [
+            {
+                "version": "1.14",
+                "url": "https://www.curseforge.com/minecraft/mc-mods/optifabric/files/2843851"
+            },
+            {
+                "version": "~1.8",
+                "url": "https://github.com/RedLime/OptiFabric/releases/latest"
             }
         ],
         "advanced": [],
@@ -281,7 +299,7 @@ const ALLOW_MODS = [
         "name": "Force Port",
         "description": "A fabric mod which forces the port of the \"open to lan\" feature to be 25565.",
         "loader": ["fabric", "legacy-fabric"],
-        "version": "~1.8, 1.15+",
+        "version": "~1.8,1.15+",
         "downloads": [
             {
                 "version": "1.15+",

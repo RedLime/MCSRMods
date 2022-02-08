@@ -110,7 +110,7 @@
 
                     `<div class="collapsible-body">` +
                         //Allowed MC Versions
-                        `<div>Allowed MC Versions<br><big class="light-font description">${obj.version.replace('*', 'All')}</big></div>` +
+                        `<div>Allowed MC Versions<br><big class="light-font description">${obj.version.replace('*', 'All').replace(',', ' / ')}</big></div>` +
 
                         //Mod Description
                         (obj.description ? `<div>Description<br><small class="light-font description">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
@@ -143,8 +143,8 @@
     function isContainsVersion(versionNum, versionName) {
         if (versionName == '*') return true;
 
-        if (versionName.includes(', ')) {
-            return versionName.split(', ').find(any => isContainsVersion(versionNum, any)) != null;
+        if (versionName.includes(',')) {
+            return versionName.split(',').find(any => isContainsVersion(versionNum, any)) != null;
         } else if (versionName.includes('-')) {
             const targetVersion1 = versionName.split('-')[0];
             const targetVersion2 = versionName.split('-')[1];
