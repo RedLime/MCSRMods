@@ -1,5 +1,5 @@
 /**
- * Mod Loader[loader] naming
+ * Category[category] naming
  * optifine       = Optifine
  * fabric         = Fabric Loader
  * legacy-fabric  = Legacy Fabric Loader
@@ -18,7 +18,7 @@ const ALLOW_MODS = [
     {
         "name": "Fabric Loader",
         "description": "You can use Fabric Loader, but DO NOT USE Fabric API!",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.14+",
         "downloads": [
             {
@@ -32,7 +32,7 @@ const ALLOW_MODS = [
     {
         "name": "Legacy Fabric Loader",
         "description": "You can use Fabric Loader, but DO NOT USE Fabric API! (Fabric for pre-1.14)",
-        "loader": ["legacy-fabric"],
+        "category": ["legacy-fabric"],
         "version": "~1.13",
         "downloads": [
             {
@@ -53,7 +53,7 @@ const ALLOW_MODS = [
     {
         "name": "Optifine",
         "description": "Check the Optifine rules",
-        "loader": ["optifine"],
+        "category": ["optifine"],
         "version": "~1.14",
         "downloads": [
             {
@@ -67,7 +67,7 @@ const ALLOW_MODS = [
     {
         "name": "OptiFabric",
         "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your 'mods' folder.",
-        "loader": ["fabric", "legacy-fabric"],
+        "category": ["fabric", "legacy-fabric"],
         "version": "1.14,~1.8",
         "downloads": [
             {
@@ -85,7 +85,7 @@ const ALLOW_MODS = [
     {
         "name": "Sodium",
         "description": "Modern rendering engine and client-side optimization mod for Minecraft",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.15-1.17",
         "downloads": [
             {
@@ -110,7 +110,7 @@ const ALLOW_MODS = [
     {
         "name": "Starlight",
         "description": "Rewrites the light engine to fix lighting performance and lighting errors",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.15-1.17",
         "downloads": [
             {
@@ -135,9 +135,14 @@ const ALLOW_MODS = [
     {
         "name": "Lithium",
         "description": "No-compromises game logic/server optimization mod",
-        "loader": ["fabric"],
-        "version": "1.16-1.17",
+        "category": ["fabric"],
+        "version": "1.15-1.17",
         "downloads": [
+            {
+                "version": "1.15",
+                "build": "0.4.6",
+                "url": "https://www.curseforge.com/minecraft/mc-mods/lithium/files/2904300"
+            },
             {
                 "version": "1.16",
                 "build": "0.6.6",
@@ -155,7 +160,7 @@ const ALLOW_MODS = [
     {
         "name": "Krypton",
         "description": "Optimizes the Minecraft networking stack and entity tracker.",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.16-1.17",
         "downloads": [
             {
@@ -175,7 +180,7 @@ const ALLOW_MODS = [
     {
         "name": "Dynamic FPS",
         "description": "Improve performance when Minecraft is in the background",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.15-1.16",
         "downloads": [
             {
@@ -195,7 +200,7 @@ const ALLOW_MODS = [
     {
         "name": "SpeedRunIGT",
         "description": "In-game Timer for Minecraft Speedrun",
-        "loader": ["fabric", "legacy-fabric"],
+        "category": ["fabric", "legacy-fabric"],
         "version": "*",
         "downloads": [
             {
@@ -209,11 +214,11 @@ const ALLOW_MODS = [
     {
         "name": "Atum",
         "description": "Automatically reset random and set seeds",
-        "loader": ["fabric", "legacy-fabric"],
-        "version": "1.8-1.18",
+        "category": ["fabric", "legacy-fabric"],
+        "version": "*",
         "downloads": [
             {
-                "version": "1.8-1.18",
+                "version": "*",
                 "url": "https://github.com/VoidXWalker/Atum/releases/latest"
             }
         ],
@@ -223,7 +228,7 @@ const ALLOW_MODS = [
     {
         "name": "Auto Reset",
         "description": "Adds a mode where it automatically resets the world after quitting.",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.14+",
         "downloads": [
             {
@@ -238,7 +243,7 @@ const ALLOW_MODS = [
     {
         "name": "Fast Reset",
         "description": "Skip saving the world when leaving the world to faster reset.",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.15-1.17",
         "downloads": [
             {
@@ -270,7 +275,7 @@ const ALLOW_MODS = [
     {
         "name": "LazyDFU",
         "description": "Makes the initialization of DataFixerUpper \"lazy\", making the game start more quickly",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.15+",
         "downloads": [
             {
@@ -284,7 +289,7 @@ const ALLOW_MODS = [
     {
         "name": "Voyager",
         "description": "Fixes a rare CME (ConcurrentModificationException) when using java 11+",
-        "loader": ["fabric"],
+        "category": ["fabric"],
         "version": "1.15+",
         "downloads": [
             {
@@ -298,7 +303,7 @@ const ALLOW_MODS = [
     {
         "name": "Force Port",
         "description": "A fabric mod which forces the port of the \"open to lan\" feature to be 25565.",
-        "loader": ["fabric", "legacy-fabric"],
+        "category": ["fabric", "legacy-fabric"],
         "version": "~1.8,1.15+",
         "downloads": [
             {
@@ -318,7 +323,7 @@ const ALLOW_MODS = [
     {
         "name": "TabFocus",
         "description": "Implement button focus by press tab feature in Pre-1.9",
-        "loader": ["legacy-fabric"],
+        "category": ["legacy-fabric"],
         "version": "~1.8",
         "downloads": [
             {

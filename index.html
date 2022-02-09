@@ -60,7 +60,7 @@
         <div class="container">
             <ul style="text-align: center; color: white;">
                 <li><a href="https://me.redlimerl.com/" target="_blank">Made by RedLime</a></li>
-                <li></li>
+                <li><br></li>
                 <li><a href="https://discord.gg/jmdFn3C" target="_blank">MCSR Javacord</a></li>
                 <li><a href="https://github.com/RedLime/MCSRMods" target="_blank">Github Repository</a></li>
             </ul>
@@ -72,10 +72,6 @@
     var elem = document.querySelector('.collapsible.expandable');
     var instance = M.Collapsible.init(elem, {
         accordion: false
-    });
-
-    $('[id^="mod-version-"]').click(function () {
-        activeVersion(+($(this)[0].id.replace("mod-version-", '')), false);
     });
 
     function getVersionCode(str) {
@@ -99,6 +95,10 @@
         initPage();
     });
 
+    $('[id^="mod-version-"]').click(function () {
+        activeVersion(+($(this)[0].id.replace("mod-version-", '')), false);
+    });
+
     function activeVersion(ver, clickable) {
         const params = new URLSearchParams(window.location.search);
         if (clickable) {
@@ -111,15 +111,17 @@
         $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''))
     }
 
+
+    // Return Mod HTML String
     function getElementFromModInfo(obj, version) {
         const downloadBuild = obj.downloads.find(versionInfo => isContainsVersion(version, versionInfo.version));
         const advancedBuild = obj.advanced.filter(versionInfo => isContainsVersion(version, versionInfo.version))
             .map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (${versionInfo.summary})</a></div>`).join('');
-        const modLoaderIcons = obj.loader.map(loader => `<img title="${loader}" src="${getModLoaderIconURL(loader)}" class="text-img circle"/>`).join(" ");
+        const categoryIcons = obj.category.map(category => `<img title="${category}" src="${getCategoryIconURL(category)}" class="text-img circle"/>`).join(" ");
         
         return `<li>` +
                     //Mod Name & Version & Mod Loader
-                    `<div class="collapsible-header light-font"><b>${obj.name}</b>${downloadBuild.build ? `<small style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} ${modLoaderIcons}</div>` +
+                    `<div class="collapsible-header light-font"><b>${obj.name}</b>${downloadBuild.build ? `<small style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} ${categoryIcons}</div>` +
 
                     `<div class="collapsible-body">` +
                         //Allowed MC Versions
@@ -140,7 +142,9 @@
                 `</li>`;
     }
 
-    function getModLoaderIconURL(loader) {
+
+    // Return Category Icon Image URL 
+    function getCategoryIconURL(loader) {
         switch (loader) {
             case 'fabric':
                 return 'https://fabricmc.net/assets/logo.png';
@@ -153,6 +157,9 @@
         }
     }
 
+    // Check version compare
+    // `versionNum` is number (middle of version name, ex] 0."2".0)
+    // `versionName` is comparable version string. ("0.2+")
     function isContainsVersion(versionNum, versionName) {
         if (versionName == '*') return true;
 
