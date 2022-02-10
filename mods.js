@@ -66,7 +66,7 @@ const ALLOW_MODS = [
     },
     {
         "name": "OptiFabric",
-        "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your 'mods' folder.",
+        "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your [mods] folder.",
         "category": ["fabric", "legacy-fabric"],
         "version": "1.14,~1.8",
         "downloads": [
@@ -86,7 +86,7 @@ const ALLOW_MODS = [
         "name": "Sodium",
         "description": "Modern rendering engine and client-side optimization mod for Minecraft",
         "category": ["fabric"],
-        "version": "1.15-1.17",
+        "version": "1.15+",
         "downloads": [
             {
                 "version": "1.15",
@@ -102,6 +102,11 @@ const ALLOW_MODS = [
                 "version": "1.17",
                 "build": "0.3.4",
                 "url": "https://modrinth.com/mod/sodium/version/Fz37KqRh"
+            },
+            {
+                "version": "1.18",
+                "build": "0.4.0-alpha6",
+                "url": "https://modrinth.com/mod/sodium/version/5JyduDNN"
             }
         ],
         "advanced": [],
@@ -111,7 +116,7 @@ const ALLOW_MODS = [
         "name": "Starlight",
         "description": "Rewrites the light engine to fix lighting performance and lighting errors",
         "category": ["fabric"],
-        "version": "1.15-1.17",
+        "version": "1.15+",
         "downloads": [
             {
                 "version": "1.15",
@@ -127,16 +132,51 @@ const ALLOW_MODS = [
                 "version": "1.17",
                 "build": "1.0.0",
                 "url": "https://modrinth.com/mod/starlight/version/nc7qGadJ"
+            },
+            {
+                "version": "1.18",
+                "build": "1.0.0",
+                "url": "https://modrinth.com/mod/starlight/version/p26lbcyI"
             }
         ],
         "advanced": [],
-        "incompatible": ['Phosphor']
+        "incompatible": ["Phosphor"]
+    },
+    {
+        "name": "Phosphor",
+        "description": "Improve the performance of Minecraft's lighting engine while fixing many bugs",
+        "category": ["fabric"],
+        "version": "1.15+",
+        "downloads": [
+            {
+                "version": "1.15",
+                "build": "0.5.2",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.15.2-v0.5.2"
+            },
+            {
+                "version": "1.16",
+                "build": "0.7.2",
+                "url": "https://github.com/mrmangohands/phosphor-fabric/releases/tag/mc1.16.1-0.7.2"
+            },
+            {
+                "version": "1.17",
+                "build": "0.8.0",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.17.x-0.8.0"
+            },
+            {
+                "version": "1.18",
+                "build": "0.8.1",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.18.x-0.8.1"
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["Starlight"]
     },
     {
         "name": "Lithium",
         "description": "No-compromises game logic/server optimization mod",
         "category": ["fabric"],
-        "version": "1.15-1.17",
+        "version": "1.15+",
         "downloads": [
             {
                 "version": "1.15",
@@ -152,6 +192,11 @@ const ALLOW_MODS = [
                 "version": "1.17",
                 "build": "0.7.5",
                 "url": "https://modrinth.com/mod/lithium/version/FHFKMKeu"
+            },
+            {
+                "version": "1.18",
+                "build": "0.7.7",
+                "url": "https://modrinth.com/mod/lithium/version/2aoHIXuK"
             }
         ],
         "advanced": [],
@@ -223,7 +268,7 @@ const ALLOW_MODS = [
             }
         ],
         "advanced": [],
-        "incompatible": ['AutoReset']
+        "incompatible": ["AutoReset"]
     },
     {
         "name": "Auto Reset",
@@ -238,7 +283,7 @@ const ALLOW_MODS = [
             }
         ],
         "advanced": [],
-        "incompatible": ['Atum']
+        "incompatible": ["Atum"]
     },
     {
         "name": "Fast Reset",
