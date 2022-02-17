@@ -358,7 +358,7 @@ const ALLOW_MODS = [
             },
             {
                 "version": "~1.15",
-                "build": "1.1.0",
+                "build": "1.0.0",
                 "url": "https://github.com/marinersfan824/Force-Port-Mod/releases/tag/v1.0.0"
             }
         ],
@@ -373,7 +373,6 @@ const ALLOW_MODS = [
         "downloads": [
             {
                 "version": "~1.8",
-                "build": "1.1.0",
                 "url": "https://github.com/RedLime/TabFocus/releases/latest"
             }
         ],
@@ -387,8 +386,7 @@ const ALLOW_MODS = [
         "version": "1.14-1.17",
         "downloads": [
             {
-                "version": "~1.8",
-                "build": "1.1.0",
+                "version": "*",
                 "url": "https://github.com/VoidXWalker/WorldPreview/releases/latest"
             }
         ],
