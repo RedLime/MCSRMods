@@ -379,5 +379,20 @@ const ALLOW_MODS = [
         ],
         "advanced": [],
         "incompatible": []
+    },
+    {
+        "name": "WorldPreview",
+        "description": "Draws a preview of the world on the loading screen during chunk generation.",
+        "category": ["fabric"],
+        "version": "1.14-1.17",
+        "downloads": [
+            {
+                "version": "~1.8",
+                "build": "1.1.0",
+                "url": "https://github.com/VoidXWalker/WorldPreview/releases/latest"
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
     }
 ];
