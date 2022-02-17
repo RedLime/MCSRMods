@@ -383,7 +383,7 @@ const ALLOW_MODS = [
         "name": "WorldPreview",
         "description": "Draws a preview of the world on the loading screen during chunk generation.",
         "category": ["fabric"],
-        "version": "1.14-1.17",
+        "version": "1.14+",
         "downloads": [
             {
                 "version": "*",
