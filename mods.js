@@ -318,6 +318,20 @@ const ALLOW_MODS = [
         "incompatible": []
     },
     {
+        "name": "WorldPreview",
+        "description": "Draws a preview of the world on the loading screen during chunk generation.",
+        "category": ["fabric"],
+        "version": "1.14+",
+        "downloads": [
+            {
+                "version": "*",
+                "url": "https://github.com/VoidXWalker/WorldPreview/releases/latest"
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
         "name": "LazyDFU",
         "description": "Makes the initialization of DataFixerUpper \"lazy\", making the game start more quickly",
         "category": ["fabric"],
@@ -380,14 +394,14 @@ const ALLOW_MODS = [
         "incompatible": []
     },
     {
-        "name": "WorldPreview",
-        "description": "Draws a preview of the world on the loading screen during chunk generation.",
+        "name": "FabricProxy-Lite",
+        "description": "Fabric mod for support forward player data from velocity",
         "category": ["fabric"],
-        "version": "1.14+",
+        "version": "1.16+",
         "downloads": [
             {
                 "version": "*",
-                "url": "https://github.com/VoidXWalker/WorldPreview/releases/latest"
+                "url": "https://www.curseforge.com/minecraft/mc-mods/fabricproxy-lite"
             }
         ],
         "advanced": [],
