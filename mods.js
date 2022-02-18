@@ -395,7 +395,7 @@ const ALLOW_MODS = [
     },
     {
         "name": "FabricProxy-Lite",
-        "description": "Fabric mod for support forward player data from velocity",
+        "description": "Support forward player data from velocity",
         "category": ["fabric"],
         "version": "1.16+",
         "downloads": [
