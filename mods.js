@@ -72,7 +72,7 @@ const ALLOW_MODS = [
         "downloads": [
             {
                 "version": "1.14",
-                "url": "https://www.curseforge.com/minecraft/mc-mods/optifabric/files/2843851"
+                "url": "https://github.com/Sjouwer/OptiFabric-1.14.4-Updated/releases/latest"
             },
             {
                 "version": "~1.8",
@@ -225,9 +225,14 @@ const ALLOW_MODS = [
     {
         "name": "Dynamic FPS",
         "description": "Improve performance when Minecraft is in the background",
-        "category": ["fabric"],
-        "version": "1.15-1.16",
+        "category": ["legacy-fabric","fabric"],
+        "version": "1.7-1.8,1.15-1.16",
         "downloads": [
+            {
+                "version": "1.7-1.8",
+                "build": "2.0.4",
+                "url": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/latest"
+            },
             {
                 "version": "1.15",
                 "build": "2.0.4",
@@ -268,22 +273,7 @@ const ALLOW_MODS = [
             }
         ],
         "advanced": [],
-        "incompatible": ["AutoReset"]
-    },
-    {
-        "name": "Auto Reset",
-        "description": "Adds a mode where it automatically resets the world after quitting.",
-        "category": ["fabric"],
-        "version": "1.14+",
-        "downloads": [
-            {
-                "version": "1.14+",
-                "build": "1.2.0",
-                "url": "https://github.com/DuncanRuns/AutoResetMod/releases/tag/v1.2.0"
-            }
-        ],
-        "advanced": [],
-        "incompatible": ["Atum"]
+        "incompatible": []
     },
     {
         "name": "Fast Reset",
