@@ -37,8 +37,7 @@ const ALLOW_MODS = [
         "downloads": [
             {
                 "version": "~1.13",
-                "summary": "Direct",
-                "url": "https://jitpack.io/com/github/Legacy-Fabric/fabric-installer/-SNAPSHOT/fabric-installer--SNAPSHOT.jar"
+                "url": "https://legacyfabric.net/downloads.html"
             }
         ],
         "advanced": [
