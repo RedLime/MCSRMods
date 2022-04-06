@@ -404,6 +404,7 @@ const ALLOW_MODS = [
         "downloads": [
             {
                 "version": "*",
+                "
                 "url": "https://github.com/Gregor0410/LazyStronghold/releases/tag/v1.1.1"
             }
         ],
