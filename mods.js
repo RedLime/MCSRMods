@@ -395,5 +395,19 @@ const ALLOW_MODS = [
         ],
         "advanced": [],
         "incompatible": []
+    },
+    {
+        "name": "LazyStronghold",
+        "description": "Generates stronghold locations on a seperate thread to speed up world generation",
+        "category": ["fabric"],
+        "version": "1.16",
+        "downloads": [
+            {
+                "version": "*",
+                "url": "https://github.com/Gregor0410/LazyStronghold/releases/tag/v1.1.1"
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
     }
 ];
