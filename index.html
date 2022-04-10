@@ -89,13 +89,14 @@
 
     $(document).ready(() => {
         fetch('./mods.json')
-            .then(response => {
-                const json = response.json();
+            .then(response => response.json())
+            .then(json => {
+                console.log(json);
                 for (const mod of json) {
                     ALLOW_MODS.push(mod);
                 }
                 initPage();
-            })
+            });
     })
 
     $(window).on("popstate", function () {
