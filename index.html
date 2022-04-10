@@ -108,7 +108,9 @@
         if (!(!params.has('version') && ver == 16) && !(params.has('version') && getVersionCode(params.get('version')) == ver)) {
             history.pushState(null, null, window.location.origin + window.location.pathname + "?version=1." + ver);
         }
-        $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''))
+        if (ALLOW_MODS.length) {
+            $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''));
+        }
     }
 
 
