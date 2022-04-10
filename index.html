@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./css/materialize.css">
     <link href="./stylesheet.css" rel="stylesheet">
     <script src="./js/bin/materialize.min.js"></script>
-    <script src="./mods.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -73,6 +72,7 @@
     var instance = M.Collapsible.init(elem, {
         accordion: false
     });
+    const ALLOW_MODS = [];
 
     function getVersionCode(str) {
         const version = str.split('.');
@@ -88,7 +88,14 @@
     }
 
     $(document).ready(() => {
-        initPage();
+        fetch('./mods.json')
+            .then(response => {
+                const json = response.json();
+                for (const mod of json) {
+                    ALLOW_MODS.push(mod);
+                }
+                initPage();
+            })
     })
 
     $(window).on("popstate", function () {
