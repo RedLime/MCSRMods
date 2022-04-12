@@ -625,6 +625,26 @@
         "incompatible": []
     },
     {
+        "name": "BiomeThreadLocalFix",
+        "description": "Fix Biome ThreadLocal Memory leak issue",
+        "category": ["fabric"],
+        "version": "1.17+",
+        "downloads": [
+            {
+                "version": "1.17+",
+                "build": "1.1",
+                "url": "https://github.com/RedLime/BiomeThreadLocalFix/releases/tag/1.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/BiomeThreadLocalFix/releases",
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
         "name": "LegacyPlanarFog",
         "description": "Make terrain fog rendering to planar",
         "category": ["fabric"],
