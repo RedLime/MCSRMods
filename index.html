@@ -117,25 +117,24 @@
             history.pushState(null, null, window.location.origin + window.location.pathname + "?version=1." + ver);
         }
         if (ALLOW_MODS.length) {
-            $('#mods-tab').html(ALLOW_MODS.filter(mod => isContainsVersion(ver, mod.version)).map(mod => getElementFromModInfo(mod, ver)).join(''));
+            $('#mods-tab').html(ALLOW_MODS.filter(mod => mod.downloads.find(asset => isContainsVersion(ver, asset.versions))).map(mod => getElementFromModInfo(mod, ver)).join(''));
         }
     }
 
 
     // Return Mod HTML String
     function getElementFromModInfo(obj, version) {
-        const downloadBuild = obj.downloads.find(versionInfo => isContainsVersion(version, versionInfo.version));
-        const advancedBuild = obj.advanced.filter(versionInfo => isContainsVersion(version, versionInfo.version))
+        const downloadBuild = obj.downloads.find(versionInfo => isContainsVersion(version, versionInfo.versions) && versionInfo.build)?.build;
+        const advancedBuild = obj.advanced.filter(versionInfo => isContainsVersion(version, versionInfo.versions))
             .map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (${versionInfo.summary})</a></div>`).join('');
         const categoryIcons = obj.category.map(category => `<img title="${category}" src="${getCategoryIconURL(category)}" class="text-img circle"/>`).join(" ");
-        
         return `<li>` +
                     //Mod Name & Version & Mod Loader
-                    `<div class="collapsible-header light-font"><b>${obj.name}</b>${downloadBuild.build ? `<small style="padding-left: 0.5em;">(v${downloadBuild.build})</small>` : ''} ${categoryIcons}</div>` +
+                    `<div class="collapsible-header light-font"><b>${obj.name}</b>${downloadBuild ? `<small style="padding-left: 0.5em;">(v${downloadBuild})</small>` : ''} ${categoryIcons}</div>` +
 
                     `<div class="collapsible-body">` +
                         //Allowed MC Versions
-                        `<div>Allowed MC Versions<br><big class="light-font description">${obj.version.replace('*', 'All').replace(',', ' / ')}</big></div>` +
+                        `<div>Allowed & Available MC Versions<br><big class="light-font description">${obj.versions.join(", ")}</big></div>` +
 
                         //Mod Description
                         (obj.description ? `<div>Description<br><small class="light-font description">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
@@ -144,7 +143,7 @@
                         (obj.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You must be only use one of these : <b>${obj.name}</b>, ${obj.incompatible.join(', ')}</small></div>` : '') +
 
                         //Download Button
-                        `<div><a class="light-font waves-effect waves-light btn" href="${downloadBuild.url}" target="_blank">Download${downloadBuild.summary ? ` (${downloadBuild.summary})` : ""}</a></div>` +
+                        getDownloadButtonHTML(obj, version) +
 
                         //Advanced Downloads
                         (advancedBuild ? `<div><details><summary style="cursor: pointer;">Advanced downloads</summary>${advancedBuild}</details></div>` : ``) +
@@ -167,30 +166,37 @@
         }
     }
 
+    // Return download buttons
+    function getDownloadButtonHTML(obj, version) {
+        const versions = versionInfo.versions.filter(v => {
+            if (v.split(".").length <= 1) return false;
+            return isContainsVersion(version, [v]);
+        }).join(", ");
+
+        const availableBuilds = obj.downloads.filter(versionInfo => isContainsVersion(version, versionInfo.versions));
+        return availableBuilds.map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (for ${versions}${versionInfo.summary ? ` / ${versionInfo.summary}` : ""})</a></div>`).join('');
+    }
+
     // Check version compare
     // `versionNum` is number (middle of version name, ex] 0."2".0)
-    // `versionName` is comparable version string. ("0.2+")
-    function isContainsVersion(versionNum, versionName) {
-        if (versionName == '*') return true;
+    // `versionArray` is comparable version array. (["0.1", "0.3+"])
+    function isContainsVersion(versionNum, versionArray) {
+        for (const versionName of versionArray) {
+            if (versionName.split('.').length <= 1) continue;
 
-        if (versionName.includes(',')) {
-            return versionName.split(',').find(any => isContainsVersion(versionNum, any)) != null;
-        } else if (versionName.includes('-')) {
-            const targetVersion1 = versionName.split('-')[0];
-            const targetVersion2 = versionName.split('-')[1];
-            return isContainsVersion(versionNum, targetVersion1 + "+") && isContainsVersion(versionNum, "~" + targetVersion2);
-        } else {
             const targetVersion = +(versionName.split('.')[1].replace(/[^0-9]/g, ''));
-            if (versionName.includes('+')) {
-                return versionNum >= targetVersion;
+            if (versionName.includes('+') && versionNum >= targetVersion) {
+                return true;
             }
-            if (versionName.includes('~')) {
-                return versionNum <= targetVersion;
+            if (versionName.includes('~') && versionNum <= targetVersion) {
+                return true;
             }
-            return versionNum == targetVersion;
+            if (versionNum == targetVersion) {
+            return true;
+            }
         }
 
-        throw 'none format versionName';
+        return false;
     }
 </script>
 
