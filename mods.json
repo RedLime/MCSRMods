@@ -581,6 +581,7 @@
         "name": "LazyStronghold",
         "description": "Generates stronghold locations on a seperate thread to speed up world generation",
         "category": ["fabric"],
+        "type": "fabric_mod",
         "downloads": [
             {
                 "versions": ["1.16.1"],
@@ -600,6 +601,7 @@
         "name": "BiomeThreadLocalFix",
         "description": "Fix Biome ThreadLocal Memory leak issue",
         "category": ["fabric"],
+        "type": "fabric_mod",
         "downloads": [
             {
                 "versions": ["1.17+"],
@@ -619,6 +621,7 @@
         "name": "LegacyPlanarFog",
         "description": "Make terrain fog rendering to planar",
         "category": ["fabric"],
+        "type": "fabric_mod",
         "downloads": [
             {
                 "versions": ["~1.13.2"],
