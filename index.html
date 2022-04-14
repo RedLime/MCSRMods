@@ -134,7 +134,7 @@
 
                     `<div class="collapsible-body">` +
                         //Allowed MC Versions
-                        `<div>Allowed & Available MC Versions<br><big class="light-font description">${obj.versions.join(", ")}</big></div>` +
+                        `<div>Allowed & Available MC Versions<br><big class="light-font description">${obj.downloads.map(asset => asset.versions.join(", ")).join(", ")}</big></div>` +
 
                         //Mod Description
                         (obj.description ? `<div>Description<br><small class="light-font description">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
