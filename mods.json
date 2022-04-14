@@ -158,7 +158,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/dariasc/Starlight/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             },
             {
@@ -168,7 +168,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/PaperMC/Starlight/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_major_version"] }
                 }
             },
             {
@@ -208,7 +208,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             },
             {
@@ -228,7 +228,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             },
             {
@@ -238,7 +238,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             }
         ],
