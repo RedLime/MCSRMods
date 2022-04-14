@@ -88,7 +88,7 @@
     }
 
     $(document).ready(() => {
-        fetch('./mods.json')
+        fetch('https://redlime.github.io/MCSRMods/mods.json')
             .then(response => response.json())
             .then(json => {
                 console.log(json);
@@ -128,6 +128,7 @@
         const advancedBuild = obj.advanced.filter(versionInfo => isContainsVersion(version, versionInfo.versions))
             .map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (${versionInfo.summary})</a></div>`).join('');
         const categoryIcons = obj.category.map(category => `<img title="${category}" src="${getCategoryIconURL(category)}" class="text-img circle"/>`).join(" ");
+
         return `<li>` +
                     //Mod Name & Version & Mod Loader
                     `<div class="collapsible-header light-font"><b>${obj.name}</b>${downloadBuild ? `<small style="padding-left: 0.5em;">(v${downloadBuild})</small>` : ''} ${categoryIcons}</div>` +

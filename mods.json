@@ -439,7 +439,7 @@
                 }
             },
             {
-                "versions": "1.17.1",
+                "versions": ["1.17.1"],
                 "build": "1.0.1",
                 "url": "https://github.com/jan-leila/FastReset/releases/tag/1.17.1-1.0.1",
                 "resource": {
