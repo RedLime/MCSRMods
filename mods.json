@@ -12,7 +12,7 @@
                 "resource": {
                     "type": "fabric_meta",
                     "url": "https://meta.fabricmc.net/v2/versions/loader",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -32,7 +32,7 @@
                 "resource": {
                     "type": "fabric_meta",
                     "url": "https://meta.legacyfabric.net/v2/versions/loader",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -44,7 +44,7 @@
                 "resource": {
                     "type": "github_contents",
                     "url": "https://api.github.com/repos/Grayray75/LegacyFabric-MultiMC/contents/dist?ref=stable",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version"] }
                 }
             }
         ],
@@ -83,7 +83,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Sjouwer/OptiFabric-1.14.4-Updated/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             },
             {
@@ -92,7 +92,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/OptiFabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -113,7 +113,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/mrmangohands/sodium-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -123,7 +123,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/mrmangohands/sodium-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -133,7 +133,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/sodium/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -143,7 +143,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/sodium/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             }
         ],
@@ -164,7 +164,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/dariasc/Starlight/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_major_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             },
             {
@@ -174,7 +174,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/PaperMC/Starlight/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_major_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_major_version"] }
                 }
             },
             {
@@ -184,7 +184,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/starlight/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             },
             {
@@ -194,7 +194,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/starlight/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -215,7 +215,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_major_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             },
             {
@@ -225,7 +225,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/mrmangohands/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -235,7 +235,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_major_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             },
             {
@@ -245,7 +245,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_major_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_major_version", "version"] }
                 }
             }
         ],
@@ -267,7 +267,7 @@
                     "type": "direct",
                     "version": "1.15.2",
                     "url": "https://www.curseforge.com/minecraft/mc-mods/lithium/download/2904300",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -277,7 +277,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/mrmangohands/lithium-fabric/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -287,7 +287,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             },
             {
@@ -297,7 +297,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -318,7 +318,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/mrmangohands/krypton/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -329,7 +329,7 @@
                     "type": "github_releases",
                     "version": "1.17.1",
                     "url": "https://api.github.com/repos/astei/krypton/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -350,7 +350,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/Pre1.9-Dynamic-FPS/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             },
             {
@@ -361,7 +361,7 @@
                     "type": "direct",
                     "version": "1.15.2",
                     "url": "https://cdn.discordapp.com/attachments/816880312415027280/926260415900561408/dynamic-fps-2.0.4-but-different.jar",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             },
             {
@@ -372,7 +372,7 @@
                     "type": "direct",
                     "version": "1.16.1",
                     "url": "https://cdn.discordapp.com/attachments/830250875376107542/880559489735086100/dynamic-menu-fps-0.1.jar",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -392,7 +392,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SpeedRunIGT/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -412,7 +412,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/VoidXWalker/Atum/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -433,7 +433,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -444,7 +444,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
             {
@@ -454,7 +454,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             }
         ],
@@ -467,7 +467,7 @@
                     "type": "github_releases",
                     "version": "1.16.5",
                     "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["mc_version", "version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             }
         ],
@@ -486,7 +486,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/VoidXWalker/WorldPreview/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -506,7 +506,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lazydfu/version",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -526,7 +526,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/modmuss50/Voyager/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -547,7 +547,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/DuncanRuns/Force-Port-Mod/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             },
             {
@@ -557,7 +557,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/marinersfan824/Force-Port-Mod/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -577,7 +577,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -597,7 +597,7 @@
                 "resource": {
                     "type": "curseforge_files",
                     "url": "https://api.curseforge.com/v1/mods/fabricproxy-lite/files",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -617,7 +617,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version", "mc_version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version", "mc_version"] }
                 }
             }
         ],
@@ -637,7 +637,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/BiomeThreadLocalFix/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
@@ -656,7 +656,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/LegacyPlanarFog/releases",
-                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w)?)", "values": ["version"] }
+                    "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
         ],
