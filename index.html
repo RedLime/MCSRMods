@@ -168,13 +168,8 @@
 
     // Return download buttons
     function getDownloadButtonHTML(obj, version) {
-        const versions = versionInfo.versions.filter(v => {
-            if (v.split(".").length <= 1) return false;
-            return isContainsVersion(version, [v]);
-        }).join(", ");
-
         const availableBuilds = obj.downloads.filter(versionInfo => isContainsVersion(version, versionInfo.versions));
-        return availableBuilds.map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (for ${versions}${versionInfo.summary ? ` / ${versionInfo.summary}` : ""})</a></div>`).join('');
+        return availableBuilds.map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (for ${versionInfo.versions.join(", ")}${versionInfo.summary ? ` / ${versionInfo.summary}` : ""})</a></div>`).join('');
     }
 
     // Check version compare
