@@ -256,8 +256,8 @@
                 "build": "0.4.6",
                 "url": "https://www.curseforge.com/minecraft/mc-mods/lithium/files/2904300",
                 "resource": {
-                    "type": "direct",
-                    "url": "https://www.curseforge.com/minecraft/mc-mods/lithium/download/2904300",
+                    "type": "curseforge_files",
+                    "url": "https://api.curseforge.com/v1/mods/360438/files",
                     "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["mc_version", "version"] }
                 }
             },
