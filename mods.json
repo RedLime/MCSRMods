@@ -569,7 +569,7 @@
                 "url": "https://www.curseforge.com/minecraft/mc-mods/fabricproxy-lite",
                 "resource": {
                     "type": "curseforge_files",
-                    "url": "https://api.curseforge.com/v1/mods/fabricproxy-lite/files",
+                    "url": "https://api.curseforge.com/v1/mods/442176/files",
                     "regex": { "match": "([0-9]+\\.){1}[0-9]+((\\.[0-9])?)+((\\w*)?)", "values": ["version"] }
                 }
             }
