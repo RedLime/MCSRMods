@@ -1,9 +1,3 @@
-
-M.AutoInit();
-var elem = document.querySelector('.collapsible.expandable');
-var instance = M.Collapsible.init(elem, {
-    accordion: false
-});
 const ALLOW_MODS = [];
 
 function getVersionCode(str) {
@@ -63,7 +57,7 @@ function getElementFromModInfo(obj, version) {
 
     return `<li>` +
                 //Mod Name & Version & Mod Loader
-                `<div class="collapsible-header light-font"><b style="opacity: 0.5">${obj.name}</b>${downloadBuild ? `<small style="padding-left: 0.5em;">(v${downloadBuild})</small>` : ''} ${categoryIcons}</div>` +
+                `<div class="collapsible-header light-font"><b${obj.warn ? ' style="opacity: 0.5"' : ""}>${obj.name}</b>${downloadBuild ? `<small style="padding-left: 0.5em;">(v${downloadBuild})</small>` : ''} ${categoryIcons}</div>` +
 
                 `<div class="collapsible-body">` +
                     //Allowed MC Versions
@@ -73,7 +67,7 @@ function getElementFromModInfo(obj, version) {
                     (obj.description ? `<div>Description<br><small class="light-font description">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
 
                     //Mod Warning
-                    (obj.warn ? `<div><b>WARNING!</b><br><small class="light-font description">${obj.warn.replaceAll('\n', '<br>')}<br>If you didn't follow this warning, your run being may rejected.</small></div>` : '') +
+                    (obj.warn ? `<div>WARNING!<br><small class="light-font description" style="text-decoration: underline">${obj.warn.replaceAll('\n', '<br>')}<br>If you didn't follow this warning, your run being may rejected.</small></div>` : '') +
 
                     //Incompatible mod list
                     (obj.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You must be only use one of these : <b>${obj.name}</b>, ${obj.incompatible.join(', ')}</small></div>` : '') +
