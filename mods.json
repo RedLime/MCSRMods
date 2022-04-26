@@ -297,7 +297,7 @@
     },
     {
         "name": "Krypton",
-        "description": "Optimizes the Minecraft networking stack and entity tracker.\n<b>Note!</b>It could be cause issues for some macros.",
+        "description": "Optimizes the Minecraft networking stack and entity tracker.\n<b>Note!</b> It could be cause issues for some macros.",
         "category": ["fabric"],
         "type": "fabric_mod",
         "downloads": [
