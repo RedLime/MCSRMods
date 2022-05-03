@@ -478,7 +478,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14+"],
+                "versions": ["1.15+"],
                 "url": "https://modrinth.com/mod/lazydfu/version/C6e265zK",
                 "resource": {
                     "type": "modrinth_releases",
