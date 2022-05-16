@@ -586,7 +586,7 @@
             {
                 "versions": ["1.16.1", "1.17.1"],
                 "build": "1.1.1",
-                "url": "https://github.com/Gregor0410/LazyStronghold/releases/tag/v1.1.1",
+                "url": "https://github.com/Gregor0410/LazyStronghold/releases/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases",
