@@ -497,7 +497,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.15+"],
+                "versions": ["1.15.x", "1.16.x"],
                 "url": "https://github.com/modmuss50/Voyager/releases/latest",
                 "resource": {
                     "type": "github_releases",
