@@ -671,7 +671,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14.4~"],
+                "versions": ["1.14+"],
                 "url": "https://github.com/RedLime/SleepBackground/releases/latest",
                 "resource": {
                     "type": "github_releases",
