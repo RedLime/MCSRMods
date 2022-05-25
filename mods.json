@@ -113,11 +113,11 @@
             },
             {
                 "versions": ["1.16.1"],
-                "build": "0.2.0",
-                "url": "https://github.com/mrmangohands/sodium-fabric/releases/tag/mc1.16.1-0.2.0%2Bbuild.17",
+                "build": "0.2.0+build.18",
+                "url": "https://github.com/jan-leila/sodium-fabric/releases/tag/mc1.16.1-0.2.0%2Bbuild.18",
                 "resource": {
                     "type": "github_releases",
-                    "url": "https://api.github.com/repos/mrmangohands/sodium-fabric/releases",
+                    "url": "https://api.github.com/repos/leila/sodium-fabric/releases",
                     "values": ["mc_version", "version"]
                 }
             },
