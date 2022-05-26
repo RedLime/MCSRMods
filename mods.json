@@ -363,7 +363,7 @@
             }
         ],
         "advanced": [],
-        "incompatible": []
+        "incompatible": ["SleepBackground"]
     },
     {
         "name": "SpeedRunIGT",
@@ -683,7 +683,7 @@
             }
         ],
         "advanced": [],
-        "incompatible": []
+        "incompatible": ["Dynamic FPS"]
     },
     {
         "name": "noPeaceful",
