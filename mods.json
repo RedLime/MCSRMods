@@ -283,7 +283,7 @@
             },
             {
                 "versions": ["1.18.2"],
-                "build": "0.7.7",
+                "build": "0.7.10",
                 "url": "https://modrinth.com/mod/lithium/version/MoF1cn6g",
                 "resource": {
                     "type": "modrinth_releases",
