@@ -673,7 +673,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14+"],
+                "versions": ["1.14+", "1.8.9", "1.8.0", "1.7.10"],
                 "url": "https://github.com/RedLime/SleepBackground/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -684,6 +684,25 @@
         ],
         "advanced": [],
         "incompatible": ["Dynamic FPS"]
+    },
+    {
+        "name": "antiresourcereload",
+        "description": "Caches datapack- and server resources to make world creation faster",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/wurgo/antiresourcereload/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/wurgo/antiresourcereload/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
     },
     {
         "name": "noPeaceful",
