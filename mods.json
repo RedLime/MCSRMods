@@ -678,7 +678,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
-                    "values": ["version"]
+                    "values": ["version", "mc_version"]
                 }
             }
         ],
@@ -697,7 +697,7 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/wurgo/antiresourcereload/releases",
-                    "values": ["version"]
+                    "values": ["version", "mc_version"]
                 }
             }
         ],
