@@ -108,7 +108,8 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/mrmangohands/sodium-fabric/releases",
-                    "values": ["mc_version", "version"]
+                    "values": ["mc_version", "version"],
+                    "format": "sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT\\+2020-12-10.jar"
                 }
             },
             {
@@ -372,7 +373,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8", "15w14a","1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.2", "22w13oneblockatatime"],
+                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "15w14a","1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.2", "22w13oneblockatatime"],
                 "url": "https://redlime.github.io/SpeedRunIGT/",
                 "resource": {
                     "type": "github_releases",
@@ -391,7 +392,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.10", "1.8", "1.8.9", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.17.1", "1.18.1", "22w13oneblockatatime"],
+                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.17.1", "1.18.1", "22w13oneblockatatime"],
                 "url": "https://github.com/VoidXWalker/Atum/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -546,7 +547,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.10", "1.8", "1.8.9"],
+                "versions": ["1.7.10", "1.8.0", "1.8.9"],
                 "url": "https://github.com/RedLime/TabFocus/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -673,12 +674,23 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14+", "1.8.9", "1.8.0", "1.7.10"],
+                "versions": ["1.14+"],
                 "url": "https://github.com/RedLime/SleepBackground/releases/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
-                    "values": ["version", "mc_version"]
+                    "values": ["version", "mc_version"],
+                    "format": "sleepbackground-(\\d+\\.)+(\\d+\\.)?((\\*|\\d|x)+(\\w*))\\+1.14\\+.jar"
+                }
+            },
+            {
+                "versions": ["1.8.9", "1.8.0", "1.7.10"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version", "mc_version"],
+                    "format": "sleepbackground-(\\d+\\.)+(\\d+\\.)?((\\*|\\d|x)+(\\w*))\\+(\\d+\\.)+(\\d+\\.)?((\\*|\\d|x)+(\\w*))\\+.jar"
                 }
             }
         ],
