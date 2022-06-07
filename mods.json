@@ -290,7 +290,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
-                    "values": ["version", "mc_version"]
+                    "values": ["mc_version", "version"]
                 }
             },
             {
@@ -300,7 +300,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
-                    "values": ["version", "mc_version"]
+                    "values": ["mc_version", "version"]
                 }
             },
             {
@@ -310,7 +310,7 @@
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
-                    "values": ["version", "mc_version"]
+                    "values": ["mc_version", "version"]
                 }
             }
         ],
