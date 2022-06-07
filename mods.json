@@ -123,6 +123,17 @@
                 }
             },
             {
+                "versions": ["1.16.5"],
+                "build": "0.2.0",
+                "url": "https://github.com/CaffeineMC/sodium-fabric/releases/tag/mc1.16.5-0.2.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/sodium-fabric/releases",
+                    "values": ["mc_version", "version"],
+                    "format": "sodium-fabric-mc1.16.5-0.2.0\\+build.4.jar"
+                }
+            },
+            {
                 "versions": ["1.17.1"],
                 "build": "0.3.4",
                 "url": "https://modrinth.com/mod/sodium/version/Fz37KqRh",
@@ -273,6 +284,16 @@
                 }
             },
             {
+                "versions": ["1.16.5"],
+                "build": "0.6.6",
+                "url": "https://modrinth.com/mod/lithium/version/rvsW1zhb",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lithium/version",
+                    "values": ["version", "mc_version"]
+                }
+            },
+            {
                 "versions": ["1.17.1"],
                 "build": "0.7.5",
                 "url": "https://modrinth.com/mod/lithium/version/FHFKMKeu",
@@ -392,7 +413,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.17.1", "1.18.1", "22w13oneblockatatime"],
+                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime"],
                 "url": "https://github.com/VoidXWalker/Atum/releases/latest",
                 "resource": {
                     "type": "github_releases",
