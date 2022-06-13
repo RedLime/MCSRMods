@@ -719,25 +719,6 @@
         "incompatible": ["Dynamic FPS"]
     },
     {
-        "name": "antiresourcereload",
-        "description": "Caches datapack- and server resources to make world creation faster",
-        "category": ["fabric"],
-        "type": "fabric_mod",
-        "downloads": [
-            {
-                "versions": ["1.16.1"],
-                "url": "https://github.com/wurgo/antiresourcereload/releases/latest",
-                "resource": {
-                    "type": "github_releases",
-                    "url": "https://api.github.com/repos/wurgo/antiresourcereload/releases",
-                    "values": ["version", "mc_version"]
-                }
-            }
-        ],
-        "advanced": [],
-        "incompatible": []
-    },
-    {
         "name": "noPeaceful",
         "description": "Make unable to change peaceful difficulty by player",
         "category": ["fabric"],
