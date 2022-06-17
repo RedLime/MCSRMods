@@ -775,8 +775,7 @@
             }
         ],
         "advanced": [],
-        "incompatible": [],
-        "warn": "This mod can cause your run to be invalidated as it has a bug which can make your saves folders inaccessible"
+        "incompatible": []
     },
     {
         "name": "noPeaceful",
