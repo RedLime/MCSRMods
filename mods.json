@@ -152,6 +152,16 @@
                     "url": "https://api.modrinth.com/v2/project/sodium/version",
                     "values": ["mc_version", "version"]
                 }
+            },
+            {
+                "versions": ["1.19.0"],
+                "build": "0.4.0-alpha6",
+                "url": "https://modrinth.com/mod/sodium/version/Yp8wLY1P",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/sodium/version",
+                    "values": ["mc_version", "version"]
+                }
             }
         ],
         "advanced": [],
@@ -202,6 +212,16 @@
                     "url": "https://api.modrinth.com/v2/project/starlight/version",
                     "values": ["version"]
                 }
+            },
+            {
+                "versions": ["1.19.0"],
+                "build": "1.1.0",
+                "url": "https://modrinth.com/mod/starlight/version/zFqBnsxO",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/starlight/version",
+                    "values": ["version"]
+                }
             }
         ],
         "advanced": [],
@@ -247,6 +267,16 @@
                 "versions": ["1.18.x"],
                 "build": "0.8.1",
                 "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.18.x-0.8.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
+                    "values": ["mc_major_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "build": "0.8.1",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.19.x-0.8.1",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
@@ -307,6 +337,16 @@
                 "versions": ["1.18.2"],
                 "build": "0.7.10",
                 "url": "https://modrinth.com/mod/lithium/version/MoF1cn6g",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lithium/version",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.19.0"],
+                "build": "0.8.0",
+                "url": "https://modrinth.com/mod/lithium/version/pXdccFQf",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
@@ -394,7 +434,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "15w14a","1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.2", "22w13oneblockatatime"],
+                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "15w14a","1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.2", "22w13oneblockatatime", "1.19.0"],
                 "url": "https://redlime.github.io/SpeedRunIGT/",
                 "resource": {
                     "type": "github_releases",
@@ -413,7 +453,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime"],
+                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime", "1.19.0"],
                 "url": "https://github.com/VoidXWalker/Atum/releases/latest",
                 "resource": {
                     "type": "github_releases",
