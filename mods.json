@@ -646,7 +646,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.16.1", "1.17.1"],
+                "versions": ["1.16.1", "1.16.5", "1.17.1"],
                 "build": "1.1.2",
                 "url": "https://github.com/Gregor0410/LazyStronghold/releases/latest",
                 "resource": {
@@ -804,7 +804,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14.x", "1.15.x", "1.16.x"],
+                "versions": ["1.14.x", "1.15.x", "1.16.1"],
                 "url": "https://github.com/VoidXWalker/extra-options/releases/latest",
                 "resource": {
                     "type": "github_releases",
