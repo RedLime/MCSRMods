@@ -667,8 +667,8 @@
         "downloads": [
             {
                 "versions": ["1.16+"],
-                "build": "1.1",
-                "url": "https://github.com/RedLime/BiomeThreadLocalFix/releases/tag/1.1",
+                "build": "1.3",
+                "url": "https://github.com/RedLime/BiomeThreadLocalFix/releases/tag/1.3",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/BiomeThreadLocalFix/releases",
