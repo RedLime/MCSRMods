@@ -120,7 +120,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/jan-leila/sodium-fabric/releases",
                     "values": ["mc_version", "version"],
-                    "format": "sodium-1.16.1-backport-fabric-0.2.1+build.9.jar"
+                    "format": "sodium-1.16.1-backport-fabric-0.2.1\\+build.9.jar"
                 }
             },
             {
