@@ -114,12 +114,13 @@
             },
             {
                 "versions": ["1.16.1"],
-                "build": "0.2.0",
-                "url": "https://github.com/jan-leila/sodium-fabric/releases/tag/mc1.16.1-0.2.0%2Bbuild.18",
+                "build": "0.2.1+build.10",
+                "url": "https://github.com/jan-leila/sodium-fabric/releases/tag/mc1.16.1-0.2.1%2Bbuild.10",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/jan-leila/sodium-fabric/releases",
-                    "values": ["mc_version", "version"]
+                    "values": ["mc_version", "version"],
+                    "format": "sodium-1.16.1-backport-fabric-0.2.1\\+build.10.jar"
                 }
             },
             {
@@ -541,7 +542,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14.4", "1.15.2", "1.16.1", "1.17.1", "20w14infinite"],
+                "versions": ["1.14.4", "1.15.2", "1.16.1", "1.16.5", "1.17.1", "20w14infinite"],
                 "url": "https://github.com/VoidXWalker/WorldPreview/releases/latest",
                 "resource": {
                     "type": "github_releases",
