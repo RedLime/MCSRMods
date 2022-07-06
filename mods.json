@@ -732,7 +732,8 @@
                 "resource": {
                     "type": "direct",
                     "url": "https://github.com/RedLime/StatsPerWorld/releases/download/1.1/StatsPerReset-1.1+1.6.x.jar",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "StatsPerReset-1.1\\+1.6.x.jar"
                 }
             },
             {
@@ -742,7 +743,8 @@
                 "resource": {
                     "type": "direct",
                     "url": "https://github.com/RedLime/StatsPerWorld/releases/download/1.1/StatsPerReset-1.1+1.3.x-1.5.x.jar",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "StatsPerReset-1.1\\+1.3.x-1.5.x.jar"
                 }
             }
         ],
