@@ -155,8 +155,8 @@
                 }
             },
             {
-                "versions": ["1.19.0"],
-                "build": "0.4.0-alpha6",
+                "versions": ["1.19.x"],
+                "build": "0.4.2",
                 "url": "https://modrinth.com/mod/sodium/version/Yp8wLY1P",
                 "resource": {
                     "type": "modrinth_releases",
