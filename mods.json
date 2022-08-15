@@ -599,7 +599,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.15+"],
+                "versions": ["1.14+"],
                 "build": "1.1.0",
                 "url": "https://github.com/DuncanRuns/Force-Port-Mod/releases/tag/v1.1.0",
                 "resource": {
@@ -610,8 +610,8 @@
             },
             {
                 "versions": ["~1.8.9"],
-                "build": "1.0.0",
-                "url": "https://github.com/marinersfan824/Force-Port-Mod/releases/tag/v1.0.0",
+                "build": "1.1.0",
+                "url": "https://github.com/marinersfan824/Force-Port-Mod/releases/tag/v1.1.0",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/marinersfan824/Force-Port-Mod/releases",
