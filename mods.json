@@ -758,23 +758,53 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14+"],
+                "versions": ["1.15+"],
                 "url": "https://github.com/RedLime/SleepBackground/releases/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-2.3\\+1.14\\+.jar"
+                    "format": "sleepbackground-3.6-1.15.x-1.19.x.jar"
                 }
             },
             {
-                "versions": ["1.8.9", "1.8.0", "1.7.10"],
+                "versions": ["1.14.x"],
                 "url": "https://github.com/RedLime/SleepBackground/releases/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
-                    "values": ["version", "mc_version"],
-                    "format": "sleepbackground-2.3+(\\+|-)+((\\d+\\.)+(\\d+\\.)?((\\*|\\d|x)+(\\w*))).jar"
+                    "values": ["version"],
+                    "format": "sleepbackground-3.6-1.14.x.jar"
+                }
+            },
+            {
+                "versions": ["1.13.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.6-1.13.x.jar"
+                }
+            },
+            {
+                "versions": ["1.12.x", "1.11.x", "1.10.x", "1.9.x", "1.8.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.6-1.8.x-1.12.x.jar"
+                }
+            },
+            {
+                "versions": ["1.7.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.6-1.7.x.jar"
                 }
             }
         ],
