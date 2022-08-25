@@ -473,6 +473,16 @@
         "type": "fabric_mod",
         "downloads": [
             {
+                "versions": ["1.14.4"],
+                "build": "1.0.0",
+                "url": "https://github.com/marinersfan824/FastReset/releases/tag/1.14.4",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/marinersfan824/FastReset/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
                 "versions": ["1.15.2"],
                 "build": "1.0.1",
                 "url": "https://github.com/jan-leila/FastReset/releases/tag/1.15.2-1.0.1",
@@ -561,7 +571,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.15+"],
+                "versions": ["1.14+"],
                 "url": "https://modrinth.com/mod/lazydfu/version/C6e265zK",
                 "resource": {
                     "type": "modrinth_releases",
@@ -609,7 +619,7 @@
                 }
             },
             {
-                "versions": ["~1.8.9"],
+                "versions": ["~1.13.2"],
                 "build": "1.1.0",
                 "url": "https://github.com/marinersfan824/Force-Port-Mod/releases/tag/v1.1.0",
                 "resource": {
@@ -634,6 +644,15 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                    "values": ["version", "mc_version"]
+                }
+            },
+            {
+                "versions": ["1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2"],
+                "url": "https://github.com/KingContaria/TabFocus/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/KingContaria/TabFocus/releases",
                     "values": ["version", "mc_version"]
                 }
             }
