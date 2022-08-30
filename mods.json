@@ -156,7 +156,6 @@
             },
             {
                 "versions": ["1.19.x"],
-                "build": "0.4.2",
                 "url": "https://modrinth.com/mod/sodium/version/Yp8wLY1P",
                 "resource": {
                     "type": "modrinth_releases",
@@ -216,7 +215,6 @@
             },
             {
                 "versions": ["1.19.0"],
-                "build": "1.1.0",
                 "url": "https://modrinth.com/mod/starlight/version/zFqBnsxO",
                 "resource": {
                     "type": "modrinth_releases",
@@ -276,7 +274,6 @@
             },
             {
                 "versions": ["1.19.x"],
-                "build": "0.8.1",
                 "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.19.x-0.8.1",
                 "resource": {
                     "type": "github_releases",
@@ -346,7 +343,6 @@
             },
             {
                 "versions": ["1.19.0"],
-                "build": "0.8.0",
                 "url": "https://modrinth.com/mod/lithium/version/pXdccFQf",
                 "resource": {
                     "type": "modrinth_releases",
