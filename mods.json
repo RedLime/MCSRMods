@@ -639,7 +639,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.10", "1.8.0", "1.8.9"],
+                "versions": ["1.6.2", "1.7.10", "1.8.0", "1.8.9", "1.12.2", "1.13.2"],
                 "url": "https://github.com/RedLime/TabFocus/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -648,12 +648,23 @@
                 }
             },
             {
-                "versions": ["1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2"],
-                "url": "https://github.com/KingContaria/TabFocus/releases/latest",
+                "versions": ["1.9.x", "1.10.x", "1.11.x"],
+                "url": "https://github.com/RedLime/TabFocus/releases/latest",
                 "resource": {
                     "type": "github_releases",
-                    "url": "https://api.github.com/repos/KingContaria/TabFocus/releases",
-                    "values": ["version", "mc_version"]
+                    "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                    "values": ["version"],
+                    "format": "tab-focus-2.0.4\\+1.9_to_1.11.2.jar"
+                }
+            },
+            {
+                "versions": ["1.3.x", "1.4.x", "1.5.x"],
+                "url": "https://github.com/RedLime/TabFocus/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                    "values": ["version"],
+                    "format": "tab-focus-2.0.4\\+1.3_to_1.5.2.jar"
                 }
             }
         ],
