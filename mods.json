@@ -156,7 +156,6 @@
             },
             {
                 "versions": ["1.19.x"],
-                "build": "0.4.2",
                 "url": "https://modrinth.com/mod/sodium/version/Yp8wLY1P",
                 "resource": {
                     "type": "modrinth_releases",
@@ -216,7 +215,6 @@
             },
             {
                 "versions": ["1.19.0"],
-                "build": "1.1.0",
                 "url": "https://modrinth.com/mod/starlight/version/zFqBnsxO",
                 "resource": {
                     "type": "modrinth_releases",
@@ -276,7 +274,6 @@
             },
             {
                 "versions": ["1.19.x"],
-                "build": "0.8.1",
                 "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.19.x-0.8.1",
                 "resource": {
                     "type": "github_releases",
@@ -346,7 +343,6 @@
             },
             {
                 "versions": ["1.19.0"],
-                "build": "0.8.0",
                 "url": "https://modrinth.com/mod/lithium/version/pXdccFQf",
                 "resource": {
                     "type": "modrinth_releases",
@@ -794,7 +790,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.6-1.15.x-1.19.x.jar"
+                    "format": "sleepbackground-3.7.1-1.15.x-1.19.x.jar"
                 }
             },
             {
@@ -804,7 +800,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.6-1.14.x.jar"
+                    "format": "sleepbackground-3.7.1-1.14.x.jar"
                 }
             },
             {
@@ -814,7 +810,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.6-1.13.x.jar"
+                    "format": "sleepbackground-3.7.1-1.13.x.jar"
                 }
             },
             {
@@ -824,7 +820,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.6-1.8.x-1.12.x.jar"
+                    "format": "sleepbackground-3.7.1-1.8.x-1.12.x.jar"
                 }
             },
             {
@@ -834,7 +830,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.6-1.7.x.jar"
+                    "format": "sleepbackground-3.7.1-1.7.x.jar"
                 }
             }
         ],
