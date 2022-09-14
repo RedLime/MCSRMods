@@ -586,7 +586,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.15.x", "1.16.x"],
+                "versions": ["1.14.x", "1.15.x", "1.16.x"],
                 "url": "https://github.com/modmuss50/Voyager/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -729,11 +729,11 @@
     {
         "name": "LegacyPlanarFog",
         "description": "Make terrain fog rendering to planar",
-        "category": ["legacy-fabric"],
+        "category": ["fabric", "legacy-fabric"],
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["~1.13.2"],
+                "versions": ["~1.14.4"],
                 "url": "https://github.com/RedLime/LegacyPlanarFog/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -874,26 +874,6 @@
         ],
         "advanced": [],
         "incompatible": []
-    },
-    {
-        "name": "noPeaceful",
-        "description": "Make unable to change peaceful difficulty by player",
-        "category": ["fabric"],
-        "type": "fabric_mod",
-        "downloads": [
-            {
-                "versions": ["1.14+"],
-                "url": "https://github.com/VoidXWalker/NoPeaceful/releases/latest",
-                "resource": {
-                    "type": "github_releases",
-                    "url": "https://api.github.com/repos/VoidXWalker/NoPeaceful/releases",
-                    "values": ["version"]
-                }
-            }
-        ],
-        "advanced": [],
-        "incompatible": [],
-        "warn": "This mod is can be use in only All Advancements run."
     },
     {
         "name": "extra-options",
