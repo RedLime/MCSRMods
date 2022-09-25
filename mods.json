@@ -83,7 +83,7 @@
                 }
             },
             {
-                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "1.8.9"],
+                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2"],
                 "url": "https://github.com/RedLime/OptiFabric/releases/latest",
                 "resource": {
                     "type": "github_releases",
