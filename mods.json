@@ -959,7 +959,7 @@
             }
         ],
         "advanced": [],
-        "incompatible": [],
+        "incompatible": ["WorldPreview"],
         "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs."
     }
 ]
