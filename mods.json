@@ -393,7 +393,7 @@
             {
                 "versions": ["1.19.x"],
                 "build": "0.2.1",
-                "url": "https://github.com/astei/krypton/releases/tag/v0.3.1",
+                "url": "https://github.com/astei/krypton/releases/tag/v0.2.1",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/astei/krypton/releases",
