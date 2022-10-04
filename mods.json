@@ -156,7 +156,7 @@
             },
             {
                 "versions": ["1.19.x"],
-                "url": "https://modrinth.com/mod/sodium/version/Yp8wLY1P",
+                "url": "https://modrinth.com/mod/sodium/version/mc1.19.2-0.4.4",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/sodium/version",
@@ -214,8 +214,8 @@
                 }
             },
             {
-                "versions": ["1.19.0"],
-                "url": "https://modrinth.com/mod/starlight/version/zFqBnsxO",
+                "versions": ["1.19.x"],
+                "url": "https://modrinth.com/mod/starlight/version/1.1.1%2B1.19",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/starlight/version",
@@ -342,8 +342,8 @@
                 }
             },
             {
-                "versions": ["1.19.0"],
-                "url": "https://modrinth.com/mod/lithium/version/pXdccFQf",
+                "versions": ["1.19.x"],
+                "url": "https://modrinth.com/mod/lithium/version/mc1.19.2-0.8.3",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
