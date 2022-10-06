@@ -706,8 +706,8 @@
                 "versions": ["1.16+"],
                 "url": "https://modrinth.com/mod/fabricproxy-lite/versions",
                 "resource": {
-                    "type": "curseforge_files",
-                    "url": "https://api.curseforge.com/v1/mods/442176/files",
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/fabricproxy-lite/version",
                     "values": ["version"]
                 }
             }
