@@ -146,8 +146,8 @@
             },
             {
                 "versions": ["1.18.2"],
-                "build": "0.4.0-alpha6",
-                "url": "https://modrinth.com/mod/sodium/version/74Y5Z8fo",
+                "build": "0.4.1",
+                "url": "https://modrinth.com/mod/sodium/version/mc1.18.2-0.4.1",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/sodium/version",
