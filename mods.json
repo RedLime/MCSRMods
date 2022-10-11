@@ -659,7 +659,7 @@
     },
     {
         "name": "TabFocus",
-        "description": "Implement button focus by press tab feature in Pre-1.9",
+        "description": "Implement button focus by press tab feature in Pre-1.14",
         "category": ["legacy-fabric"],
         "type": "fabric_mod",
         "downloads": [
