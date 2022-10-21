@@ -343,7 +343,7 @@
             },
             {
                 "versions": ["1.19.x"],
-                "url": "https://modrinth.com/mod/lithium/version/mc1.19.2-0.9.1",
+                "url": "https://modrinth.com/mod/lithium/version/mc1.19.2-0.10.0",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
