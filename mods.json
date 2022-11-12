@@ -331,8 +331,8 @@
             },
             {
                 "versions": ["1.18.2"],
-                "build": "0.7.10",
-                "url": "https://modrinth.com/mod/lithium/version/mc1.18.2-0.7.10",
+                "build": "0.10.2",
+                "url": "https://modrinth.com/mod/lithium/version/mc1.18.2-0.10.2",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
@@ -341,7 +341,7 @@
             },
             {
                 "versions": ["1.19.x"],
-                "url": "https://modrinth.com/mod/lithium/version/mc1.19.2-0.10.0",
+                "url": "https://modrinth.com/mod/lithium/version/mc1.19.2-0.10.2",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/lithium/version",
