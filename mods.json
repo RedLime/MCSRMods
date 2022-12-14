@@ -980,7 +980,7 @@
         "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs."
     },
     {
-        "name": "set-spawn-mod",
+        "name": "ChunkCacher",
         "description": "Set your spawnpoint to specified coordinates during set seed runs",
         "category": ["fabric"],
         "type": "fabric_mod",
