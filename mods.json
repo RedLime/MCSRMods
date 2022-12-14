@@ -978,5 +978,43 @@
         "advanced": [],
         "incompatible": ["WorldPreview"],
         "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs."
+    },
+    {
+        "name": "set-spawn-mod",
+        "description": "Set your spawnpoint to specified coordinates during set seed runs",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.4", "1.15.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.16.1", "1.16.5", "1.17.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.18.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["WorldPreview", "LazyStronghold"],
+        "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs."
     }
 ]
