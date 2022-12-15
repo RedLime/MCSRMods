@@ -987,29 +987,35 @@
         "downloads": [
             {
                 "versions": ["1.14.4", "1.15.2"],
+                "build": "1.0.0",
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases/tag/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "chunkcacher-1.14-1.15.2-1.0.0.jar"
                 }
             },
             {
                 "versions": ["1.16.1", "1.16.5", "1.17.1"],
+                "build": "1.0.0",
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/tag/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "chunkcacher-1.16-1.17.1-1.0.0.jar"
                 }
             },
             {
                 "versions": ["1.18.2"],
+                "build": "1.0.0",
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases/tag/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "chunkcacher-1.18-1.18.2-1.0.0.jar"
                 }
             }
         ],
