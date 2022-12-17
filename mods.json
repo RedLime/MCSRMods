@@ -981,7 +981,7 @@
     },
     {
         "name": "ChunkCacher",
-        "description": "Set your spawnpoint to specified coordinates during set seed runs",
+        "description": "Caches chunks up to before features stage for set seed",
         "category": ["fabric"],
         "type": "fabric_mod",
         "downloads": [
