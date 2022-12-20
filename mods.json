@@ -375,7 +375,8 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/astei/krypton/releases",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "krypton-0.1.4.jar"
                 }
             },
             {
@@ -385,7 +386,8 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/astei/krypton/releases",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "krypton-0.1.9.jar"
                 }
             },
             {
@@ -395,7 +397,8 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/astei/krypton/releases",
-                    "values": ["version"]
+                    "values": ["version"],
+                    "format": "krypton-0.2.1.jar"
                 }
             }
         ],
@@ -827,7 +830,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.7.1-1.15.x-1.19.x.jar"
+                    "format": "sleepbackground-3.8-1.15.x-1.19.x.jar"
                 }
             },
             {
@@ -837,7 +840,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.7.1-1.14.x.jar"
+                    "format": "sleepbackground-3.8-1.14.x.jar"
                 }
             },
             {
@@ -847,7 +850,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.7.1-1.13.x.jar"
+                    "format": "sleepbackground-3.8-1.13.x.jar"
                 }
             },
             {
@@ -857,7 +860,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.7.1-1.8.x-1.12.x.jar"
+                    "format": "sleepbackground-3.8-1.8.x-1.12.x.jar"
                 }
             },
             {
@@ -867,7 +870,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.7.1-1.7.x.jar"
+                    "format": "sleepbackground-3.8-1.7.x.jar"
                 }
             }
         ],
