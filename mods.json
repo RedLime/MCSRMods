@@ -486,7 +486,7 @@
                 "versions": ["1.7.10", "1.8.0", "1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime", "1.19.2"],
                 "url": "https://modrinth.com/mod/atum/versions",
                 "resource": {
-                    "type": "github_releases",
+                    "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/atum/version",
                     "values": ["version", "mc_version"]
                 }
