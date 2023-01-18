@@ -1008,7 +1008,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases",
                     "values": [],
-                    "format": "chunkcacher-1.14-1.15.2-1.0.0.jar"
+                    "format": "chunkcacher-1.14-1.15.2-2.0.0.jar"
                 }
             },
             {
@@ -1019,7 +1019,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases",
                     "values": [],
-                    "format": "chunkcacher-1.16-1.17.1-1.0.0.jar"
+                    "format": "chunkcacher-1.16-1.17.1-2.0.0.jar"
                 }
             },
             {
@@ -1030,7 +1030,7 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
                     "values": [],
-                    "format": "chunkcacher-1.18-1.18.2-1.0.0.jar"
+                    "format": "chunkcacher-1.18-1.18.2-3.0.0.jar"
                 }
             }
         ],
