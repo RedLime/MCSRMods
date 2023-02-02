@@ -458,6 +458,25 @@
         "incompatible": ["SleepBackground"]
     },
     {
+        "name": "ServerSideRNG",
+        "description": "Helps to ensure the legitimacy of Minecraft Speedruns",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
         "name": "SpeedRunIGT",
         "description": "In-game Timer for Minecraft Speedrun",
         "category": ["fabric", "legacy-fabric"],
@@ -577,7 +596,7 @@
     {
         "name": "WorldPreview",
         "description": "Draws a preview of the world on the loading screen during chunk generation.",
-        "category": ["fabric"],
+        "category": ["fabric", "legacy-fabric"],
         "type": "fabric_mod",
         "downloads": [
             {
@@ -587,6 +606,15 @@
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/worldpreview/version",
                     "values": ["version", "mc_version"]
+                }
+            },
+            {
+                "versions": ["1.8.9"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases",
+                    "values": ["mc_version", "version"]
                 }
             }
         ],
