@@ -924,7 +924,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.16.1"],
+                "versions": ["1.13.2"],
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases/latest",
                 "resource": {
                     "type": "github_releases",
@@ -942,7 +942,7 @@
                 }
             },
             {
-                "versions": ["1.16.1"],
+                "versions": ["1.15.2"],
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases/latest",
                 "resource": {
                     "type": "github_releases",
