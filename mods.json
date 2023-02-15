@@ -502,7 +502,34 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime", "1.19.2"],
+                "versions": ["1.7.10"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/pre-mcsr-atum-1.7.10/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/pre-mcsr-atum-1.7.10/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.0"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/pre-mcsr-atum-1.8/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/pre-mcsr-atum-1.8/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.9"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/pre-mcsr-atum-1.8.9/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/pre-mcsr-atum-1.8.9/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime", "1.19.2"],
                 "url": "https://modrinth.com/mod/atum/versions",
                 "resource": {
                     "type": "modrinth_releases",
