@@ -1056,6 +1056,33 @@
         "type": "fabric_mod",
         "downloads": [
             {
+                "versions": ["1.6.4"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.7.10"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.x"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
                 "versions": ["1.15.2"],
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases/tag/latest",
                 "resource": {
