@@ -237,7 +237,8 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "values": ["mc_major_version", "version"]
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.15.2-0.5.2\\+build.6.jar"
                 }
             },
             {
@@ -251,13 +252,25 @@
                 }
             },
             {
+                "versions": ["1.16.2", "1.16.3", "1.16.4", "1.16.5"],
+                "build": "0.8.0",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.16.2-0.8.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/mrmangohands/phosphor-fabric/releases",
+                    "values": ["mc_version", "version"],
+                    "format": "phosphor-fabric-mc1.16.2-0.8.0.jar"
+                }
+            },
+            {
                 "versions": ["1.17.x"],
                 "build": "0.8.0",
                 "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.17.x-0.8.0",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "values": ["mc_major_version", "version"]
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.17.x-0.8.0.jar"
                 }
             },
             {
@@ -267,16 +280,19 @@
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "values": ["mc_major_version", "version"]
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.18.x-0.8.1.jar"
                 }
             },
             {
                 "versions": ["1.19.x"],
+                "build": "0.8.1",
                 "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.19.x-0.8.1",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
-                    "values": ["mc_major_version", "version"]
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.19.x-0.8.1.jar"
                 }
             }
         ],
