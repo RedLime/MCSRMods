@@ -14,6 +14,7 @@ function initPage() {
 }
 
 $(document).ready(() => {
+    // fetch('mods.json') for local testing
     fetch('https://redlime.github.io/MCSRMods/mods.json')
         .then(response => response.json())
         .then(json => {
