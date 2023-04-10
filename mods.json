@@ -1099,6 +1099,15 @@
                 }
             },
             {
+                "versions": ["1.9.x", "1.10.x", "1.11.x", "1.12.x"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
                 "versions": ["1.15.2"],
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases/tag/latest",
                 "resource": {
