@@ -643,20 +643,20 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.14.4", "1.15.2", "1.16.1", "1.16.5", "1.17.1", "20w14infinite"],
-                "url": "https://modrinth.com/mod/worldpreview/versions",
-                "resource": {
-                    "type": "modrinth_releases",
-                    "url": "https://api.modrinth.com/v2/project/worldpreview/version",
-                    "values": ["version", "mc_version"]
-                }
-            },
-            {
                 "versions": ["1.16.1"],
                 "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.15.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.15.2/releases",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.15.2/releases",
                     "values": ["mc_version", "version"]
                 }
             },
@@ -667,6 +667,15 @@
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases",
                     "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.14.4", "1.16.5", "1.17.1", "20w14infinite"],
+                "url": "https://modrinth.com/mod/worldpreview/versions",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/worldpreview/version",
+                    "values": ["version", "mc_version"]
                 }
             }
         ],
