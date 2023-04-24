@@ -936,13 +936,33 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ["1.15+"],
+                "versions": ["1.19.x"],
                 "url": "https://github.com/RedLime/SleepBackground/releases/latest",
                 "resource": {
                     "type": "github_releases",
                     "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
                     "values": ["version"],
-                    "format": "sleepbackground-3.8-1.15.x-1.19.x.jar"
+                    "format": "sleepbackground-3.8-1.19.x.jar"
+                }
+            },
+            {
+                "versions": ["1.16.x", "1.17.x", "1.18.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.16.x-1.18.x.jar"
+                }
+            },
+            {
+                "versions": ["1.15.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.15.x.jar"
                 }
             },
             {
