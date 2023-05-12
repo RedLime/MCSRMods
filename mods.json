@@ -1,0 +1,1244 @@
+[
+    {
+        "name": "Fabric Loader",
+        "description": "You can use Fabric Loader, but DO NOT USE Fabric API!",
+        "category": ["fabric"],
+        "type": "mod_loader",
+        "downloads": [
+            {
+                "versions": ["1.14+"],
+                "url": "https://fabricmc.net/use/installer/",
+                "resource": {
+                    "type": "fabric_meta",
+                    "url": "https://meta.fabricmc.net/v2/versions/loader",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Legacy Fabric Loader",
+        "description": "You can use Fabric Loader, but DO NOT USE Fabric API! (Fabric for pre-1.14)",
+        "category": ["legacy-fabric"],
+        "type": "mod_loader",
+        "downloads": [
+            {
+                "versions": ["~1.13.2"],
+                "url": "https://legacyfabric.net/downloads.html",
+                "resource": {
+                    "type": "fabric_meta",
+                    "url": "https://meta.legacyfabric.net/v2/versions/loader",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [
+            {
+                "versions": ["~1.13.2"],
+                "summary": "for MultiMC",
+                "url": "https://github.com/Grayray75/LegacyFabric-MultiMC",
+                "resource": {
+                    "type": "github_contents",
+                    "url": "https://api.github.com/repos/Grayray75/LegacyFabric-MultiMC/contents/dist?ref=stable",
+                    "values": ["mc_version"]
+                }
+            }
+        ],
+        "incompatible": []
+    },
+    {
+        "name": "Optifine",
+        "description": "Check the Optifine rules",
+        "category": ["optifine"],
+        "type": "optifine",
+        "downloads": [
+            {
+                "versions": ["~1.14.4"],
+                "url": "https://optifine.net/downloads",
+                "resource": {
+                    "type": "none",
+                    "url": "",
+                    "values": []
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "OptiFabric",
+        "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your [mods] folder.",
+        "category": ["fabric", "legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.4"],
+                "url": "https://github.com/Sjouwer/OptiFabric-1.14.4-Updated/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Sjouwer/OptiFabric-1.14.4-Updated/releases",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2"],
+                "url": "https://github.com/RedLime/OptiFabric/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/OptiFabric/releases",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Sodium",
+        "description": "Modern rendering engine and client-side optimization mod for Minecraft",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.15.2"],
+                "build": "0.1.1",
+                "url": "https://github.com/mrmangohands/sodium-fabric/releases/tag/mc1.15.2-0.1.1-SNAPSHOT%2B2020-12-10",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/mrmangohands/sodium-fabric/releases",
+                    "values": ["mc_version", "version"],
+                    "format": "sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT\\+2020-12-10.jar"
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.1/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.5"],
+                "build": "0.2.0",
+                "url": "https://github.com/CaffeineMC/sodium-fabric/releases/tag/mc1.16.5-0.2.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/sodium-fabric/releases",
+                    "values": ["mc_version", "version"],
+                    "format": "sodium-fabric-mc1.16.5-0.2.0\\+build.4.jar"
+                }
+            },
+            {
+                "versions": ["1.17.1"],
+                "build": "0.3.4",
+                "url": "https://modrinth.com/mod/sodium/version/Fz37KqRh",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/sodium/version",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.18.2"],
+                "build": "0.4.1",
+                "url": "https://modrinth.com/mod/sodium/version/mc1.18.2-0.4.1",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/sodium/version",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "url": "https://modrinth.com/mod/sodium/version/mc1.19.2-0.4.4",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/sodium/version",
+                    "values": ["mc_version", "version"]
+                }
+            }
+        ],
+        "advanced": [
+            {
+                "versions": ["1.16.1"],
+                "summary": "for MacOS",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-mac-1.16.1/releases",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-mac-1.16.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            }
+        ],
+        "incompatible": []
+    },
+    {
+        "name": "Starlight",
+        "description": "Rewrites the light engine to fix lighting performance and lighting errors",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.15.x"],
+                "build": "1.0.0-alpha",
+                "url": "https://github.com/dariasc/Starlight/releases/tag/1.15%2F1.0.0-alpha",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/dariasc/Starlight/releases",
+                    "values": ["mc_major_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.x"],
+                "build": "1.0.0-RC2",
+                "url": "https://github.com/PaperMC/Starlight/releases/tag/1.0.0-RC2",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/PaperMC/Starlight/releases",
+                    "values": ["version", "mc_major_version"]
+                }
+            },
+            {
+                "versions": ["1.17.x"],
+                "build": "1.0.0",
+                "url": "https://modrinth.com/mod/starlight/version/nc7qGadJ",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/starlight/version",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.18.2"],
+                "build": "1.0.2",
+                "url": "https://modrinth.com/mod/starlight/version/4ew9whL8",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/starlight/version",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "url": "https://modrinth.com/mod/starlight/version/1.1.1%2B1.19",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/starlight/version",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["Phosphor"]
+    },
+    {
+        "name": "Phosphor",
+        "description": "Improve the performance of Minecraft's lighting engine while fixing many bugs",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.15.2"],
+                "build": "0.5.2",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.15.2-v0.5.2",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.15.2-0.5.2\\+build.6.jar"
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "build": "0.7.2",
+                "url": "https://github.com/mrmangohands/phosphor-fabric/releases/tag/mc1.16.1-0.7.2",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/mrmangohands/phosphor-fabric/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.2", "1.16.3", "1.16.4", "1.16.5"],
+                "build": "0.8.0",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.16.2-0.8.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/mrmangohands/phosphor-fabric/releases",
+                    "values": ["mc_version", "version"],
+                    "format": "phosphor-fabric-mc1.16.2-0.8.0.jar"
+                }
+            },
+            {
+                "versions": ["1.17.x"],
+                "build": "0.8.0",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.17.x-0.8.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.17.x-0.8.0.jar"
+                }
+            },
+            {
+                "versions": ["1.18.x"],
+                "build": "0.8.1",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.18.x-0.8.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.18.x-0.8.1.jar"
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "build": "0.8.1",
+                "url": "https://github.com/CaffeineMC/phosphor-fabric/releases/tag/mc1.19.x-0.8.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
+                    "values": ["mc_major_version", "version"],
+                    "format": "phosphor-fabric-mc1.19.x-0.8.1.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["Starlight"]
+    },
+    {
+        "name": "Lithium",
+        "description": "No-compromises game logic/server optimization mod",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.15.2"],
+                "build": "0.4.6",
+                "url": "https://www.curseforge.com/minecraft/mc-mods/lithium/files/2904300",
+                "resource": {
+                    "type": "curseforge_files",
+                    "url": "https://api.curseforge.com/v1/mods/360438/files",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "build": "0.6.6",
+                "url": "https://github.com/mrmangohands/lithium-fabric/releases/tag/mc1.16.1-0.6.6",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/mrmangohands/lithium-fabric/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.5"],
+                "build": "0.6.6",
+                "url": "https://modrinth.com/mod/lithium/version/rvsW1zhb",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lithium/version",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.17.x"],
+                "build": "0.7.5",
+                "url": "https://modrinth.com/mod/lithium/version/mc1.17.1-0.7.5",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lithium/version",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.18.2"],
+                "build": "0.10.2",
+                "url": "https://modrinth.com/mod/lithium/version/mc1.18.2-0.10.2",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lithium/version",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "url": "https://modrinth.com/mod/lithium/version/mc1.19.2-0.10.2",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lithium/version",
+                    "values": ["mc_version", "version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Krypton",
+        "description": "Optimizes the Minecraft networking stack and entity tracker.\n<b>Note!</b> It could be cause issues for some macros.",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.15.x", "1.16.1"],
+                "build": "0.1.3-SNAPSHOT+2021-02-20",
+                "url": "https://github.com/mrmangohands/krypton/releases/tag/mc1.16.1-0.1.3-SNAPSHOT%2B2021-02-20",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/mrmangohands/krypton/releases",
+                    "values": ["mc_version", "version"],
+                    "format": "krypton-1.16.1-backport-0.1.3-SNAPSHOT\\+2021-02-20.jar"
+                }
+            },
+            {
+                "versions": ["1.16.5"],
+                "build": "0.1.2",
+                "url": "https://github.com/astei/krypton/releases/tag/v0.1.2",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/astei/krypton/releases",
+                    "values": ["version"],
+                    "format": "krypton-0.1.2.jar"
+                }
+            },
+            {
+                "versions": ["1.17.1"],
+                "build": "0.1.4",
+                "url": "https://github.com/astei/krypton/releases/tag/v0.1.4",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/astei/krypton/releases",
+                    "values": ["version"],
+                    "format": "krypton-0.1.4.jar"
+                }
+            },
+            {
+                "versions": ["1.18.2"],
+                "build": "0.1.9",
+                "url": "https://github.com/astei/krypton/releases/tag/v0.1.9",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/astei/krypton/releases",
+                    "values": ["version"],
+                    "format": "krypton-0.1.9.jar"
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "build": "0.2.1",
+                "url": "https://github.com/astei/krypton/releases/tag/v0.2.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/astei/krypton/releases",
+                    "values": ["version"],
+                    "format": "krypton-0.2.1.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Dynamic FPS",
+        "description": "Improve performance when Minecraft is in the background",
+        "category": ["legacy-fabric","fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.7.x", "1.8.0", "1.8.9"],
+                "build": "2.0.4",
+                "url": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/Pre1.9-Dynamic-FPS/releases",
+                    "values": ["version", "mc_version"]
+                }
+            },
+            {
+                "versions": ["1.15.2"],
+                "build": "2.0.4",
+                "url": "https://cdn.discordapp.com/attachments/816880312415027280/926260415900561408/dynamic-fps-2.0.4-but-different.jar",
+                "resource": {
+                    "type": "direct",
+                    "url": "https://cdn.discordapp.com/attachments/816880312415027280/926260415900561408/dynamic-fps-2.0.4-but-different.jar",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "build": "0.1",
+                "url": "https://cdn.discordapp.com/attachments/830250875376107542/880559489735086100/dynamic-menu-fps-0.1.jar",
+                "resource": {
+                    "type": "direct",
+                    "url": "https://cdn.discordapp.com/attachments/830250875376107542/880559489735086100/dynamic-menu-fps-0.1.jar",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["SleepBackground"]
+    },
+    {
+        "name": "ServerSideRNG",
+        "description": "Helps to ensure the legitimacy of Minecraft Speedruns",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "SpeedRunIGT",
+        "description": "In-game Timer for Minecraft Speedrun",
+        "category": ["fabric", "legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.7.2", "1.7.4", "1.7.10", "1.8.0", "15w14a","1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.2", "22w13oneblockatatime", "1.19.0"],
+                "url": "https://redlime.github.io/SpeedRunIGT/",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SpeedRunIGT/releases",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Atum",
+        "description": "Automatically reset random and set seeds",
+        "category": ["fabric", "legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.7.10"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.7.10/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.7.10/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.0"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.9"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "20w14infinite", "1.16.1", "1.16.5", "1.17.1", "1.18.1", "22w13oneblockatatime", "1.19.2"],
+                "url": "https://modrinth.com/mod/atum/versions",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/atum/version",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Fast Reset",
+        "description": "Skip saving the world when leaving the world to faster reset.",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.4"],
+                "build": "1.0.0",
+                "url": "https://github.com/marinersfan824/FastReset/releases/tag/1.14.4",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/marinersfan824/FastReset/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.15.2"],
+                "build": "1.0.1",
+                "url": "https://github.com/jan-leila/FastReset/releases/tag/1.15.2-1.0.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "build": "1.4.1",
+                "url": "https://github.com/jan-leila/FastReset/releases/tag/1.16.1-1.4.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.5"],
+                "url": "https://github.com/jan-leila/FastReset/releases/tag/1.16.5-1.0.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.17.1"],
+                "build": "1.0.1",
+                "url": "https://github.com/jan-leila/FastReset/releases/tag/1.17.1-1.0.1",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/jan-leila/FastReset/releases",
+                    "values": ["mc_version", "version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Anchiale",
+        "description": "Skip saving the world when leaving the world to faster reset but for Pre 1.9",
+        "category": ["legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.8.x"],
+                "build": "3.0.0",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "WorldPreview",
+        "description": "Draws a preview of the world on the loading screen during chunk generation.",
+        "category": ["fabric", "legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.15.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.15.2/releases",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.15.2/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.9"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.14.4", "1.16.5", "1.17.1", "20w14infinite"],
+                "url": "https://modrinth.com/mod/worldpreview/versions",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/worldpreview/version",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "LazyDFU",
+        "description": "Makes the initialization of DataFixerUpper \"lazy\", making the game start more quickly",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.x", "1.15.x", "1.16.x", "1.17.x", "1.18.x"],
+                "url": "https://modrinth.com/mod/lazydfu/version/C6e265zK",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lazydfu/version",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["1.19.x"],
+                "url": "https://modrinth.com/mod/lazydfu/version/0.1.3",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/lazydfu/version",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Voyager",
+        "description": "Fixes a rare CME (ConcurrentModificationException) when using java 11+",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.x", "1.15.x", "1.16.x"],
+                "url": "https://github.com/modmuss50/Voyager/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/modmuss50/Voyager/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "Force Port",
+        "description": "A fabric mod which forces the port of the \"open to lan\" feature to be 25565.",
+        "category": ["fabric", "legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14+"],
+                "build": "1.1.0",
+                "url": "https://github.com/DuncanRuns/Force-Port-Mod/releases/tag/v1.1.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/DuncanRuns/Force-Port-Mod/releases",
+                    "values": ["version"]
+                }
+            },
+            {
+                "versions": ["~1.13.2"],
+                "build": "1.1.0",
+                "url": "https://github.com/marinersfan824/Force-Port-Mod/releases/tag/v1.1.0",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/marinersfan824/Force-Port-Mod/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "TabFocus",
+        "description": "Implement button focus by press tab feature in Pre-1.14",
+        "category": ["legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.6.2", "1.7.10", "1.8.0", "1.8.9", "1.12.2", "1.13.2"],
+                "url": "https://github.com/RedLime/TabFocus/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                    "values": ["version", "mc_version"]
+                }
+            },
+            {
+                "versions": ["1.9.x", "1.10.x", "1.11.x"],
+                "url": "https://github.com/RedLime/TabFocus/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                    "values": ["version"],
+                    "format": "tab-focus-2.0.4\\+1.9_to_1.11.2.jar"
+                }
+            },
+            {
+                "versions": ["1.3.x", "1.4.x", "1.5.x"],
+                "url": "https://github.com/RedLime/TabFocus/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                    "values": ["version"],
+                    "format": "tab-focus-2.0.4\\+1.3_to_1.5.2.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "FabricProxy-Lite",
+        "description": "Support forward player data from \"Velocity\" proxy",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.16+"],
+                "url": "https://modrinth.com/mod/fabricproxy-lite/versions",
+                "resource": {
+                    "type": "modrinth_releases",
+                    "url": "https://api.modrinth.com/v2/project/fabricproxy-lite/version",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "LazyStronghold",
+        "description": "Generates stronghold locations on a seperate thread to speed up world generation",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.4", "1.15.2", "1.16.1"],
+                "build": "1.1.3",
+                "url": "https://github.com/Gregor0410/LazyStronghold/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases",
+                    "values": ["version", "mc_version"]
+                }
+            },
+            {
+                "versions": ["1.16.5", "1.17.1"],
+                "build": "1.1.2",
+                "url": "https://github.com/Gregor0410/LazyStronghold/releases/tag/v1.1.2",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "BiomeThreadLocalFix",
+        "description": "Fix Biome ThreadLocal Memory leak issue",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.16.5+"],
+                "build": "1.3",
+                "url": "https://github.com/RedLime/BiomeThreadLocalFix/releases/tag/1.3",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/BiomeThreadLocalFix/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "LegacyPlanarFog",
+        "description": "Make terrain fog rendering to planar",
+        "category": ["fabric", "legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["~1.14.4"],
+                "url": "https://github.com/RedLime/LegacyPlanarFog/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/LegacyPlanarFog/releases",
+                    "values": ["version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "StatsPerWorld",
+        "description": "Separation of achievements and statistics per world in Minecraft Pre-1.7",
+        "category": ["legacy-fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.6.4"],
+                "build": "1.1",
+                "url": "https://github.com/RedLime/StatsPerWorld/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/StatsPerWorld/releases",
+                    "values": ["version"],
+                    "format": "StatsPerWorld-1.1\\+1.6.x.jar"
+                }
+            },
+            {
+                "versions": ["1.3.2", "1.4.7", "1.5.2"],
+                "build": "1.1",
+                "url": "https://github.com/RedLime/StatsPerWorld/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/StatsPerWorld/releases",
+                    "values": ["version"],
+                    "format": "StatsPerWorld-1.1\\+1.3.x-1.5.x.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "SleepBackground",
+        "description": "Improve performance when Minecraft is in the background with config",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.19.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.19.x.jar"
+                }
+            },
+            {
+                "versions": ["1.16.x", "1.17.x", "1.18.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.16.x-1.18.x.jar"
+                }
+            },
+            {
+                "versions": ["1.15.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.15.x.jar"
+                }
+            },
+            {
+                "versions": ["1.14.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.14.x.jar"
+                }
+            },
+            {
+                "versions": ["1.13.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.13.x.jar"
+                }
+            },
+            {
+                "versions": ["1.12.x", "1.11.x", "1.10.x", "1.9.x", "1.8.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+                }
+            },
+            {
+                "versions": ["1.7.x"],
+                "url": "https://github.com/RedLime/SleepBackground/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/RedLime/SleepBackground/releases",
+                    "values": ["version"],
+                    "format": "sleepbackground-3.8-1.7.x.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["Dynamic FPS"]
+    },
+    {
+        "name": "antiresourcereload",
+        "description": "Caches datapack and server resources to make world creation faster",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.13.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.14.4"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.14.4/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.14.4/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.15.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.1/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.5"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.5/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.5/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.17.1", "1.18.1"],
+                "build": "1.0.0",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases",
+                    "values": [],
+                    "format": "antiresourcereload-1.17.1-1.0.0.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "StandardSettings",
+        "description": "Defaults settings to a standard set by the player when creating a new World for macros",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.7.10", "1.8.0", "1.8.9", "1.9.4", "1.10.2", "1.11.2", "1.12.2", "1.13.2", "1.14.4", "1.15.2", "1.16.1", "1.16.5", "1.17.x", "1.18.x", "1.19.0", "20w14infinite"],
+                "url": "https://github.com/KingContaria/StandardSettings/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/KingContaria/StandardSettings/releases",
+                    "values": ["version", "mc_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": []
+    },
+    {
+        "name": "extra-options",
+        "description": "Adds the 1.17 options of a monochrome logo, reduced distortion effects and reduced fov effects",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.x", "1.15.x", "1.16.1"],
+                "url": "https://github.com/VoidXWalker/extra-options/releases/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/VoidXWalker/extra-options/releases",
+                    "values": ["version", "mc_major_version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": [],
+        "warn": "You may only use this mod if medically necessary, <b>and</b> if you have permission from the moderation team <b>before</b> submitting any run with it."
+    },
+    {
+        "name": "set-spawn-mod",
+        "description": "Set your spawnpoint to specified coordinates during set seed runs",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.6.4"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.7.10"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.8.x"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.9.x", "1.10.x", "1.11.x", "1.12.x"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.15.2"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.16.5"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.5/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.5/releases",
+                    "values": ["mc_version", "version"]
+                }
+            },
+            {
+                "versions": ["1.17.1"],
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases",
+                    "values": ["mc_version", "version"]
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["WorldPreview"],
+        "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs."
+    },
+    {
+        "name": "ChunkCacher",
+        "description": "Caches chunks up to before features stage for set seed",
+        "category": ["fabric"],
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ["1.14.4", "1.15.2"],
+                "build": "1.0.0",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases",
+                    "values": [],
+                    "format": "chunkcacher-1.14-1.15.2-2.0.0.jar"
+                }
+            },
+            {
+                "versions": ["1.16.1", "1.16.5", "1.17.1"],
+                "build": "1.0.0",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases",
+                    "values": [],
+                    "format": "chunkcacher-1.16-1.17.1-2.0.0.jar"
+                }
+            },
+            {
+                "versions": ["1.18.2"],
+                "build": "1.0.0",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases/tag/latest",
+                "resource": {
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
+                    "values": [],
+                    "format": "chunkcacher-1.18-1.18.2-3.0.0.jar"
+                }
+            }
+        ],
+        "advanced": [],
+        "incompatible": ["WorldPreview", "LazyStronghold"],
+        "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs."
+    }
+]

@@ -1,0 +1,203 @@
+[
+    {
+        "name": "OptiFabric",
+        "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your [mods] folder.",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Sodium",
+        "description": "Modern rendering engine and client-side optimization mod for Minecraft",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Starlight",
+        "description": "Rewrites the light engine to fix lighting performance and lighting errors",
+        "incompatible": [
+            "Phosphor"
+        ],
+        "versions": []
+    },
+    {
+        "name": "Phosphor",
+        "description": "Improve the performance of Minecraft's lighting engine while fixing many bugs",
+        "incompatible": [
+            "Starlight"
+        ],
+        "versions": []
+    },
+    {
+        "name": "Lithium",
+        "description": "No-compromises game logic/server optimization mod",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Krypton",
+        "description": "Optimizes the Minecraft networking stack and entity tracker.\n<b>Note!</b> It could be cause issues for some macros.",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Dynamic FPS",
+        "description": "Improve performance when Minecraft is in the background",
+        "incompatible": [
+            "SleepBackground"
+        ],
+        "versions": [
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://cdn.discordapp.com/attachments/816880312415027280/926260415900561408/dynamic-fps-2.0.4-but-different.jar",
+                "filename": [
+                    "dynamic-fps-2.0.4-but-different.jar"
+                ]
+            },
+            {
+                "buildVersion": "0.1",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://cdn.discordapp.com/attachments/830250875376107542/880559489735086100/dynamic-menu-fps-0.1.jar",
+                "filename": [
+                    "dynamic-menu-fps-0.1.jar"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ServerSideRNG",
+        "description": "Helps to ensure the legitimacy of Minecraft Speedruns",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "SpeedRunIGT",
+        "description": "In-game Timer for Minecraft Speedrun",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Atum",
+        "description": "Automatically reset random and set seeds",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Fast Reset",
+        "description": "Skip saving the world when leaving the world to faster reset.",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Anchiale",
+        "description": "Skip saving the world when leaving the world to faster reset but for Pre 1.9",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "WorldPreview",
+        "description": "Draws a preview of the world on the loading screen during chunk generation.",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "LazyDFU",
+        "description": "Makes the initialization of DataFixerUpper \"lazy\", making the game start more quickly",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Voyager",
+        "description": "Fixes a rare CME (ConcurrentModificationException) when using java 11+",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "Force Port",
+        "description": "A fabric mod which forces the port of the \"open to lan\" feature to be 25565.",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "TabFocus",
+        "description": "Implement button focus by press tab feature in Pre-1.14",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "FabricProxy-Lite",
+        "description": "Support forward player data from \"Velocity\" proxy",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "LazyStronghold",
+        "description": "Generates stronghold locations on a seperate thread to speed up world generation",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "BiomeThreadLocalFix",
+        "description": "Fix Biome ThreadLocal Memory leak issue",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "LegacyPlanarFog",
+        "description": "Make terrain fog rendering to planar",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "StatsPerWorld",
+        "description": "Separation of achievements and statistics per world in Minecraft Pre-1.7",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "SleepBackground",
+        "description": "Improve performance when Minecraft is in the background with config",
+        "incompatible": [
+            "Dynamic FPS"
+        ],
+        "versions": []
+    },
+    {
+        "name": "antiresourcereload",
+        "description": "Caches datapack and server resources to make world creation faster",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "StandardSettings",
+        "description": "Defaults settings to a standard set by the player when creating a new World for macros",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "extra-options",
+        "description": "Adds the 1.17 options of a monochrome logo, reduced distortion effects and reduced fov effects",
+        "warn": "You may only use this mod if medically necessary, <b>and</b> if you have permission from the moderation team <b>before</b> submitting any run with it.",
+        "incompatible": [],
+        "versions": []
+    },
+    {
+        "name": "set-spawn-mod",
+        "description": "Set your spawnpoint to specified coordinates during set seed runs",
+        "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs.",
+        "incompatible": [
+            "WorldPreview"
+        ],
+        "versions": []
+    },
+    {
+        "name": "ChunkCacher",
+        "description": "Caches chunks up to before features stage for set seed",
+        "warn": "This mod is allowed ONLY for Set Seed or Set Seed Glitchless runs.",
+        "incompatible": [
+            "WorldPreview",
+            "LazyStronghold"
+        ],
+        "versions": []
+    }
+]

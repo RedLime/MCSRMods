@@ -1,0 +1,10 @@
+name: 'MCSRModsMetaGenerator'
+author: 'RedLime'
+description: 'mods version json auto generator'
+inputs:
+  github_token: 
+    description: 'github token'
+    required: true
+runs:
+  using: 'node16'
+  main: 'app.js'
