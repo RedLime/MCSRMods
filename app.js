@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const fetch = require('node-fetch');
 const { Octokit } = require('octokit');
 
 const fs = require('fs');
@@ -48,6 +49,7 @@ const refreshMods = async () => {
                     repo: rawUrl[2],
                     per_page: 30
                 });
+                core.error(githubData);
             }
             if (resourceData.type == 'curseforge_files') continue;
             if (resourceData.type == 'direct') {
