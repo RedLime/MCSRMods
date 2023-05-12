@@ -50,7 +50,7 @@ const refreshMods = async () => {
                     repo: rawUrl[2],
                     per_page: 30
                 });
-                core.error(githubData);
+                githubData = githubData.data;
             }
             if (resourceData.type == 'curseforge_files') continue;
             if (resourceData.type == 'direct') {
