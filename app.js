@@ -33,6 +33,7 @@ const refreshMods = async () => {
             description: modData.description,
             warn: modData.warn,
             incompatible: modData.incompatible,
+            readme: modData.readme,
             versions: []
         };
 
