@@ -1,0 +1,30 @@
+name: Build Pages
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update latest meta file
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./
+          github_token: ${{ secrets.GITHUB_TOKEN }}
