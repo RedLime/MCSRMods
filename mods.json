@@ -1092,7 +1092,8 @@
             }
         ],
         "advanced": [],
-        "incompatible": []
+        "incompatible": [],
+        "warn": "If you are using this mod for the first time, please read the <a herf='https://github.com/KingContaria/StandardSettings/blob/1.16.1/README.md' target='_blank'>README</a> before use it."
     },
     {
         "name": "extra-options",
