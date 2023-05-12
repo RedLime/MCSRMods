@@ -3,13 +3,99 @@
         "name": "OptiFabric",
         "description": "Can be used to run OptiFine on the Fabric Loader\n<b>Note!</b> Optifine should be included in your [mods] folder.",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/Sjouwer/OptiFabric-1.14.4-Updated/releases/download/v1.0.0/optifabric-origins-1.0.0-mc1.14.4.jar",
+                "filename": "optifabric-origins-1.0.0-mc1.14.4.jar"
+            },
+            {
+                "buildVersion": "1.0.4",
+                "targetVersion": "1.10.2",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.4%2B1.10.2.jar",
+                "filename": "optifabric-1.0.4+1.10.2.jar"
+            },
+            {
+                "buildVersion": "1.0.4",
+                "targetVersion": "1.11.2",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.4%2B1.11.2.jar",
+                "filename": "optifabric-1.0.4+1.11.2.jar"
+            },
+            {
+                "buildVersion": "1.0.4",
+                "targetVersion": "1.12.2",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.4%2B1.12.2.jar",
+                "filename": "optifabric-1.0.4+1.12.2.jar"
+            },
+            {
+                "buildVersion": "1.0.4",
+                "targetVersion": "1.9.4",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.4%2B1.9.4.jar",
+                "filename": "optifabric-1.0.4+1.9.4.jar"
+            },
+            {
+                "buildVersion": "1.0.5",
+                "targetVersion": "1.7.10",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.5%2B1.7.10.jar",
+                "filename": "optifabric-1.0.5+1.7.10.jar"
+            },
+            {
+                "buildVersion": "1.0.5",
+                "targetVersion": "1.7.2",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.5%2B1.7.2.jar",
+                "filename": "optifabric-1.0.5+1.7.2.jar"
+            },
+            {
+                "buildVersion": "1.0.5",
+                "targetVersion": "1.7.4",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.5%2B1.7.4.jar",
+                "filename": "optifabric-1.0.5+1.7.4.jar"
+            },
+            {
+                "buildVersion": "1.0.5",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.5%2B1.8.0.jar",
+                "filename": "optifabric-1.0.5+1.8.0.jar"
+            },
+            {
+                "buildVersion": "1.0.5",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.5/optifabric-1.0.5%2B1.8.9.jar",
+                "filename": "optifabric-1.0.5+1.8.9.jar"
+            },
+            {
+                "buildVersion": "1.0.2",
+                "targetVersion": "1.7",
+                "downloadUrl": "https://github.com/RedLime/OptiFabric-Pre1.14/releases/download/1.0.2/optifabric-1.0.2%2B1.7.jar",
+                "filename": "optifabric-1.0.2+1.7.jar"
+            }
+        ]
     },
     {
         "name": "Sodium",
         "description": "Modern rendering engine and client-side optimization mod for Minecraft",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "0.1.1",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/mrmangohands/sodium-fabric/releases/download/mc1.15.2-0.1.1-SNAPSHOT%2B2020-12-10/sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT%2B2020-12-10.jar",
+                "filename": "sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT+2020-12-10.jar"
+            },
+            {
+                "buildVersion": "v1",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.1/releases/download/v1/sodium-1.16.1-v1.jar",
+                "filename": "sodium-1.16.1-v1.jar"
+            },
+            {
+                "buildVersion": "0.2.0",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/CaffeineMC/sodium-fabric/releases/download/mc1.16.5-0.2.0/sodium-fabric-mc1.16.5-0.2.0%2Bbuild.4.jar",
+                "filename": "sodium-fabric-mc1.16.5-0.2.0+build.4.jar"
+            }
+        ]
     },
     {
         "name": "Starlight",
@@ -17,7 +103,62 @@
         "incompatible": [
             "Phosphor"
         ],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.x",
+                "downloadUrl": "https://github.com/dariasc/Starlight/releases/download/1.15/1.0.0-alpha/starlight-1.15-1.0.0-alpha.jar",
+                "filename": "starlight-1.15-1.0.0-alpha.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.17.x",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC3/starlight-1.0.0-RC3%2Bfabric.1.17.x.jar",
+                "filename": "starlight-1.0.0-RC3+fabric.1.17.x.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.x",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC2/starlight-fabric-1.0.0-RC2-1.16.x.jar",
+                "filename": "starlight-fabric-1.0.0-RC2-1.16.x.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "21w11a",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC1/starlight-fabric-1.0.0-RC1-21w11a.jar",
+                "filename": "starlight-fabric-1.0.0-RC1-21w11a.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "21w13a",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC1/starlight-fabric-1.0.0-RC1-21w13a.jar",
+                "filename": "starlight-fabric-1.0.0-RC1-21w13a.jar"
+            },
+            {
+                "buildVersion": "0.0.3",
+                "targetVersion": "20w51a",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-20w51a.jar",
+                "filename": "starlight-fabric-0.0.3-20w51a.jar"
+            },
+            {
+                "buildVersion": "0.0.3",
+                "targetVersion": "21w03a",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-21w03a.jar",
+                "filename": "starlight-fabric-0.0.3-21w03a.jar"
+            },
+            {
+                "buildVersion": "0.0.3",
+                "targetVersion": "21w06a",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-21w06a.jar",
+                "filename": "starlight-fabric-0.0.3-21w06a.jar"
+            },
+            {
+                "buildVersion": "0.0.3",
+                "targetVersion": "21w10a",
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-21w10a.jar",
+                "filename": "starlight-fabric-0.0.3-21w10a.jar"
+            }
+        ]
     },
     {
         "name": "Phosphor",
@@ -25,19 +166,88 @@
         "incompatible": [
             "Starlight"
         ],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "0.5.2",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.15.2-v0.5.2/phosphor-fabric-mc1.15.2-0.5.2%2Bbuild.6.jar",
+                "filename": "phosphor-fabric-mc1.15.2-0.5.2+build.6.jar"
+            },
+            {
+                "buildVersion": "0.7.2",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/mrmangohands/phosphor-fabric/releases/download/mc1.16.1-0.7.2/phosphor-1.16.1-backport-fabric-0.7.2.jar",
+                "filename": "phosphor-1.16.1-backport-fabric-0.7.2.jar"
+            },
+            {
+                "buildVersion": "0.8.0",
+                "targetVersion": "1.17.x",
+                "downloadUrl": "https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.17.x-0.8.0/phosphor-fabric-mc1.17.x-0.8.0.jar",
+                "filename": "phosphor-fabric-mc1.17.x-0.8.0.jar"
+            },
+            {
+                "buildVersion": "0.8.1",
+                "targetVersion": "1.18.x",
+                "downloadUrl": "https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.18.x-0.8.1/phosphor-fabric-mc1.18.x-0.8.1.jar",
+                "filename": "phosphor-fabric-mc1.18.x-0.8.1.jar"
+            },
+            {
+                "buildVersion": "0.8.1",
+                "targetVersion": "1.19.x",
+                "downloadUrl": "https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.19.x-0.8.1/phosphor-fabric-mc1.19.x-0.8.1.jar",
+                "filename": "phosphor-fabric-mc1.19.x-0.8.1.jar"
+            }
+        ]
     },
     {
         "name": "Lithium",
         "description": "No-compromises game logic/server optimization mod",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "0.6.6",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/mrmangohands/lithium-fabric/releases/download/mc1.16.1-0.6.6/lithium-1.16.1-backport-fabric-0.6.6.jar",
+                "filename": "lithium-1.16.1-backport-fabric-0.6.6.jar"
+            }
+        ]
     },
     {
         "name": "Krypton",
         "description": "Optimizes the Minecraft networking stack and entity tracker.\n<b>Note!</b> It could be cause issues for some macros.",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "0.1.3",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/mrmangohands/krypton/releases/download/mc1.16.1-0.1.3-SNAPSHOT%2B2021-02-20/krypton-1.16.1-backport-0.1.3-SNAPSHOT%2B2021-02-20.jar",
+                "filename": "krypton-1.16.1-backport-0.1.3-SNAPSHOT+2021-02-20.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/astei/krypton/releases/download/0.1.2/krypton-0.1.2.jar",
+                "filename": "krypton-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.4",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/astei/krypton/releases/download/v0.1.4/krypton-0.1.4.jar",
+                "filename": "krypton-0.1.4.jar"
+            },
+            {
+                "buildVersion": "0.1.9",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://github.com/astei/krypton/releases/download/v0.1.9/krypton-0.1.9.jar",
+                "filename": "krypton-0.1.9.jar"
+            },
+            {
+                "buildVersion": "0.2.1",
+                "targetVersion": "1.19.x",
+                "downloadUrl": "https://github.com/astei/krypton/releases/download/v0.2.1/krypton-0.2.1.jar",
+                "filename": "krypton-0.2.1.jar"
+            }
+        ]
     },
     {
         "name": "Dynamic FPS",
@@ -46,6 +256,24 @@
             "SleepBackground"
         ],
         "versions": [
+            {
+                "buildVersion": "1.0.1",
+                "targetVersion": "1.7.x",
+                "downloadUrl": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/download/1.0.1/mangodfps-1.0.1-SNAPSHOT%2B1.7.x.jar",
+                "filename": "mangodfps-1.0.1-SNAPSHOT+1.7.x.jar"
+            },
+            {
+                "buildVersion": "1.0.1",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/download/1.0.1/mangodfps-1.0.1-SNAPSHOT%2B1.8.9.jar",
+                "filename": "mangodfps-1.0.1-SNAPSHOT+1.8.9.jar"
+            },
+            {
+                "buildVersion": "1.0.2",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/download/1.0.1/mangodfps-1.0.2-SNAPSHOT%2B1.8.jar",
+                "filename": "mangodfps-1.0.2-SNAPSHOT+1.8.jar"
+            },
             {
                 "buildVersion": "2.0.4",
                 "targetVersion": "1.15.2",
@@ -68,37 +296,289 @@
         "name": "ServerSideRNG",
         "description": "Helps to ensure the legitimacy of Minecraft Speedruns",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "9.0.0",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases/download/v9/serverSideRNG-9.0.0.jar",
+                "filename": "serverSideRNG-9.0.0.jar"
+            }
+        ]
     },
     {
         "name": "SpeedRunIGT",
         "description": "In-game Timer for Minecraft Speedrun",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "13.4.1",
+                "targetVersion": "20w14infinite",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.4.1%2B20w14infinite.jar",
+                "filename": "SpeedRunIGT-13.4.1+20w14infinite.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.10.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.10.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.10.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.11.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.11.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.11.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.12.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.12.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.12.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.13.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.13.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.13.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.14.4.jar",
+                "filename": "SpeedRunIGT-13.5+1.14.4.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.15.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.15.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.16.1.jar",
+                "filename": "SpeedRunIGT-13.5+1.16.1.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.16.5.jar",
+                "filename": "SpeedRunIGT-13.5+1.16.5.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.17.1.jar",
+                "filename": "SpeedRunIGT-13.5+1.17.1.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.17",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.17.jar",
+                "filename": "SpeedRunIGT-13.5+1.17.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.18.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.18.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.19.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.19.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.19.4.jar",
+                "filename": "SpeedRunIGT-13.5+1.19.4.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.7.10",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.7.10.jar",
+                "filename": "SpeedRunIGT-13.5+1.7.10.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.7.2",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.7.2.jar",
+                "filename": "SpeedRunIGT-13.5+1.7.2.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.7.4",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.7.4.jar",
+                "filename": "SpeedRunIGT-13.5+1.7.4.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.8.9.jar",
+                "filename": "SpeedRunIGT-13.5+1.8.9.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.8.jar",
+                "filename": "SpeedRunIGT-13.5+1.8.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "1.9.4",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B1.9.4.jar",
+                "filename": "SpeedRunIGT-13.5+1.9.4.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "15w14a",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B15w14a.jar",
+                "filename": "SpeedRunIGT-13.5+15w14a.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "22w13oneblockatatime",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B22w13oneblockatatime.jar",
+                "filename": "SpeedRunIGT-13.5+22w13oneblockatatime.jar"
+            },
+            {
+                "buildVersion": "13.5",
+                "targetVersion": "23w13a_or_b",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.5/SpeedRunIGT-13.5%2B23w13a_or_b.jar",
+                "filename": "SpeedRunIGT-13.5+23w13a_or_b.jar"
+            },
+            {
+                "buildVersion": "13.3",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.3/SpeedRunIGT-13.3%2B1.19.3.jar",
+                "filename": "SpeedRunIGT-13.3+1.19.3.jar"
+            },
+            {
+                "buildVersion": "10.16",
+                "targetVersion": "1.19.0",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/10.17/SpeedRunIGT-10.16%2B1.19.jar",
+                "filename": "SpeedRunIGT-10.16+1.19.jar"
+            },
+            {
+                "buildVersion": "10.17",
+                "targetVersion": "1.19.1",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/10.17/SpeedRunIGT-10.17%2B1.19.1.jar",
+                "filename": "SpeedRunIGT-10.17+1.19.1.jar"
+            },
+            {
+                "buildVersion": "7.2.1",
+                "targetVersion": "1.18.1",
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/7.2/SpeedRunIGT-7.2.1%2B1.18.1.jar",
+                "filename": "SpeedRunIGT-7.2.1+1.18.1.jar"
+            }
+        ]
     },
     {
         "name": "Atum",
         "description": "Automatically reset random and set seeds",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "4.0.0",
+                "targetVersion": "1.7.10",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.7.10/releases/download/v4/atum-1.7.10-4.0.0.jar",
+                "filename": "atum-1.7.10-4.0.0.jar"
+            },
+            {
+                "buildVersion": "4.0.0",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8/releases/download/v4/atum-1.8-4.0.0.jar",
+                "filename": "atum-1.8-4.0.0.jar"
+            },
+            {
+                "buildVersion": "5.0.0",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases/download/v5/atum-1.8.9-5.0.0.jar",
+                "filename": "atum-1.8.9-5.0.0.jar"
+            }
+        ]
     },
     {
         "name": "Fast Reset",
         "description": "Skip saving the world when leaving the world to faster reset.",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/marieee824/FastReset/releases/download/1.14.4/fast_reset-1.14.4-1.0.0.jar",
+                "filename": "fast_reset-1.14.4-1.0.0.jar"
+            },
+            {
+                "buildVersion": "v1.0.1",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/jan-leila/FastReset/releases/download/1.17.1-1.0.1/fast-reset-1.17.1-v1.0.1.jar",
+                "filename": "fast-reset-1.17.1-v1.0.1.jar"
+            },
+            {
+                "buildVersion": "v1.0.0",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/jan-leila/FastReset/releases/download/1.16.5-1.0.0/fast-reset-1.16.5-v1.0.0.jar",
+                "filename": "fast-reset-1.16.5-v1.0.0.jar"
+            },
+            {
+                "buildVersion": "v1.4.1",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/jan-leila/FastReset/releases/download/1.16.1-1.4.1/fast-reset-1.16.1-v1.4.1.jar",
+                "filename": "fast-reset-1.16.1-v1.4.1.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/jan-leila/FastReset/releases/download/1.15.2-1.0.0/fast_reset-1.15.2-1.0.0.jar",
+                "filename": "fast_reset-1.15.2-1.0.0.jar"
+            }
+        ]
     },
     {
         "name": "Anchiale",
         "description": "Skip saving the world when leaving the world to faster reset but for Pre 1.9",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.8.9",
+                "targetVersion": "3.0.0",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases/download/v3/anchiale-1.8.9-3.0.0.jar",
+                "filename": "anchiale-1.8.9-3.0.0.jar"
+            },
+            {
+                "buildVersion": "1.8.9",
+                "targetVersion": "2.0.0",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases/download/v2/anchiale-1.8.9-2.0.0.jar",
+                "filename": "anchiale-1.8.9-2.0.0.jar"
+            }
+        ]
     },
     {
         "name": "WorldPreview",
         "description": "Draws a preview of the world on the loading screen during chunk generation.",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "4.0.0",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases/download/v4/worldpreview-1.16.1-4.0.0.jar",
+                "filename": "worldpreview-1.16.1-4.0.0.jar"
+            },
+            {
+                "buildVersion": "3.0.0",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.15.2/releases/download/latest/worldpreview-1.15.2-3.0.0.jar",
+                "filename": "worldpreview-1.15.2-3.0.0.jar"
+            },
+            {
+                "buildVersion": "4.0.0",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases/download/v4/worldpreview-1.8.9-4.0.0.jar",
+                "filename": "worldpreview-1.8.9-4.0.0.jar"
+            }
+        ]
     },
     {
         "name": "LazyDFU",
@@ -110,19 +590,124 @@
         "name": "Voyager",
         "description": "Fixes a rare CME (ConcurrentModificationException) when using java 11+",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.x",
+                "downloadUrl": "https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar",
+                "filename": "voyager-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.x",
+                "downloadUrl": "https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar",
+                "filename": "voyager-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.x",
+                "downloadUrl": "https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar",
+                "filename": "voyager-1.0.0.jar"
+            }
+        ]
     },
     {
         "name": "Force Port",
         "description": "A fabric mod which forces the port of the \"open to lan\" feature to be 25565.",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.1.0",
+                "targetVersion": "1.14+",
+                "downloadUrl": "https://github.com/DuncanRuns/Force-Port-Mod/releases/download/v1.1.0/forceport-1.1.0.jar",
+                "filename": "forceport-1.1.0.jar"
+            },
+            {
+                "buildVersion": "1.0.1",
+                "targetVersion": "~1.13.2",
+                "downloadUrl": "https://github.com/marieee824/Force-Port-Mod/releases/download/v1.1.0/forceport-mod-1.0.1.jar",
+                "filename": "forceport-mod-1.0.1.jar"
+            }
+        ]
     },
     {
         "name": "TabFocus",
         "description": "Implement button focus by press tab feature in Pre-1.14",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.12.2",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.12.2.jar",
+                "filename": "tab-focus-2.0.4+1.12.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.13.2",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.13.2.jar",
+                "filename": "tab-focus-2.0.4+1.13.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.3",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.3_to_1.5.2.jar",
+                "filename": "tab-focus-2.0.4+1.3_to_1.5.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.6.2",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.6.2.jar",
+                "filename": "tab-focus-2.0.4+1.6.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.7.10",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.7.10.jar",
+                "filename": "tab-focus-2.0.4+1.7.10.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.8.9.jar",
+                "filename": "tab-focus-2.0.4+1.8.9.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.8.jar",
+                "filename": "tab-focus-2.0.4+1.8.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.9",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.9_to_1.11.2.jar",
+                "filename": "tab-focus-2.0.4+1.9_to_1.11.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.10.x",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.9_to_1.11.2.jar",
+                "filename": "tab-focus-2.0.4+1.9_to_1.11.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.11.x",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.9_to_1.11.2.jar",
+                "filename": "tab-focus-2.0.4+1.9_to_1.11.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.4.x",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.3_to_1.5.2.jar",
+                "filename": "tab-focus-2.0.4+1.3_to_1.5.2.jar"
+            },
+            {
+                "buildVersion": "2.0.4",
+                "targetVersion": "1.5.x",
+                "downloadUrl": "https://github.com/RedLime/TabFocus/releases/download/2.0.4/tab-focus-2.0.4%2B1.3_to_1.5.2.jar",
+                "filename": "tab-focus-2.0.4+1.3_to_1.5.2.jar"
+            }
+        ]
     },
     {
         "name": "FabricProxy-Lite",
@@ -134,25 +719,95 @@
         "name": "LazyStronghold",
         "description": "Generates stronghold locations on a seperate thread to speed up world generation",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/Gregor0410/LazyStronghold/releases/download/v1.1.3/lazystronghold-1.1.3%2B1.14.4.jar",
+                "filename": "lazystronghold-1.1.3+1.14.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/Gregor0410/LazyStronghold/releases/download/v1.1.3/lazystronghold-1.1.3%2B1.15.2.jar",
+                "filename": "lazystronghold-1.1.3+1.15.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Gregor0410/LazyStronghold/releases/download/v1.1.3/lazystronghold-1.1.3%2B1.16.1.jar",
+                "filename": "lazystronghold-1.1.3+1.16.1.jar"
+            },
+            {
+                "buildVersion": "1.1.2",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/Gregor0410/LazyStronghold/releases/download/v1.1.2/lazystronghold-1.1.2%2B1.16.5.jar",
+                "filename": "lazystronghold-1.1.2+1.16.5.jar"
+            },
+            {
+                "buildVersion": "1.1.2",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/Gregor0410/LazyStronghold/releases/download/v1.1.2/lazystronghold-1.1.2%2B1.17.1.jar",
+                "filename": "lazystronghold-1.1.2+1.17.1.jar"
+            }
+        ]
     },
     {
         "name": "BiomeThreadLocalFix",
         "description": "Fix Biome ThreadLocal Memory leak issue",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.3",
+                "targetVersion": "1.16.5+",
+                "downloadUrl": "https://github.com/RedLime/BiomeThreadLocalFix/releases/download/1.3/BiomeThreadLocalFix-1.3.jar",
+                "filename": "BiomeThreadLocalFix-1.3.jar"
+            }
+        ]
     },
     {
         "name": "LegacyPlanarFog",
         "description": "Make terrain fog rendering to planar",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.3",
+                "targetVersion": "~1.14.4",
+                "downloadUrl": "https://github.com/RedLime/LegacyPlanarFog/releases/download/1.3/z-buffer-fog-1.3.jar",
+                "filename": "z-buffer-fog-1.3.jar"
+            }
+        ]
     },
     {
         "name": "StatsPerWorld",
         "description": "Separation of achievements and statistics per world in Minecraft Pre-1.7",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.1",
+                "targetVersion": "1.6.4",
+                "downloadUrl": "https://github.com/RedLime/StatsPerWorld/releases/download/1.1/StatsPerWorld-1.1%2B1.6.x.jar",
+                "filename": "StatsPerWorld-1.1+1.6.x.jar"
+            },
+            {
+                "buildVersion": "1.1",
+                "targetVersion": "1.3.2",
+                "downloadUrl": "https://github.com/RedLime/StatsPerWorld/releases/download/1.1/StatsPerWorld-1.1%2B1.3.x-1.5.x.jar",
+                "filename": "StatsPerWorld-1.1+1.3.x-1.5.x.jar"
+            },
+            {
+                "buildVersion": "1.1",
+                "targetVersion": "1.4.7",
+                "downloadUrl": "https://github.com/RedLime/StatsPerWorld/releases/download/1.1/StatsPerWorld-1.1%2B1.3.x-1.5.x.jar",
+                "filename": "StatsPerWorld-1.1+1.3.x-1.5.x.jar"
+            },
+            {
+                "buildVersion": "1.1",
+                "targetVersion": "1.5.2",
+                "downloadUrl": "https://github.com/RedLime/StatsPerWorld/releases/download/1.1/StatsPerWorld-1.1%2B1.3.x-1.5.x.jar",
+                "filename": "StatsPerWorld-1.1+1.3.x-1.5.x.jar"
+            }
+        ]
     },
     {
         "name": "SleepBackground",
@@ -160,26 +815,264 @@
         "incompatible": [
             "Dynamic FPS"
         ],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.19.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.19.x.jar",
+                "filename": "sleepbackground-3.8-1.19.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.16.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.16.x-1.18.x.jar",
+                "filename": "sleepbackground-3.8-1.16.x-1.18.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.17.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.16.x-1.18.x.jar",
+                "filename": "sleepbackground-3.8-1.16.x-1.18.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.18.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.16.x-1.18.x.jar",
+                "filename": "sleepbackground-3.8-1.16.x-1.18.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.15.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.15.x.jar",
+                "filename": "sleepbackground-3.8-1.15.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.14.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.14.x.jar",
+                "filename": "sleepbackground-3.8-1.14.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.13.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.13.x.jar",
+                "filename": "sleepbackground-3.8-1.13.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.12.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.11.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.10.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.9.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.8.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.7.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.7.x.jar",
+                "filename": "sleepbackground-3.8-1.7.x.jar"
+            }
+        ]
     },
     {
         "name": "antiresourcereload",
         "description": "Caches datapack and server resources to make world creation faster",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.13.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases/download/v1/antiresourcereload-1.13.2-1.0.0.jar",
+                "filename": "antiresourcereload-1.13.2-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.14.4/releases/download/v1/antiresourcereload-1.14.4-1.0.0.jar",
+                "filename": "antiresourcereload-1.14.4-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases/download/v1/antiresourcereload-1.15.2-1.0.0.jar",
+                "filename": "antiresourcereload-1.15.2-1.0.0.jar"
+            },
+            {
+                "buildVersion": "4.0.0",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.1/releases/download/v4/antiresourcereload-1.16.1-4.0.0.jar",
+                "filename": "antiresourcereload-1.16.1-4.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.5/releases/download/v1/antiresourcereload-1.16.5-1.0.0.jar",
+                "filename": "antiresourcereload-1.16.5-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases/download/v1/antiresourcereload-1.17.1-1.0.0.jar",
+                "filename": "antiresourcereload-1.17.1-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.18.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases/download/v1/antiresourcereload-1.17.1-1.0.0.jar",
+                "filename": "antiresourcereload-1.17.1-1.0.0.jar"
+            }
+        ]
     },
     {
         "name": "StandardSettings",
         "description": "Defaults settings to a standard set by the player when creating a new World for macros",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.10.2",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.10.2.jar",
+                "filename": "standardsettings-1.2.2+1.10.2.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.11.2",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.11.2.jar",
+                "filename": "standardsettings-1.2.2+1.11.2.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.12.2",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.12.2.jar",
+                "filename": "standardsettings-1.2.2+1.12.2.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.13.2",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.13.2.jar",
+                "filename": "standardsettings-1.2.2+1.13.2.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.14.4.jar",
+                "filename": "standardsettings-1.2.2+1.14.4.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.15.x.jar",
+                "filename": "standardsettings-1.2.2+1.15.x.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.16.1.jar",
+                "filename": "standardsettings-1.2.2+1.16.1.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.16.5.jar",
+                "filename": "standardsettings-1.2.2+1.16.5.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.17.x",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.17.x.jar",
+                "filename": "standardsettings-1.2.2+1.17.x.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.18.x",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.18.x.jar",
+                "filename": "standardsettings-1.2.2+1.18.x.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.19.0",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.19.x.jar",
+                "filename": "standardsettings-1.2.2+1.19.x.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.7.10",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.7.x.jar",
+                "filename": "standardsettings-1.2.2+1.7.x.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.8.0.jar",
+                "filename": "standardsettings-1.2.2+1.8.0.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.8.9.jar",
+                "filename": "standardsettings-1.2.2+1.8.9.jar"
+            },
+            {
+                "buildVersion": "1.2.2",
+                "targetVersion": "1.9.4",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B1.9.4.jar",
+                "filename": "standardsettings-1.2.2+1.9.4.jar"
+            },
+            {
+                "buildVersion": "1.2.1.1",
+                "targetVersion": "20w14infinite",
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.1.1/standardsettings-1.2.1.1%2B20w14infinite.jar",
+                "filename": "standardsettings-1.2.1.1+20w14infinite.jar"
+            }
+        ]
     },
     {
         "name": "extra-options",
         "description": "Adds the 1.17 options of a monochrome logo, reduced distortion effects and reduced fov effects",
         "warn": "You may only use this mod if medically necessary, <b>and</b> if you have permission from the moderation team <b>before</b> submitting any run with it.",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.x",
+                "downloadUrl": "https://github.com/VoidXWalker/extra-options/releases/download/v1.0.0/extra-options-1.0.0-1.14.jar",
+                "filename": "extra-options-1.0.0-1.14.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.x",
+                "downloadUrl": "https://github.com/VoidXWalker/extra-options/releases/download/v1.0.0/extra-options-1.0.0-1.15.jar",
+                "filename": "extra-options-1.0.0-1.15.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/VoidXWalker/extra-options/releases/download/v1.0.0/extra-options-1.0.0-1.16.jar",
+                "filename": "extra-options-1.0.0-1.16.jar"
+            }
+        ]
     },
     {
         "name": "set-spawn-mod",
@@ -188,7 +1081,56 @@
         "incompatible": [
             "WorldPreview"
         ],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "3.0.0",
+                "targetVersion": "1.6.4",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases/download/v3/setspawn-1.6.4-3.0.0.jar",
+                "filename": "setspawn-1.6.4-3.0.0.jar"
+            },
+            {
+                "buildVersion": "4.0.0",
+                "targetVersion": "1.7.10",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases/download/v4/setspawn-1.7.10-4.0.0.jar",
+                "filename": "setspawn-1.7.10-4.0.0.jar"
+            },
+            {
+                "buildVersion": "2.0.0",
+                "targetVersion": "1.8.x",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases/download/v2/setspawnmod-1.8.x-2.0.0.jar",
+                "filename": "setspawnmod-1.8.x-2.0.0.jar"
+            },
+            {
+                "buildVersion": "1.12.2",
+                "targetVersion": "1.9.x",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases/download/v2/setspawnmod-1.9-1.12.2-2.0.0.jar",
+                "filename": "setspawnmod-1.9-1.12.2-2.0.0.jar"
+            },
+            {
+                "buildVersion": "v2",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases/download/v2/setspawnmod-1.15.2-v2.jar",
+                "filename": "setspawnmod-1.15.2-v2.jar"
+            },
+            {
+                "buildVersion": "v2",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases/download/v2/setspawnmod-1.16.1-v2.jar",
+                "filename": "setspawnmod-1.16.1-v2.jar"
+            },
+            {
+                "buildVersion": "v2",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.5/releases/download/v2/setspawnmod-1.16.5-v2.jar",
+                "filename": "setspawnmod-1.16.5-v2.jar"
+            },
+            {
+                "buildVersion": "v2",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases/download/v2/setspawnmod-1.17.1-v2.jar",
+                "filename": "setspawnmod-1.17.1-v2.jar"
+            }
+        ]
     },
     {
         "name": "ChunkCacher",
@@ -198,6 +1140,43 @@
             "WorldPreview",
             "LazyStronghold"
         ],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases/download/v2/chunkcacher-1.14-1.15.2-2.0.0.jar",
+                "filename": "chunkcacher-1.14-1.15.2-2.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases/download/v2/chunkcacher-1.14-1.15.2-2.0.0.jar",
+                "filename": "chunkcacher-1.14-1.15.2-2.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/v2/chunkcacher-1.16-1.17.1-2.0.0.jar",
+                "filename": "chunkcacher-1.16-1.17.1-2.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/v2/chunkcacher-1.16-1.17.1-2.0.0.jar",
+                "filename": "chunkcacher-1.16-1.17.1-2.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/v2/chunkcacher-1.16-1.17.1-2.0.0.jar",
+                "filename": "chunkcacher-1.16-1.17.1-2.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases/download/v3/chunkcacher-1.18-1.18.2-3.0.0.jar",
+                "filename": "chunkcacher-1.18-1.18.2-3.0.0.jar"
+            }
+        ]
     }
 ]
