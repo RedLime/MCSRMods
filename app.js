@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const { Octokit } = require('octokit');
 
 const fs = require('fs');
 const path = require('path');
@@ -11,6 +12,9 @@ async function sleep(ms) {
 }
 const refreshMods = async () => {
     const githubToken = core.getInput('github_token');
+    const octokit = new Octokit({ 
+        auth: githubToken,
+    });
 
     const newResourceList = [];
 
@@ -35,8 +39,15 @@ const refreshMods = async () => {
 
             const resourceData = downloadData.resource;
             const targetHeader = {};
+            let githubData = null;
             if (resourceData.type == 'github_releases') {
-                targetHeader["Authorization"] = "Bearer "+githubToken;
+                const rawUrl = resourceData.url.replace('https://api.github.com/', '').split('/');
+
+                githubData = await octokit.request('GET /repos/{owner}/{repo}/releases', {
+                    owner: rawUrl[1],
+                    repo: rawUrl[2],
+                    per_page: 30
+                });
             }
             if (resourceData.type == 'curseforge_files') continue;
             if (resourceData.type == 'direct') {
@@ -52,7 +63,7 @@ const refreshMods = async () => {
             }
 
             try {
-                const result = urlCaches[resourceData.url] || await (await fetch(resourceData.url, { headers: targetHeader })).json();
+                const result = githubData || urlCaches[resourceData.url] || await (await fetch(resourceData.url, { headers: targetHeader })).json();
                 urlCaches[resourceData.url] = result;
     
                 const resources = convertResourceInfo(result, downloadData); 
