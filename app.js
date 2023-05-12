@@ -11,6 +11,8 @@ async function sleep(ms) {
     return new Promise((r) => setTimeout(r, ms));
 }
 const refreshMods = async () => {
+    const fetch = await import('node-fetch');
+
     const githubToken = core.getInput('github_token');
     const octokit = new Octokit({ 
         auth: githubToken,
@@ -48,6 +50,7 @@ const refreshMods = async () => {
                     repo: rawUrl[2],
                     per_page: 30
                 });
+                core.error(githubData);
             }
             if (resourceData.type == 'curseforge_files') continue;
             if (resourceData.type == 'direct') {
