@@ -1093,7 +1093,7 @@
         ],
         "advanced": [],
         "incompatible": [],
-        "default": false
+        "readme": "https://github.com/KingContaria/StandardSettings/blob/1.16.1/README.md"
     },
     {
         "name": "extra-options",
