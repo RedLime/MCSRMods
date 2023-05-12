@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const fetch = require('node-fetch');
 const { Octokit } = require('octokit');
 
 const fs = require('fs');
@@ -12,6 +11,8 @@ async function sleep(ms) {
     return new Promise((r) => setTimeout(r, ms));
 }
 const refreshMods = async () => {
+    const fetch = await import('node-fetch');
+
     const githubToken = core.getInput('github_token');
     const octokit = new Octokit({ 
         auth: githubToken,
