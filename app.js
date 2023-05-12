@@ -1,8 +1,9 @@
-const core = require('@actions/core');
-const { Octokit } = require('octokit');
+import core from '@actions/core';
+import fetch from 'node-fetch';
+import { Octokit } from 'octokit';
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const VERSION_PARSING = /((\d+\.)+(\d+\.)?(\d+|x)|(v(\d+\.)?(\d+\.)?(\d+|x)))/g;
 const SNAPSHOT_PARSING = /\d+w+\d+\w*/;
@@ -11,7 +12,6 @@ async function sleep(ms) {
     return new Promise((r) => setTimeout(r, ms));
 }
 const refreshMods = async () => {
-    const fetch = await import('node-fetch');
 
     const githubToken = core.getInput('github_token');
     const octokit = new Octokit({ 
