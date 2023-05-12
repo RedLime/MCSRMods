@@ -83,6 +83,7 @@ const refreshMods = async () => {
                     }
                 }
             } catch (e) {
+                core.error(e);
                 core.info("[ModCheck] Failed a load "+resourceData.url);
             }
             sleep(2000);
