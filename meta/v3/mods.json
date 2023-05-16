@@ -78,10 +78,10 @@
         "incompatible": [],
         "versions": [
             {
-                "buildVersion": "0.1.1",
+                "buildVersion": "v1",
                 "targetVersion": "1.15.2",
-                "downloadUrl": "https://github.com/mrmangohands/sodium-fabric/releases/download/mc1.15.2-0.1.1-SNAPSHOT%2B2020-12-10/sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT%2B2020-12-10.jar",
-                "filename": "sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT+2020-12-10.jar"
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.15.2/releases/download/v1/sodium-1.15.2-v1.jar",
+                "filename": "sodium-1.15.2-v1.jar"
             },
             {
                 "buildVersion": "v1",
@@ -90,34 +90,10 @@
                 "filename": "sodium-1.16.1-v1.jar"
             },
             {
-                "buildVersion": "0.2.0",
-                "targetVersion": "1.16.5",
-                "downloadUrl": "https://github.com/CaffeineMC/sodium-fabric/releases/download/mc1.16.5-0.2.0/sodium-fabric-mc1.16.5-0.2.0%2Bbuild.4.jar",
-                "filename": "sodium-fabric-mc1.16.5-0.2.0+build.4.jar"
-            },
-            {
                 "buildVersion": "0.4.10",
-                "targetVersion": "1.19.4",
+                "targetVersion": "1.19.x",
                 "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/b4hTi3mo/sodium-fabric-mc1.19.4-0.4.10%2Bbuild.24.jar",
                 "filename": "sodium-fabric-mc1.19.4-0.4.10+build.24.jar"
-            },
-            {
-                "buildVersion": "0.4.9",
-                "targetVersion": "1.19.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/idtcaIVT/sodium-fabric-mc1.19.3-0.4.9%2Bbuild.23.jar",
-                "filename": "sodium-fabric-mc1.19.3-0.4.9+build.23.jar"
-            },
-            {
-                "buildVersion": "0.4.4",
-                "targetVersion": "1.19.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/rAfhHfow/sodium-fabric-mc1.19.2-0.4.4%2Bbuild.18.jar",
-                "filename": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar"
-            },
-            {
-                "buildVersion": "0.4.2",
-                "targetVersion": "1.19",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.19-0.4.2/sodium-fabric-mc1.19-0.4.2%2Bbuild.16.jar",
-                "filename": "sodium-fabric-mc1.19-0.4.2+build.16.jar"
             },
             {
                 "buildVersion": "0.4.1",
@@ -142,6 +118,12 @@
                 "targetVersion": "1.18",
                 "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18-0.40-alpha5/sodium-fabric-mc1.18-0.4.0-alpha5%2Bbuild.9.jar",
                 "filename": "sodium-fabric-mc1.18-0.4.0-alpha5+build.9.jar"
+            },
+            {
+                "buildVersion": "0.2.0",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.16.5-0.2.0/sodium-fabric-mc1.16.5-0.2.0%2Bbuild.4.jar",
+                "filename": "sodium-fabric-mc1.16.5-0.2.0+build.4.jar"
             },
             {
                 "buildVersion": "0.1.0",

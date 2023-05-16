@@ -103,13 +103,11 @@
         "downloads": [
             {
                 "versions": ["1.15.2"],
-                "build": "0.1.1",
-                "url": "https://github.com/mrmangohands/sodium-fabric/releases/tag/mc1.15.2-0.1.1-SNAPSHOT%2B2020-12-10",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.15.2/releases/latest",
                 "resource": {
                     "type": "github_releases",
-                    "url": "https://api.github.com/repos/mrmangohands/sodium-fabric/releases",
-                    "values": ["mc_version", "version"],
-                    "format": "sodium-1.15.2-backport-fabric-0.1.1-SNAPSHOT\\+2020-12-10.jar"
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.15.2/releases",
+                    "values": ["mc_version", "version"]
                 }
             },
             {
@@ -123,38 +121,34 @@
             },
             {
                 "versions": ["1.16.5"],
-                "build": "0.2.0",
-                "url": "https://github.com/CaffeineMC/sodium-fabric/releases/tag/mc1.16.5-0.2.0",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.5/releases/latest",
                 "resource": {
                     "type": "github_releases",
-                    "url": "https://api.github.com/repos/CaffeineMC/sodium-fabric/releases",
-                    "values": ["mc_version", "version"],
-                    "format": "sodium-fabric-mc1.16.5-0.2.0\\+build.4.jar"
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.5/releases",
+                    "values": ["mc_version", "version"]
                 }
             },
             {
                 "versions": ["1.17.1"],
-                "build": "0.3.4",
-                "url": "https://modrinth.com/mod/sodium/version/Fz37KqRh",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.17.1/releases/latest",
                 "resource": {
-                    "type": "modrinth_releases",
-                    "url": "https://api.modrinth.com/v2/project/sodium/version",
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.17.1/releases",
                     "values": ["mc_version", "version"]
                 }
             },
             {
                 "versions": ["1.18.2"],
-                "build": "0.4.1",
-                "url": "https://modrinth.com/mod/sodium/version/mc1.18.2-0.4.1",
+                "url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.18.2/releases/latest",
                 "resource": {
-                    "type": "modrinth_releases",
-                    "url": "https://api.modrinth.com/v2/project/sodium/version",
+                    "type": "github_releases",
+                    "url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.18.2/releases",
                     "values": ["mc_version", "version"]
                 }
             },
             {
                 "versions": ["1.19.x"],
-                "url": "https://modrinth.com/mod/sodium/version/mc1.19.2-0.4.4",
+                "url": "https://modrinth.com/mod/sodium/versions/",
                 "resource": {
                     "type": "modrinth_releases",
                     "url": "https://api.modrinth.com/v2/project/sodium/version",
