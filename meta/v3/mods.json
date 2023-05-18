@@ -462,7 +462,7 @@
             {
                 "buildVersion": "9.0.0",
                 "targetVersion": "1.16.1",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases/download/latest/serverSideRNG-9.0.0.jar",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases/download/v9/serverSideRNG-9.0.0.jar",
                 "filename": "serverSideRNG-9.0.0.jar"
             }
         ]
