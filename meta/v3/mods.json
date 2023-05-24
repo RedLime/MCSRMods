@@ -5,8 +5,14 @@
         "incompatible": [],
         "versions": [
             {
-                "buildVersion": "1.1.0",
+                "buildVersion": "1.0.0",
                 "targetVersion": "1.14.4",
+                "downloadUrl": "https://github.com/Sjouwer/OptiFabric-Origins/releases/download/v1.0.0/optifabric-origins-1.0.0-mc1.14.4.jar",
+                "filename": "optifabric-origins-1.0.0-mc1.14.4.jar"
+            },
+            {
+                "buildVersion": "1.1.0",
+                "targetVersion": "1.15.2",
                 "downloadUrl": "https://github.com/Sjouwer/OptiFabric-Origins/releases/download/v1.0.0/optifabric-origins-1.1.0-mc1.15.2.jar",
                 "filename": "optifabric-origins-1.1.0-mc1.15.2.jar"
             },
