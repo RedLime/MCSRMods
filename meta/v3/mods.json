@@ -617,22 +617,16 @@
                 "filename": "SpeedRunIGT-13.6+23w13a_or_b.jar"
             },
             {
-                "buildVersion": "13.3",
+                "buildVersion": "13.2",
                 "targetVersion": "1.19.3",
-                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.3/SpeedRunIGT-13.3%2B1.19.3.jar",
-                "filename": "SpeedRunIGT-13.3+1.19.3.jar"
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.2/SpeedRunIGT-13.2%2B1.19.3.jar",
+                "filename": "SpeedRunIGT-13.2+1.19.3.jar"
             },
             {
-                "buildVersion": "10.16",
+                "buildVersion": "10.9",
                 "targetVersion": "1.19.0",
-                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/10.17/SpeedRunIGT-10.16%2B1.19.jar",
-                "filename": "SpeedRunIGT-10.16+1.19.jar"
-            },
-            {
-                "buildVersion": "10.17",
-                "targetVersion": "1.19.1",
-                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/10.17/SpeedRunIGT-10.17%2B1.19.1.jar",
-                "filename": "SpeedRunIGT-10.17+1.19.1.jar"
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/10.9/SpeedRunIGT-10.9%2B1.19.jar",
+                "filename": "SpeedRunIGT-10.9+1.19.jar"
             },
             {
                 "buildVersion": "7.2.1",
