@@ -148,7 +148,7 @@
                 }
             },
             {
-                "versions": ["1.20.0", "1.19.4"],
+                "versions": ["1.19.4", "1.20.0"],
                 "url": "https://modrinth.com/mod/sodium/versions/",
                 "resource": {
                     "type": "modrinth_releases",
