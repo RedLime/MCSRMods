@@ -96,22 +96,70 @@
                 "filename": "sodium-1.16.1-v1.jar"
             },
             {
-                "buildVersion": "v1",
-                "targetVersion": "1.16.5",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.5/releases/download/v1/sodium-1.16.5-v1.jar",
-                "filename": "sodium-1.16.5-v1.jar"
+                "buildVersion": "0.4.10",
+                "targetVersion": "1.20.0",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/vgceLbdH/sodium-fabric-mc1.20-0.4.10%2Bbuild.27.jar",
+                "filename": "sodium-fabric-mc1.20-0.4.10+build.27.jar"
             },
             {
-                "buildVersion": "v1",
-                "targetVersion": "1.17.1",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.17.1/releases/download/v1/sodium-1.17.1-v1.jar",
-                "filename": "sodium-1.17.1-v1.jar"
+                "buildVersion": "0.4.10",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/b4hTi3mo/sodium-fabric-mc1.19.4-0.4.10%2Bbuild.24.jar",
+                "filename": "sodium-fabric-mc1.19.4-0.4.10+build.24.jar"
             },
             {
-                "buildVersion": "v1",
+                "buildVersion": "0.4.9",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/idtcaIVT/sodium-fabric-mc1.19.3-0.4.9%2Bbuild.23.jar",
+                "filename": "sodium-fabric-mc1.19.3-0.4.9+build.23.jar"
+            },
+            {
+                "buildVersion": "0.4.4",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/rAfhHfow/sodium-fabric-mc1.19.2-0.4.4%2Bbuild.18.jar",
+                "filename": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar"
+            },
+            {
+                "buildVersion": "0.4.2",
+                "targetVersion": "1.19",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.19-0.4.2/sodium-fabric-mc1.19-0.4.2%2Bbuild.16.jar",
+                "filename": "sodium-fabric-mc1.19-0.4.2+build.16.jar"
+            },
+            {
+                "buildVersion": "0.4.1",
                 "targetVersion": "1.18.2",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.18.2/releases/download/v1/sodium-1.18.2-v1.jar",
-                "filename": "sodium-1.18.2-v1.jar"
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.2-0.4.1/sodium-fabric-mc1.18.2-0.4.1%2Bbuild.15.jar",
+                "filename": "sodium-fabric-mc1.18.2-0.4.1+build.15.jar"
+            },
+            {
+                "buildVersion": "0.4.0",
+                "targetVersion": "1.18.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.1-0.4.0-alpha6/sodium-fabric-mc1.18.1-0.4.0-alpha6%2Bbuild.14.jar",
+                "filename": "sodium-fabric-mc1.18.1-0.4.0-alpha6+build.14.jar"
+            },
+            {
+                "buildVersion": "0.3.4",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.17.1-0.3.4/sodium-fabric-mc1.17.1-0.3.4%2Bbuild.13.jar",
+                "filename": "sodium-fabric-mc1.17.1-0.3.4+build.13.jar"
+            },
+            {
+                "buildVersion": "0.4.0",
+                "targetVersion": "1.18",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18-0.40-alpha5/sodium-fabric-mc1.18-0.4.0-alpha5%2Bbuild.9.jar",
+                "filename": "sodium-fabric-mc1.18-0.4.0-alpha5+build.9.jar"
+            },
+            {
+                "buildVersion": "0.2.0",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.16.5-0.2.0/sodium-fabric-mc1.16.5-0.2.0%2Bbuild.4.jar",
+                "filename": "sodium-fabric-mc1.16.5-0.2.0+build.4.jar"
+            },
+            {
+                "buildVersion": "0.1.0",
+                "targetVersion": "1.16.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.16.3-0.1.0/sodium-fabric-mc1.16.3-0.1.0.jar",
+                "filename": "sodium-fabric-mc1.16.3-0.1.0.jar"
             }
         ]
     },
@@ -175,6 +223,42 @@
                 "targetVersion": "21w10a",
                 "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-21w10a.jar",
                 "filename": "starlight-fabric-0.0.3-21w10a.jar"
+            },
+            {
+                "buildVersion": "1.0.2",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.0.2%2B1.18.2/starlight-1.0.2%2Bfabric.89b8d9f.jar",
+                "filename": "starlight-1.0.2+fabric.89b8d9f.jar"
+            },
+            {
+                "buildVersion": "1.1.1",
+                "targetVersion": "1.19",
+                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
+                "filename": "starlight-1.1.1+fabric.ae22326.jar"
+            },
+            {
+                "buildVersion": "1.1.1",
+                "targetVersion": "1.19.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
+                "filename": "starlight-1.1.1+fabric.ae22326.jar"
+            },
+            {
+                "buildVersion": "1.1.1",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
+                "filename": "starlight-1.1.1+fabric.ae22326.jar"
+            },
+            {
+                "buildVersion": "1.1.1",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
+                "filename": "starlight-1.1.1+fabric.ae22326.jar"
+            },
+            {
+                "buildVersion": "1.1.1",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
+                "filename": "starlight-1.1.1+fabric.ae22326.jar"
             }
         ]
     },
@@ -227,6 +311,84 @@
                 "targetVersion": "1.16.1",
                 "downloadUrl": "https://github.com/mrmangohands/lithium-fabric/releases/download/mc1.16.1-0.6.6/lithium-1.16.1-backport-fabric-0.6.6.jar",
                 "filename": "lithium-1.16.1-backport-fabric-0.6.6.jar"
+            },
+            {
+                "buildVersion": "0.11.2",
+                "targetVersion": "1.20",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/2KMrj5c1/lithium-fabric-mc1.20-0.11.2.jar",
+                "filename": "lithium-fabric-mc1.20-0.11.2.jar"
+            },
+            {
+                "buildVersion": "0.11.1",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/14hWYkog/lithium-fabric-mc1.19.4-0.11.1.jar",
+                "filename": "lithium-fabric-mc1.19.4-0.11.1.jar"
+            },
+            {
+                "buildVersion": "0.11.1",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/53cwYYb1/lithium-fabric-mc1.19.3-0.11.1.jar",
+                "filename": "lithium-fabric-mc1.19.3-0.11.1.jar"
+            },
+            {
+                "buildVersion": "0.11.1",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/m6sVgAi6/lithium-fabric-mc1.19.2-0.11.1.jar",
+                "filename": "lithium-fabric-mc1.19.2-0.11.1.jar"
+            },
+            {
+                "buildVersion": "0.10.3",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/ALnv7Npy/lithium-fabric-mc1.18.2-0.10.3.jar",
+                "filename": "lithium-fabric-mc1.18.2-0.10.3.jar"
+            },
+            {
+                "buildVersion": "0.8.3",
+                "targetVersion": "1.19.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.19.1-0.8.3/lithium-fabric-mc1.19.1-0.8.3.jar",
+                "filename": "lithium-fabric-mc1.19.1-0.8.3.jar"
+            },
+            {
+                "buildVersion": "0.8.1",
+                "targetVersion": "1.19",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.19-0.8.1/lithium-fabric-mc1.19-0.8.1.jar",
+                "filename": "lithium-fabric-mc1.19-0.8.1.jar"
+            },
+            {
+                "buildVersion": "0.7.8",
+                "targetVersion": "1.18.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.8/lithium-fabric-mc1.18.1-0.7.8.jar",
+                "filename": "lithium-fabric-mc1.18.1-0.7.8.jar"
+            },
+            {
+                "buildVersion": "0.7.6",
+                "targetVersion": "1.18",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18-0.7.6-rc1/lithium-fabric-mc1.18-0.7.6-rc1.jar",
+                "filename": "lithium-fabric-mc1.18-0.7.6-rc1.jar"
+            },
+            {
+                "buildVersion": "0.7.5",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.17.1-0.7.5/lithium-fabric-mc1.17.1-0.7.5.jar",
+                "filename": "lithium-fabric-mc1.17.1-0.7.5.jar"
+            },
+            {
+                "buildVersion": "0.7.2",
+                "targetVersion": "1.17",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.17-0.7.2/lithium-fabric-mc1.17-0.7.2.jar",
+                "filename": "lithium-fabric-mc1.17-0.7.2.jar"
+            },
+            {
+                "buildVersion": "0.6.6",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.16.5-0.6.6/lithium-fabric-mc1.16.5-0.6.6.jar",
+                "filename": "lithium-fabric-mc1.16.5-0.6.6.jar"
+            },
+            {
+                "buildVersion": "0.6.0",
+                "targetVersion": "1.16.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.16.4-0.6.0/lithium-fabric-mc1.16.4-0.6.0.jar",
+                "filename": "lithium-fabric-mc1.16.4-0.6.0.jar"
             }
         ]
     },
@@ -496,6 +658,96 @@
                 "targetVersion": "1.8.9",
                 "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases/download/v5/atum-1.8.9-5.0.0.jar",
                 "filename": "atum-1.8.9-5.0.0.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "22w13oneblockatatime",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/A45jqJ8j/atum-1.1.3%2B22w13oneblockatatime.jar",
+                "filename": "atum-1.1.3+22w13oneblockatatime.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "20w14infinite",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/gTuJcytY/atum-1.1.3%2B20w14infinite.jar",
+                "filename": "atum-1.1.3+20w14infinite.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "15w14a",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/4EGjmsns/atum-1.1.3%2B15w14a.jar",
+                "filename": "atum-1.1.3+15w14a.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.9.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/Pi9ulf2s/atum-1.1.3%2B1.9.4.jar",
+                "filename": "atum-1.1.3+1.9.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/HZVNOw4q/atum-1.1.3%2B1.19.2.jar",
+                "filename": "atum-1.1.3+1.19.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/RF2t8L2C/atum-1.1.3%2B1.18.2.jar",
+                "filename": "atum-1.1.3+1.18.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/tGr3P1je/atum-1.1.3%2B1.17.1.jar",
+                "filename": "atum-1.1.3+1.17.1.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/TilzJg8a/atum-1.1.3%2B1.16.5.jar",
+                "filename": "atum-1.1.3+1.16.5.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/9lusl9ec/atum-1.1.3%2B1.16.1.jar",
+                "filename": "atum-1.1.3+1.16.1.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/wivMNeFa/atum-1.1.3%2B1.15.2.jar",
+                "filename": "atum-1.1.3+1.15.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/9kgyhSnQ/atum-1.1.3%2B1.14.4.jar",
+                "filename": "atum-1.1.3+1.14.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.13.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/bIDYzzVo/atum-1.1.3%2B1.13.2.jar",
+                "filename": "atum-1.1.3+1.13.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.12.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/UY9uOFyC/atum-1.1.3%2B1.12.2.jar",
+                "filename": "atum-1.1.3+1.12.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.11.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/6OkTnX3V/atum-1.1.3%2B1.11.2.jar",
+                "filename": "atum-1.1.3+1.11.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.10.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/bKxSEmF7/atum-1.1.3%2B1.10.2.jar",
+                "filename": "atum-1.1.3+1.10.2.jar"
             }
         ]
     },
@@ -577,6 +829,30 @@
                 "targetVersion": "1.8.9",
                 "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases/download/v4/worldpreview-1.8.9-4.0.0.jar",
                 "filename": "worldpreview-1.8.9-4.0.0.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "20w14infinite",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/JFDkTCa2/worldpreview-2.3.3%2B20w14infinite.jar",
+                "filename": "worldpreview-2.3.3+20w14infinite.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/zL0kzULM/worldpreview-2.3.3%2B1.17.1.jar",
+                "filename": "worldpreview-2.3.3+1.17.1.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/vBgg8ZKY/worldpreview-2.3.3%2B1.16.5.jar",
+                "filename": "worldpreview-2.3.3+1.16.5.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/dMOmyR71/worldpreview-2.3.3%2B1.14.4.jar",
+                "filename": "worldpreview-2.3.3+1.14.4.jar"
             }
         ]
     },
@@ -584,7 +860,146 @@
         "name": "LazyDFU",
         "description": "Makes the initialization of DataFixerUpper \"lazy\", making the game start more quickly",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.15",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.15.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.17",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.18",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.18.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.3",
+                "targetVersion": "1.19",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+                "filename": "lazydfu-0.1.3.jar"
+            },
+            {
+                "buildVersion": "0.1.3",
+                "targetVersion": "1.19.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+                "filename": "lazydfu-0.1.3.jar"
+            },
+            {
+                "buildVersion": "0.1.3",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+                "filename": "lazydfu-0.1.3.jar"
+            },
+            {
+                "buildVersion": "0.1.3",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+                "filename": "lazydfu-0.1.3.jar"
+            }
+        ]
     },
     {
         "name": "Voyager",
@@ -713,7 +1128,68 @@
         "name": "FabricProxy-Lite",
         "description": "Support forward player data from \"Velocity\" proxy",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "2.5.0",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/HuwRuGXe/FabricProxy-Lite-2.5.0.jar",
+                "filename": "FabricProxy-Lite-2.5.0.jar"
+            },
+            {
+                "buildVersion": "2.5.0",
+                "targetVersion": "1.20",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/HuwRuGXe/FabricProxy-Lite-2.5.0.jar",
+                "filename": "FabricProxy-Lite-2.5.0.jar"
+            },
+            {
+                "buildVersion": "2.4.0",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/rCwKd1CC/FabricProxy-Lite-2.4.0.jar",
+                "filename": "FabricProxy-Lite-2.4.0.jar"
+            },
+            {
+                "buildVersion": "2.3.0",
+                "targetVersion": "1.19.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.3.0/FabricProxy-Lite-2.3.0.jar",
+                "filename": "FabricProxy-Lite-2.3.0.jar"
+            },
+            {
+                "buildVersion": "2.3.0",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.3.0/FabricProxy-Lite-2.3.0.jar",
+                "filename": "FabricProxy-Lite-2.3.0.jar"
+            },
+            {
+                "buildVersion": "2.1.1",
+                "targetVersion": "1.19",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.1.1/FabricProxy-Lite-2.1.1.jar",
+                "filename": "FabricProxy-Lite-2.1.1.jar"
+            },
+            {
+                "buildVersion": "1.1.6",
+                "targetVersion": "1.18",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.6/FabricProxy-Lite-1.1.6.jar",
+                "filename": "FabricProxy-Lite-1.1.6.jar"
+            },
+            {
+                "buildVersion": "1.1.5",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.5/FabricProxy-Lite-1.1.5.jar",
+                "filename": "FabricProxy-Lite-1.1.5.jar"
+            },
+            {
+                "buildVersion": "1.1.4",
+                "targetVersion": "1.17",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.4/FabricProxy-Lite-1.1.4.jar",
+                "filename": "FabricProxy-Lite-1.1.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.3/FabricProxy-Lite-1.1.3.jar",
+                "filename": "FabricProxy-Lite-1.1.3.jar"
+            }
+        ]
     },
     {
         "name": "LazyStronghold",
