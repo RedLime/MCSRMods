@@ -313,6 +313,12 @@
                 "filename": "lithium-1.16.1-backport-fabric-0.6.6.jar"
             },
             {
+                "buildVersion": "0.11.2",
+                "targetVersion": "1.20",
+                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/2KMrj5c1/lithium-fabric-mc1.20-0.11.2.jar",
+                "filename": "lithium-fabric-mc1.20-0.11.2.jar"
+            },
+            {
                 "buildVersion": "0.11.1",
                 "targetVersion": "1.19.4",
                 "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/14hWYkog/lithium-fabric-mc1.19.4-0.11.1.jar",
