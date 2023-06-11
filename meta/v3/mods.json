@@ -90,10 +90,10 @@
                 "filename": "sodium-1.15.2-v1.jar"
             },
             {
-                "buildVersion": "v1",
+                "buildVersion": "v2",
                 "targetVersion": "1.16.1",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.1/releases/download/v1/sodium-1.16.1-v1.jar",
-                "filename": "sodium-1.16.1-v1.jar"
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.1/releases/download/v2/sodium-1.16.1-v2.jar",
+                "filename": "sodium-1.16.1-v2.jar"
             },
             {
                 "buildVersion": "0.4.10",
