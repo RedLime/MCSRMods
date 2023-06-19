@@ -23,6 +23,23 @@ $(document).ready(() => {
                 ALLOW_MODS.push(mod);
             }
             initPage();
+
+            console.log(JSON.stringify(ALLOW_MODS.map(mod => {
+                return {
+                    name: mod.name,
+                    description: mod.description,
+                    type: mod.type,
+                    downloads: mod.downloads.map(dl => {
+                        return {
+                            versions: dl.versions.join(", "),
+                            type: dl.resource.type.split("_")[0],
+                            page_url: dl.url,
+                            api_url: dl.resource.url
+                        }
+                    }),
+                    recommended: true
+                }
+            })));
         });
 })
 
