@@ -1004,6 +1004,12 @@
                 "targetVersion": "1.19.3",
                 "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
                 "filename": "lazydfu-0.1.3.jar"
+            },
+            {
+                "buildVersion": "0.1.3",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
+                "filename": "lazydfu-0.1.3.jar"
             }
         ]
     },
