@@ -2,13 +2,14 @@ package com.redlimerl.mcsr.mod;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.redlimerl.mcsr.helper.HttpRequestHelper;
+import com.redlimerl.mcsr.helper.VersionPredicateHelper;
 import com.redlimerl.mcsr.mod.abst.ModAsset;
 import com.redlimerl.mcsr.mod.abst.ModDownload;
 import com.redlimerl.mcsr.mod.abst.ModInfo;
-import com.redlimerl.mcsr.helper.HttpRequestHelper;
-import com.redlimerl.mcsr.helper.VersionPredicateHelper;
 
-import java.util.*;
+import java.util.List;
+import java.util.SortedSet;
 
 public class Loader extends ModInfo {
 

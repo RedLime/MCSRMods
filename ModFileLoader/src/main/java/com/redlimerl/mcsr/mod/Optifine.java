@@ -1,10 +1,10 @@
 package com.redlimerl.mcsr.mod;
 
+import com.redlimerl.mcsr.helper.HttpRequestHelper;
 import com.redlimerl.mcsr.helper.VersionPredicateHelper;
 import com.redlimerl.mcsr.mod.abst.ModAsset;
 import com.redlimerl.mcsr.mod.abst.ModDownload;
 import com.redlimerl.mcsr.mod.abst.ModInfo;
-import com.redlimerl.mcsr.helper.HttpRequestHelper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
