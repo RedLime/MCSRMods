@@ -88,7 +88,7 @@ public class FabricMod extends ModInfo {
                         fileData.get("size").getAsInt(),
                         download.getRules()
                 );
-                if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*")) continue;
+                if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*") || !VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion())) continue;
 
                 boolean add = this.hasVersionRange(modAsset);
                 if (add) list.add(modAsset);
@@ -164,7 +164,7 @@ public class FabricMod extends ModInfo {
                         fileName, downloadUrl, pageUrl,
                         sha1Hash, assetData.get("size").getAsInt(), download.getRules()
                 );
-                if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*")) continue;
+                if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*") || !VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion())) continue;
 
                 boolean add = this.hasVersionRange(modAsset);
                 if (add) list.add(modAsset);

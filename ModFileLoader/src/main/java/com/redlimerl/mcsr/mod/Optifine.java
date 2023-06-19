@@ -38,7 +38,8 @@ public class Optifine extends ModInfo {
                                 VersionPredicateHelper.getFromStringArray(new String[] { modName[0] }),
                                 "OptiFine_" + fileName, null, downloadUrl
                         );
-                        treeSet.add(modAsset);
+                        if (VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion()))
+                            treeSet.add(modAsset);
                     }
                 }
             } else {
@@ -50,7 +51,8 @@ public class Optifine extends ModInfo {
                         VersionPredicateHelper.getFromStringArray(new String[] { modName[0] }),
                         "OptiFine_" + fileName, null, downloadUrl
                 );
-                treeSet.add(modAsset);
+                if (VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion()))
+                    treeSet.add(modAsset);
             }
         }
     }

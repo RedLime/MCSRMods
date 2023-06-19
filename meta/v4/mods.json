@@ -57,7 +57,7 @@
                 "api_url": "http://optifine.net/adloadx?f=OptiFine_1.6.4_HD_U_D1.jar"
             },
             {
-                "versions": "<=1.13.2",
+                "versions": "<=1.14.4",
                 "type": "optifine",
                 "page_url": "https://optifine.net/downloads",
                 "api_url": "https://optifine.net/downloads"
