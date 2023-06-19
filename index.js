@@ -11,26 +11,12 @@ const typeOptions = {
     medical_issue: false
 }
 
-function getVersionCode(str) {
-    const version = str.split('.');
-    if (version.length > 1) {
-        return +version[1];
-    }
-    return 0;
-}
-
-function initPage() {
-    const params = new URLSearchParams(window.location.search);
-    activeVersion(params.has('version') ? getVersionCode(params.get('version')) : 16, true);
-}
-
 function initVersions() {
     const params = new URLSearchParams(window.location.search);
     let hasFirst = false;
     $('#game-versions').html(`<select id="game-versions-select" class="browser-default">${ALLOW_VERSIONS.map(version => {
-        const selected = (params.has('version') ? version.value == params.get('version') : !hasFirst);
-        if (!hasFirst) {
-            hasFirst = true;
+        const selected = (params.has('version') ? version.value == params.get('version') : typeOptions.version == null);
+        if (selected) {
             typeOptions.version = version.value;
         }
         return `<option value="${version.value}" ${selected ? 'selected' : ''}>${version.name}</option>`;
@@ -60,6 +46,8 @@ $(document).ready(() => {
                 for (const mod of json) {
                     ALLOW_MODS.push(mod);
                 }
+
+                initResources();
 
                 setInterval(() => {
                     let needRefresh = false;
