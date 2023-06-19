@@ -10,6 +10,7 @@ public final class ModDownload {
     private final String api_url;
     private final List<ModRule> rules;
     private final boolean latest_only;
+    private final List<VersionOverride> override;
 
     public ModDownload(String versions, String type, String page_url, String api_url, List<ModRule> rules, boolean latest_only) {
         this.versions = versions;
@@ -18,6 +19,7 @@ public final class ModDownload {
         this.api_url = api_url;
         this.rules = rules;
         this.latest_only = latest_only;
+        this.override = null;
     }
 
     public String[] getVersions() {
@@ -42,6 +44,10 @@ public final class ModDownload {
 
     public boolean isRequireLatestOnly() {
         return latest_only;
+    }
+
+    public List<VersionOverride> getOverride() {
+        return override;
     }
 
     @Override

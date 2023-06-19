@@ -14,15 +14,11 @@ public class OptionalVersionPredicate<T extends VersionPredicate & VersionPredic
 
     private final List<T> predicates;
 
+    @SuppressWarnings("unchecked")
     public OptionalVersionPredicate(List<VersionPredicate> versionPredicates) {
         List<T> list = new ArrayList<>();
         for (VersionPredicate versionPredicate : versionPredicates) {
-            for (PredicateTerm term : versionPredicate.getTerms()) {
-                if (term instanceof VersionPredicate) {
-                    //noinspection unchecked
-                    list.add((T) term);
-                }
-            }
+            list.add((T) versionPredicate);
         }
         this.predicates = list;
     }

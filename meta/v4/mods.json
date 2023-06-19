@@ -19,7 +19,7 @@
         "type": "mod_loader",
         "downloads": [
             {
-                "versions": "<=1.13-",
+                "versions": "<=1.13.2",
                 "type": "fabric_meta",
                 "page_url": "https://legacyfabric.net/downloads.html",
                 "api_url": "https://meta.legacyfabric.net/v2/versions/loader"
@@ -28,12 +28,36 @@
         "recommended": true
     },
     {
-        "name": "Optifine",
+        "name": "OptiFine",
         "description": "Check the Optifine rules",
         "type": "optifine",
         "downloads": [
             {
-                "versions": "<=1.13-",
+                "versions": "1.3.2",
+                "type": "optifine_old",
+                "page_url": "http://optifine.net/adloadx?f=OptiFine_1.3.2_HD_U_B4.zip",
+                "api_url": "http://optifine.net/adloadx?f=OptiFine_1.3.2_HD_U_B4.zip"
+            },
+            {
+                "versions": "1.4.6",
+                "type": "optifine_old",
+                "page_url": "http://optifine.net/adloadx?f=OptiFine_1.4.6_HD_U_D5.zip",
+                "api_url": "http://optifine.net/adloadx?f=OptiFine_1.4.6_HD_U_D5.zip"
+            },
+            {
+                "versions": "1.5.2",
+                "type": "optifine_old",
+                "page_url": "http://optifine.net/adloadx?f=OptiFine_1.5.2_HD_U_D5.zip",
+                "api_url": "http://optifine.net/adloadx?f=OptiFine_1.5.2_HD_U_D5.zip"
+            },
+            {
+                "versions": "1.6.4",
+                "type": "optifine_old",
+                "page_url": "http://optifine.net/adloadx?f=OptiFine_1.6.4_HD_U_D1.jar",
+                "api_url": "http://optifine.net/adloadx?f=OptiFine_1.6.4_HD_U_D1.jar"
+            },
+            {
+                "versions": "<=1.13.2",
                 "type": "optifine",
                 "page_url": "https://optifine.net/downloads",
                 "api_url": "https://optifine.net/downloads"
@@ -47,16 +71,23 @@
         "type": "fabric_mod",
         "downloads": [
             {
+                "versions": "<=1.13.2",
+                "type": "github",
+                "page_url": "https://github.com/RedLime/OptiFabric/releases",
+                "api_url": "https://api.github.com/repos/RedLime/OptiFabric/releases",
+                "override": [
+                    {
+                        "version": "1.0.5+1.8.9",
+                        "game_versions": "1.8.9"
+                    }
+                ],
+                "latest_only": true
+            },
+            {
                 "versions": "1.14.4",
                 "type": "github",
                 "page_url": "https://github.com/Sjouwer/OptiFabric-Origins/releases",
                 "api_url": "https://api.github.com/repos/Sjouwer/OptiFabric-Origins/releases"
-            },
-            {
-                "versions": "<=1.13-",
-                "type": "github",
-                "page_url": "https://github.com/RedLime/OptiFabric/releases",
-                "api_url": "https://api.github.com/repos/RedLime/OptiFabric/releases"
             }
         ],
         "incompatible": ["WorldPreview"],
@@ -81,8 +112,8 @@
                 "rules": [
                     {
                         "action": "disallow",
-                        "os": {
-                            "name": "osx"
+                        "properties": {
+                            "os": "osx"
                         }
                     }
                 ]
@@ -95,8 +126,8 @@
                 "rules": [
                     {
                         "action": "allow",
-                        "os": {
-                            "name": "osx"
+                        "properties": {
+                            "os": "osx"
                         }
                     }
                 ]
@@ -435,7 +466,14 @@
                 "versions": "<=1.13.2",
                 "type": "github",
                 "page_url": "https://github.com/RedLime/TabFocus/releases",
-                "api_url": "https://api.github.com/repos/RedLime/TabFocus/releases"
+                "api_url": "https://api.github.com/repos/RedLime/TabFocus/releases",
+                "override": [
+                    {
+                        "version": "2.0.4+1.9_to_1.11.2",
+                        "game_versions": ">=1.9- <=1.11.2"
+                    }
+                ],
+                "latest_only": true
             }
         ],
         "recommended": true
@@ -591,11 +629,11 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ">=1.14- <=1.16-",
+                "versions": ">=1.14- <=1.16.5",
                 "type": "github",
                 "page_url": "https://github.com/VoidXWalker/extra-options/releases",
                 "api_url": "https://api.github.com/repos/VoidXWalker/extra-options/releases",
-                "rules": [{"action": "allow", "condition": { "name": "medical_issue" } }]
+                "rules": [{"action": "allow", "properties": { "condition": "medical_issue" } }]
             }
         ],
         "recommended": false
@@ -610,56 +648,56 @@
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.7.10",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.8.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
-                "versions": ">=1.9- <=1.12-",
+                "versions": ">=1.9- <=1.12.2",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.9-1.12.2/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.15.2",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.16.1",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.16.5",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.5/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.5/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.17.1",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             }
         ],
         "incompatible": ["WorldPreview"],
@@ -671,25 +709,25 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ">=1.14- <=1.15-",
+                "versions": ">=1.14- <=1.15.2",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.14-1.15.2/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
-                "versions": ">=1.16- <=1.17-",
+                "versions": ">=1.16- <=1.17.2",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
                 "versions": "1.18.2",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
-                "rules": [{"action": "allow", "category": { "name": "ssg" } }]
+                "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             }
         ],
         "incompatible": ["WorldPreview", "LazyStronghold"],

@@ -11,6 +11,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.SortedSet;
 
 public class Optifine extends ModInfo {
@@ -20,22 +21,34 @@ public class Optifine extends ModInfo {
 
     @Override
     protected void init(SortedSet<ModAsset> treeSet) throws Throwable {
-        ModDownload optifineInfo = getDownloads().get(0);
+        for (ModDownload download : this.getDownloads()) {
+            if (Objects.equals(download.getType(), "optifine")) {
+                Document pageHtml = Jsoup.parse(HttpRequestHelper.getStringFromUrl(download.getPageUrl()));
+                Elements downloadTables = pageHtml.getElementsByClass("downloadTable mainTable");
 
-        Document pageHtml = Jsoup.parse(HttpRequestHelper.getStringFromUrl(optifineInfo.getPageUrl()));
-        Elements downloadTables = pageHtml.getElementsByClass("downloadTable mainTable");
+                for (Element downloadTable : downloadTables) {
+                    Elements downloadElement = downloadTable.select(".colMirror a");
+                    String downloadUrl = downloadElement.attr("href");
+                    if (!downloadUrl.isBlank()) {
+                        String fileName = downloadUrl.replace("http://optifine.net/adloadx?f=OptiFine_", "");
+                        String[] modName = fileName.replace(".jar", "").split("_");
 
-        for (Element downloadTable : downloadTables) {
-            Elements downloadElement = downloadTable.select(".colMirror a");
-            String downloadUrl = downloadElement.attr("href");
-            if (!downloadUrl.isBlank()) {
+                        ModAsset modAsset = new ModAsset(
+                                String.join("_", modName).replace(modName[0] + "_", ""),
+                                VersionPredicateHelper.getFromStringArray(new String[] { modName[0] }),
+                                "OptiFine_" + fileName, null, downloadUrl
+                        );
+                        treeSet.add(modAsset);
+                    }
+                }
+            } else {
+                String downloadUrl = download.getPageUrl();
                 String fileName = downloadUrl.replace("http://optifine.net/adloadx?f=OptiFine_", "");
-                String[] modName = fileName.replace(".jar", "").split("_");
-
+                String[] modName = fileName.replace(".jar", "").replace(".zip", "").split("_");
                 ModAsset modAsset = new ModAsset(
                         String.join("_", modName).replace(modName[0] + "_", ""),
                         VersionPredicateHelper.getFromStringArray(new String[] { modName[0] }),
-                        fileName, null, downloadUrl
+                        "OptiFine_" + fileName, null, downloadUrl
                 );
                 treeSet.add(modAsset);
             }

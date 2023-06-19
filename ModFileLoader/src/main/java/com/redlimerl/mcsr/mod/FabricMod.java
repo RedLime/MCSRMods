@@ -11,6 +11,7 @@ import com.redlimerl.mcsr.helper.VersionPredicateHelper;
 import com.redlimerl.mcsr.mod.abst.ModAsset;
 import com.redlimerl.mcsr.mod.abst.ModDownload;
 import com.redlimerl.mcsr.mod.abst.ModInfo;
+import com.redlimerl.mcsr.mod.abst.VersionOverride;
 import net.fabricmc.loader.api.Version;
 
 import java.io.ByteArrayInputStream;
@@ -87,7 +88,7 @@ public class FabricMod extends ModInfo {
                         fileData.get("size").getAsInt(),
                         download.getRules()
                 );
-                if (modAsset.mcVersion().toString().isBlank()) continue;
+                if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*")) continue;
 
                 boolean add = this.hasVersionRange(modAsset);
                 if (add) list.add(modAsset);
@@ -134,6 +135,7 @@ public class FabricMod extends ModInfo {
                 if (modJson == null) continue;
                 String sha1Hash = Sha1Helper.getFromInputStream(inputStream);
 
+                String modVersion = modJson.get("version").getAsString();
                 String[] mcVersions = download.getVersions();
 
                 if (modJson.has("depends") && modJson.getAsJsonObject("depends").has("minecraft")) {
@@ -147,14 +149,22 @@ public class FabricMod extends ModInfo {
                         mcVersions = new String[] { mcVerElement.getAsString() };
                     }
                 }
+                if (download.getOverride() != null) {
+                    for (VersionOverride versionOverride : download.getOverride()) {
+                        if (modVersion.equals(versionOverride.getVersion())) {
+                            mcVersions = versionOverride.getGameVersions();
+                            break;
+                        }
+                    }
+                }
 
                 ModAsset modAsset = new ModAsset(
-                        modJson.get("version").getAsString(),
+                        modVersion,
                         VersionPredicateHelper.getFromStringArray(mcVersions),
                         fileName, downloadUrl, pageUrl,
                         sha1Hash, assetData.get("size").getAsInt(), download.getRules()
                 );
-                if (modAsset.mcVersion().toString().isBlank()) continue;
+                if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*")) continue;
 
                 boolean add = this.hasVersionRange(modAsset);
                 if (add) list.add(modAsset);

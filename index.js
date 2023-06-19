@@ -6,7 +6,9 @@ const { compareVersions, compare, satisfies, validate } = window.compareVersions
 const typeOptions = {
     version: null,
     type: 'mods',
-    run: 'random_seed'
+    run: 'rsg',
+    isMac: navigator.platform.toLocaleLowerCase().includes('mac'),
+    medical_issue: false
 }
 
 function getVersionCode(str) {
@@ -40,23 +42,21 @@ function initVersions() {
 }
 
 function initResources() {
-    $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)))).map(mod => getElementFromModInfo(mod)).join(''));    
+    $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv))) && rulesCheck(mod)).map(mod => getElementFromModInfo(mod)).join(''));    
 }
 
 $(document).ready(() => {
     fetch('./meta/v4/mc_versions.json')
     .then(response => response.json())
     .then(json => {
-        console.log(json);
         for (const version of json) {
-            ALLOW_VERSIONS.push(version);
+            if (validate(version.value)) ALLOW_VERSIONS.push(version);
         }
         initVersions();
 
         fetch('./meta/v4/files.json')
             .then(response => response.json())
             .then(json => {
-                console.log(json);
                 for (const mod of json) {
                     ALLOW_MODS.push(mod);
                 }
@@ -82,6 +82,12 @@ $(document).ready(() => {
                         needRefresh = true;
                     }
 
+                    const medicalIssue = $('input:checkbox[name="medical-issue"]').is(":checked") == true;
+                    if (medicalIssue != typeOptions.medical_issue) {
+                        typeOptions.medical_issue = medicalIssue;
+                        needRefresh = true;
+                    }
+
                     if (needRefresh) {
                         history.replaceState(null, null, window.location.origin + window.location.pathname + "?version=" + typeOptions.version + "&type=" + typeOptions.type + "&run=" + typeOptions.run);
                         initResources();
@@ -98,7 +104,7 @@ $('[id^="mod-version-"]').click(function () {
 
 // Return Mod HTML String
 function getElementFromModInfo(modInfo) {
-    const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)));
+    const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv) && rulesCheck(modInfo)));
     return `<li>` +
                 //Mod Name & Version & Mod Loader
                 `<div class="collapsible-header light-font"><b>${modInfo.name}</b>${`<small style="padding-left: 0.5em;">(v${build.version.replace('v', '')})</small>`}</div>` +
@@ -123,22 +129,32 @@ function satisfiesVersion(gv) {
     const vp = gv.split(' ');
     if (vp.length == 1) {
         const va = vp[0].split('.');
-        try {
-            if (gv.replace('=', '') == typeOptions.version || vp[0].replace('=', '') == ALLOW_VERSIONS.find(v => v.version == typeOptions.version)?.name) return true;
-            if (va[1].endsWith('-')) {
-                va[1] = va[1].substring(0, va[1].length - 1) + '.0';
-            }
-            if (va[1].includes('-alpha')) {
-                return typeOptions.version == vp[0].replace('=');
-            }
-        
-            const finalVersion = va.join('.');
-            return satisfies(typeOptions.version, finalVersion);
-        } catch (e) {
-            console.log(e)
-            return false;
+        if (va.length < 2) return false;
+        if (va[1].endsWith('-')) {
+            va[1] = va[1].substring(0, va[1].length - 1) + '.0';
         }
+        if (va[1].includes('-alpha')) {
+            return typeOptions.version == vp[0].replace('=');
+        }
+    
+        const finalVersion = va.join('.');
+        try {
+            return satisfies(typeOptions.version, finalVersion);
+        } catch (e) {}
     } else {
         return vp.every(vpp => satisfiesVersion(vpp));
     }
+}
+
+function rulesCheck(mod) {
+    return mod.files.every(file => {
+        if (!file.rules) return true;
+        for (const rule of file.rules) {
+            const allow = rule.action == 'allow';
+            if (rule.properties['category']) return (rule.properties['category'] == typeOptions.run) == allow || typeOptions.run == 'all'
+            if (rule.properties['os'] == 'osx') return typeOptions.isMac == allow
+            if (rule.properties['condition']) return (typeOptions[rule.properties['condition']]) == allow
+        }
+        return false;
+    })
 }
