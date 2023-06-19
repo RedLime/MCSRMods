@@ -59,6 +59,7 @@
                 "api_url": "https://api.github.com/repos/RedLime/OptiFabric/releases"
             }
         ],
+        "incompatible": ["WorldPreview"],
         "recommended": true
     },
     {
@@ -151,6 +152,7 @@
                 "api_url": "https://api.modrinth.com/v2/project/starlight/version"
             }
         ],
+        "incompatible": ["Phosphor"],
         "recommended": true
     },
     {
@@ -171,6 +173,7 @@
                 "api_url": "https://api.github.com/repos/mrmangohands/phosphor-fabric/releases"
             }
         ],
+        "incompatible": ["Starlight"],
         "recommended": true
     },
     {
@@ -243,6 +246,7 @@
                 "api_url": "https://cdn.discordapp.com/attachments/830250875376107542/880559489735086100/dynamic-menu-fps-0.1.jar"
             }
         ],
+        "incompatible": ["SleepBackground"],
         "recommended": true
     },
     {
@@ -371,6 +375,7 @@
                 "api_url": "https://api.modrinth.com/v2/project/worldpreview/version"
             }
         ],
+        "incompatible": ["OptiFabric", "set-spawn-mod", "ChunkCacher"],
         "recommended": true
     },
     {
@@ -518,6 +523,7 @@
                 "latest_only": true
             }
         ],
+        "incompatible": ["Dynamic FPS"],
         "recommended": true
     },
     {
@@ -656,6 +662,7 @@
                 "rules": [{"action": "allow", "category": { "name": "ssg" } }]
             }
         ],
+        "incompatible": ["WorldPreview"],
         "recommended": true
     },
     {
@@ -685,6 +692,7 @@
                 "rules": [{"action": "allow", "category": { "name": "ssg" } }]
             }
         ],
+        "incompatible": ["WorldPreview", "LazyStronghold"],
         "recommended": true
     }
 ]

@@ -2,6 +2,7 @@ package com.redlimerl.mcsr.mod.abst;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.redlimerl.mcsr.MCSRModLoader;
 
 import java.util.*;
 
@@ -11,6 +12,7 @@ public abstract class ModInfo {
     private final String type;
     private final List<ModDownload> downloads;
     private final boolean recommended;
+    private final List<String> incompatible;
     private SortedSet<ModAsset> assetsResult;
 
     public ModInfo(String name, String description, String type, List<ModDownload> downloads, boolean recommended) {
@@ -19,6 +21,7 @@ public abstract class ModInfo {
         this.type = type;
         this.downloads = downloads;
         this.recommended = recommended;
+        this.incompatible = null;
     }
 
     public String getName() {
@@ -39,6 +42,10 @@ public abstract class ModInfo {
 
     public String getType() {
         return type;
+    }
+
+    public List<String> getIncompatible() {
+        return incompatible;
     }
 
     protected abstract void init(SortedSet<ModAsset> treeSet) throws Throwable;
@@ -64,6 +71,8 @@ public abstract class ModInfo {
             jsonArray.add(result.toJson());
         }
         jsonObject.add("files", jsonArray);
+
+        if (this.getIncompatible() != null) jsonObject.add("incompatible", MCSRModLoader.GSON.toJsonTree(this.getIncompatible()));
 
         jsonObject.addProperty("recommended", this.isRecommended());
         return jsonObject;
