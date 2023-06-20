@@ -1,5 +1,7 @@
 package com.redlimerl.mcsr.mod.abst;
 
+import com.redlimerl.mcsr.MCSRModLoader;
+
 import java.util.Map;
 import java.util.Objects;
 
@@ -26,7 +28,7 @@ public final class ModRule {
         if (obj == null || obj.getClass() != this.getClass()) return false;
         var that = (ModRule) obj;
         return Objects.equals(this.action, that.action) &&
-                Objects.equals(this.properties, that.properties);
+                Objects.equals(MCSRModLoader.GSON.toJson(this.properties), MCSRModLoader.GSON.toJson(that.properties));
     }
 
     @Override

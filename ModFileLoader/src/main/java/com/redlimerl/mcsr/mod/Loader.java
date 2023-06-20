@@ -9,7 +9,6 @@ import com.redlimerl.mcsr.mod.abst.ModDownload;
 import com.redlimerl.mcsr.mod.abst.ModInfo;
 
 import java.util.List;
-import java.util.SortedSet;
 
 public class Loader extends ModInfo {
 
@@ -18,7 +17,7 @@ public class Loader extends ModInfo {
     }
 
     @Override
-    protected void init(SortedSet<ModAsset> treeSet) throws Throwable {
+    protected void init(List<ModAsset> modAssetList) throws Throwable {
         ModDownload loaderInfo = getDownloads().get(0);
 
         String loaderVersion = null;
@@ -30,7 +29,7 @@ public class Loader extends ModInfo {
             }
         }
 
-        treeSet.add(new ModAsset(
+        modAssetList.add(new ModAsset(
                 loaderVersion,
                 VersionPredicateHelper.getFromStringArray(loaderInfo.getVersions()),
                 "",

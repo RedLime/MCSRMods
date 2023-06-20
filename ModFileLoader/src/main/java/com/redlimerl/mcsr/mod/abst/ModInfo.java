@@ -13,7 +13,7 @@ public abstract class ModInfo {
     private final List<ModDownload> downloads;
     private final boolean recommended;
     private final List<String> incompatible;
-    private SortedSet<ModAsset> assetsResult;
+    private List<ModAsset> assetsResult;
 
     public ModInfo(String name, String description, String type, List<ModDownload> downloads, boolean recommended) {
         this.name = name;
@@ -48,18 +48,19 @@ public abstract class ModInfo {
         return incompatible;
     }
 
-    protected abstract void init(SortedSet<ModAsset> treeSet) throws Throwable;
+    protected abstract void init(List<ModAsset> modAssetList) throws Throwable;
 
-    public Set<ModAsset> getAssetsResult() throws Throwable {
+    public List<ModAsset> getAssetsResult() throws Throwable {
         if (this.assetsResult == null) {
-            this.assetsResult = new TreeSet<>(Comparator.comparing(asset -> asset.mcVersion().getMinVersion()));
+            this.assetsResult = new ArrayList<>();
             init(this.assetsResult);
         }
+        this.assetsResult.sort(Comparator.comparing(asset -> asset.mcVersion().getMinVersion()));
         return this.assetsResult;
     }
 
     public JsonObject toJson() throws Throwable {
-        Set<ModAsset> results = this.getAssetsResult();
+        List<ModAsset> results = this.getAssetsResult();
         JsonObject jsonObject = new JsonObject();
 
         jsonObject.addProperty("name", this.getName());

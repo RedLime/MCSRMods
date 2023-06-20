@@ -12,7 +12,6 @@ import org.jsoup.select.Elements;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.SortedSet;
 
 public class Optifine extends ModInfo {
     public Optifine(String name, String description, List<ModDownload> downloads, boolean recommended) {
@@ -20,7 +19,7 @@ public class Optifine extends ModInfo {
     }
 
     @Override
-    protected void init(SortedSet<ModAsset> treeSet) throws Throwable {
+    protected void init(List<ModAsset> modAssetList) throws Throwable {
         for (ModDownload download : this.getDownloads()) {
             if (Objects.equals(download.getType(), "optifine")) {
                 Document pageHtml = Jsoup.parse(HttpRequestHelper.getStringFromUrl(download.getPageUrl()));
@@ -39,7 +38,7 @@ public class Optifine extends ModInfo {
                                 "OptiFine_" + fileName, null, downloadUrl
                         );
                         if (VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion()))
-                            treeSet.add(modAsset);
+                            modAssetList.add(modAsset);
                     }
                 }
             } else {
@@ -52,7 +51,7 @@ public class Optifine extends ModInfo {
                         "OptiFine_" + fileName, null, downloadUrl
                 );
                 if (VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion()))
-                    treeSet.add(modAsset);
+                    modAssetList.add(modAsset);
             }
         }
     }

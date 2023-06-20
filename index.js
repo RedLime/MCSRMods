@@ -7,13 +7,12 @@ const typeOptions = {
     version: null,
     type: 'mods',
     run: 'rsg',
-    isMac: navigator.platform.toLocaleLowerCase().includes('mac'),
+    os: null,
     medical_issue: false
 }
 
 function initVersions() {
     const params = new URLSearchParams(window.location.search);
-    let hasFirst = false;
     $('#game-versions').html(`<select id="game-versions-select" class="browser-default">${ALLOW_VERSIONS.map(version => {
         const selected = (params.has('version') ? version.value == params.get('version') : typeOptions.version == null);
         if (selected) {
@@ -25,10 +24,19 @@ function initVersions() {
 
     if (params.has('type')) $("input[name='resource-type'][value='" + params.get('type') + "']").prop("checked", true);
     if (params.has('run')) $("input[name='run-type'][value='" + params.get('run') + "']").prop("checked", true);
+
+    if (params.has('os')) typeOptions.os = params.get('os');
+    else {
+        const platform = navigator.platform.toLocaleLowerCase();
+        if (platform.includes('mac') || platform.includes('osx')) typeOptions.os = 'osx';
+        else if (platform.includes('linux')) typeOptions.os = 'linux';
+        else typeOptions.os = 'windows';
+    }
+    $("input[name='os-type'][value='" + typeOptions.os + "']").prop("checked", true);
 }
 
 function initResources() {
-    $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv))) && rulesCheck(mod)).map(mod => getElementFromModInfo(mod)).join(''));    
+    $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file))).map(mod => getElementFromModInfo(mod)).join(''));    
 }
 
 $(document).ready(() => {
@@ -76,8 +84,14 @@ $(document).ready(() => {
                         needRefresh = true;
                     }
 
+                    const currentOS = $('input[name="os-type"]:checked').val();
+                    if (currentOS != typeOptions.os) {
+                        typeOptions.os = currentOS;
+                        needRefresh = true;
+                    }
+
                     if (needRefresh) {
-                        history.replaceState(null, null, window.location.origin + window.location.pathname + "?version=" + typeOptions.version + "&type=" + typeOptions.type + "&run=" + typeOptions.run);
+                        history.replaceState(null, null, window.location.origin + window.location.pathname + "?version=" + typeOptions.version + "&type=" + typeOptions.type + "&run=" + typeOptions.run + "&os=" + typeOptions.os);
                         initResources();
                     }
                 }, 50);
@@ -92,7 +106,7 @@ $('[id^="mod-version-"]').click(function () {
 
 // Return Mod HTML String
 function getElementFromModInfo(modInfo) {
-    const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv) && rulesCheck(modInfo)));
+    const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file));
     return `<li>` +
                 //Mod Name & Version & Mod Loader
                 `<div class="collapsible-header light-font"><b>${modInfo.name}</b>${`<small style="padding-left: 0.5em;">(v${build.version.replace('v', '')})</small>`}</div>` +
@@ -134,15 +148,13 @@ function satisfiesVersion(gv) {
     }
 }
 
-function rulesCheck(mod) {
-    return mod.files.every(file => {
-        if (!file.rules) return true;
-        for (const rule of file.rules) {
-            const allow = rule.action == 'allow';
-            if (rule.properties['category']) return (rule.properties['category'] == typeOptions.run) == allow || typeOptions.run == 'all'
-            if (rule.properties['os'] == 'osx') return typeOptions.isMac == allow
-            if (rule.properties['condition']) return (typeOptions[rule.properties['condition']]) == allow
-        }
-        return false;
-    })
+function rulesCheck(file) {
+    if (!file.rules) return true;
+    for (const rule of file.rules) {
+        const allow = rule.action == 'allow';
+        if (rule.properties['category']) return (rule.properties['category'] == typeOptions.run) == allow || typeOptions.run == 'all'
+        if (rule.properties['os']) return (typeOptions.os == rule.properties['os']) == allow
+        if (rule.properties['condition']) return (typeOptions[rule.properties['condition']]) == allow
+    }
+    return false;
 }

@@ -8,10 +8,7 @@ import com.redlimerl.mcsr.MCSRModLoader;
 import com.redlimerl.mcsr.helper.HttpRequestHelper;
 import com.redlimerl.mcsr.helper.Sha1Helper;
 import com.redlimerl.mcsr.helper.VersionPredicateHelper;
-import com.redlimerl.mcsr.mod.abst.ModAsset;
-import com.redlimerl.mcsr.mod.abst.ModDownload;
-import com.redlimerl.mcsr.mod.abst.ModInfo;
-import com.redlimerl.mcsr.mod.abst.VersionOverride;
+import com.redlimerl.mcsr.mod.abst.*;
 import net.fabricmc.loader.api.Version;
 
 import java.io.ByteArrayInputStream;
@@ -23,20 +20,21 @@ import java.util.zip.ZipInputStream;
 
 public class FabricMod extends ModInfo {
 
-    private Set<Version> minVersionSet = new HashSet<>();
+    private record VersionRulesIdentifier(Version version, List<ModRule> rules) {}
+    private Set<VersionRulesIdentifier> minVersionSet = new HashSet<>();
 
     public FabricMod(String name, String description, List<ModDownload> downloads, boolean recommended) {
         super(name, description, "fabric_mod", downloads, recommended);
     }
 
     @Override
-    protected void init(SortedSet<ModAsset> treeSet) throws Throwable {
+    protected void init(List<ModAsset> modAssetList) throws Throwable {
         this.minVersionSet = new HashSet<>();
         for (ModDownload download : this.getDownloads()) {
             switch (download.getType()) {
-                case "github" -> treeSet.addAll(this.getAssetFromGithub(download));
-                case "modrinth" -> treeSet.addAll(this.getAssetFromModrinth(download));
-                case "direct" -> treeSet.add(this.getAssetFromDirect(download));
+                case "github" -> modAssetList.addAll(this.getAssetFromGithub(download));
+                case "modrinth" -> modAssetList.addAll(this.getAssetFromModrinth(download));
+                case "direct" -> modAssetList.add(this.getAssetFromDirect(download));
             }
         }
     }
@@ -191,10 +189,12 @@ public class FabricMod extends ModInfo {
     }
 
     private boolean hasVersionRange(ModAsset modAsset) {
-        for (Version semanticVersion : minVersionSet) {
-            if (modAsset.mcVersion().getMinVersion().compareTo(semanticVersion) == 0) return false;
+        for (VersionRulesIdentifier version : minVersionSet) {
+            if (modAsset.mcVersion().getMinVersion().compareTo(version.version) == 0 && Objects.equals(version.rules, modAsset.rules())) {
+                return false;
+            }
         }
-        minVersionSet.add(modAsset.mcVersion().getMinVersion());
+        minVersionSet.add(new VersionRulesIdentifier(modAsset.mcVersion().getMinVersion(), modAsset.rules()));
         return true;
     }
 }
