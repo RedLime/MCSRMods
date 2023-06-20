@@ -30,7 +30,7 @@ jobs:
 
       - name: (V4) Update latest meta file
         run: |
-          java -jar .\ModFileLoader\ModFileLoader-1.0-SNAPSHOT-all.jar ${{ secrets.CUSTOM_GITHUB_TOKEN_V4 }}
+          java -jar ./ModFileLoader/ModFileLoader-1.0-SNAPSHOT-all.jar ${{ secrets.CUSTOM_GITHUB_TOKEN_V4 }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
