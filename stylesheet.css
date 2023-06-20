@@ -14,6 +14,11 @@ html {
     background-color: #101010;
 }
 
+select {
+    font-family: 'Minecraft', sans-serif;
+    color: #464646;
+}
+
 main {
     min-height: 100%;
 }
@@ -34,6 +39,7 @@ main {
 
 .description {
     line-height: 1.2em;
+    color: #dbdbdb;
 }
 
 .text-img {

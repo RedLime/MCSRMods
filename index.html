@@ -12,50 +12,92 @@
     <link href="./stylesheet.css" rel="stylesheet">
     <script src="./js/bin/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=https://unpkg.com/compare-versions/lib/umd/index.js></script>
 </head>
 
 <body>
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <span class="white-text" style="font-size: 1.75em; font-weight: bold; padding-left: 1em;">MCSR Mod
-                    List</span>
+                <span class="white-text" style="font-size: 1.75em; font-weight: bold; padding-left: 1em;">MCSR Resource List</span>
             </div>
         </nav>
     </div>
     <main>
         <div class="container">
             <center><img src="./images/end_crystal.png" width="25%" style="margin: auto 0"></center>
-            <div style="font-size: 2.5em; text-align: center;">Minecraft SpeedRun Mods</div>
+            <div style="font-size: 2.5em; text-align: center;">Minecraft SpeedRun Resources</div>
             <div style="font-size: 1.5em; text-align: center; color: rgb(255, 87, 87);">Do not use Fabric API!</div>
             </br>
             <div style="text-align: center;">
                 <a class="waves-effect waves-light btn" href="http://bombch.us/DOOK" target="_blank">Mods & Optifine Rules Document</a>
             </div>
-        </br>
+            </br>
             <div class="row">
-                <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
-                    <li class="tab"><a id="mod-version-20">1.20</a></li>
-                    <li class="tab"><a id="mod-version-19">1.19</a></li>
-                    <li class="tab"><a id="mod-version-18">1.18</a></li>
-                    <li class="tab"><a id="mod-version-17">1.17</a></li>
-                    <li class="tab"><a id="mod-version-16">1.16</a></li>
-                    <li class="tab"><a id="mod-version-15">1.15</a></li>
-                    <li class="tab"><a id="mod-version-14">1.14</a></li>
-                    <li class="tab"><a id="mod-version-13">1.13</a></li>
-                    <li class="tab"><a id="mod-version-12">1.12</a></li>
-                    <li class="tab"><a id="mod-version-11">1.11</a></li>
-                    <li class="tab"><a id="mod-version-10">1.10</a></li>
-                    <li class="tab"><a id="mod-version-9">1.9</a></li>
-                    <li class="tab"><a id="mod-version-8">1.8</a></li>
-                    <li class="tab"><a id="mod-version-7">1.7</a></li>
-                    <li class="tab"><a id="mod-version-6">1.6</a></li>
-                    <li class="tab"><a id="mod-version-5">1.5</a></li>
-                    <li class="tab"><a id="mod-version-4">1.4</a></li>
-                    <li class="tab"><a id="mod-version-3">1.3</a></li>
-                </ul>
-                <div class="col s12">
-                    <ul id="mods-tab" class="collapsible">
+                <div class="col s3">
+                    <p>Resource Type</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="resource-type" type="radio" value="mods" checked />
+                            <span>Mods</span>
+                        </label>
+                    </p>
+                    <br>
+                    <p>Minecraft Version</p>
+                    <div class="input-field" id="game-versions">
+                    </div>
+                    <br>
+                    <p>Run Type</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="run-type" type="radio" value="rsg" checked />
+                            <span>Random Seed</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="run-type" type="radio" value="ssg" />
+                            <span>Set Seed</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="run-type" type="radio" value="all" />
+                            <span>All</span>
+                        </label>
+                    </p>
+                    <br>
+                    <p>OS</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="os-type" type="radio" value="windows" />
+                            <span>Windows</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="os-type" type="radio" value="osx" />
+                            <span>MacOS</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="os-type" type="radio" value="linux" />
+                            <span>Linux</span>
+                        </label>
+                    </p>
+                    <br>
+                    <p>Additional Options</p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="medical-issue" class="filled-in" />
+                            <span>Accessibility Mods<p style="padding-left: 35px;" class="light-font description">You may utilize these mods ONLY if you tell the MCSR Team about a medical condition that makes them necessary in advance.</p></span>
+                        </label>
+                    </p>
+                </div>
+        
+                <div class="col s9">
+                    <ul class="collapsible" id="resources-tab">
                     </ul>
                 </div>
             </div>

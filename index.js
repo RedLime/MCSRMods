@@ -1,126 +1,160 @@
+const ALLOW_VERSIONS = [];
 const ALLOW_MODS = [];
 
-function getVersionCode(str) {
-    const version = str.split('.');
-    if (version.length > 1) {
-        return +version[1];
-    }
-    return 0;
+const { compareVersions, compare, satisfies, validate } = window.compareVersions
+
+const typeOptions = {
+    version: null,
+    type: 'mods',
+    run: 'rsg',
+    os: null,
+    medical_issue: false
 }
 
-function initPage() {
+function initVersions() {
     const params = new URLSearchParams(window.location.search);
-    activeVersion(params.has('version') ? getVersionCode(params.get('version')) : 16, true);
+    $('#game-versions').html(`<select id="game-versions-select" class="browser-default">${ALLOW_VERSIONS.map(version => {
+        const selected = (params.has('version') ? version.value == params.get('version') : typeOptions.version == null);
+        if (selected) {
+            typeOptions.version = version.value;
+        }
+        return `<option value="${version.value}" ${selected ? 'selected' : ''}>${version.name}</option>`;
+    }).join('')}</select>`);
+    M.FormSelect.init($('#game-versions-select'));
+
+    if (params.has('type')) $("input[name='resource-type'][value='" + params.get('type') + "']").prop("checked", true);
+    if (params.has('run')) $("input[name='run-type'][value='" + params.get('run') + "']").prop("checked", true);
+
+    if (params.has('os')) typeOptions.os = params.get('os');
+    else {
+        const platform = navigator.platform.toLocaleLowerCase();
+        if (platform.includes('mac') || platform.includes('osx')) typeOptions.os = 'osx';
+        else if (platform.includes('linux')) typeOptions.os = 'linux';
+        else typeOptions.os = 'windows';
+    }
+    $("input[name='os-type'][value='" + typeOptions.os + "']").prop("checked", true);
+}
+
+function initResources() {
+    $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file))).map(mod => getElementFromModInfo(mod)).join(''));    
 }
 
 $(document).ready(() => {
-    // fetch('mods.json') for local testing
-    fetch('https://redlime.github.io/MCSRMods/mods.json')
-        .then(response => response.json())
-        .then(json => {
-            console.log(json);
-            for (const mod of json) {
-                ALLOW_MODS.push(mod);
-            }
-            initPage();
-        });
-})
+    fetch('./meta/v4/mc_versions.json')
+    .then(response => response.json())
+    .then(json => {
+        for (const version of json) {
+            if (validate(version.value)) ALLOW_VERSIONS.push(version);
+        }
+        initVersions();
 
-$(window).on("popstate", function () {
-    initPage();
+        fetch('./meta/v4/files.json')
+            .then(response => response.json())
+            .then(json => {
+                for (const mod of json) {
+                    ALLOW_MODS.push(mod);
+                }
+
+                initResources();
+
+                setInterval(() => {
+                    let needRefresh = false;
+
+                    const currentVersion = $('#game-versions-select').val();
+                    if (currentVersion != typeOptions.version && typeOptions.version != null) {
+                        typeOptions.version = currentVersion;
+                        needRefresh = true;
+                    }
+
+                    const currentType = $('input[name="resource-type"]:checked').val();
+                    if (currentType != typeOptions.type) {
+                        typeOptions.type = currentType;
+                        needRefresh = true;
+                    }
+
+                    const currentRun = $('input[name="run-type"]:checked').val();
+                    if (currentRun != typeOptions.run) {
+                        typeOptions.run = currentRun;
+                        needRefresh = true;
+                    }
+
+                    const medicalIssue = $('input:checkbox[name="medical-issue"]').is(":checked") == true;
+                    if (medicalIssue != typeOptions.medical_issue) {
+                        typeOptions.medical_issue = medicalIssue;
+                        needRefresh = true;
+                    }
+
+                    const currentOS = $('input[name="os-type"]:checked').val();
+                    if (currentOS != typeOptions.os) {
+                        typeOptions.os = currentOS;
+                        needRefresh = true;
+                    }
+
+                    if (needRefresh) {
+                        history.replaceState(null, null, window.location.origin + window.location.pathname + "?version=" + typeOptions.version + "&type=" + typeOptions.type + "&run=" + typeOptions.run + "&os=" + typeOptions.os);
+                        initResources();
+                    }
+                }, 50);
+            });
+    });
 });
 
 $('[id^="mod-version-"]').click(function () {
     activeVersion(+($(this)[0].id.replace("mod-version-", '')), false);
 });
 
-function activeVersion(ver, clickable) {
-    const params = new URLSearchParams(window.location.search);
-    if (clickable) {
-        document.getElementById('mod-version-' + ver)?.click();
-        return;
-    }
-    if (!(!params.has('version') && ver == 16) && !(params.has('version') && getVersionCode(params.get('version')) == ver)) {
-        history.pushState(null, null, window.location.origin + window.location.pathname + "?version=1." + ver);
-    }
-    if (ALLOW_MODS.length) {
-        $('#mods-tab').html(ALLOW_MODS.filter(mod => mod.downloads.find(asset => isContainsVersion(ver, asset.versions))).map(mod => getElementFromModInfo(mod, ver)).join(''));
-    }
-}
-
 
 // Return Mod HTML String
-function getElementFromModInfo(obj, version) {
-    const downloadBuild = obj.downloads.find(versionInfo => isContainsVersion(version, versionInfo.versions) && versionInfo.build)?.build;
-    const advancedBuild = obj.advanced.filter(versionInfo => isContainsVersion(version, versionInfo.versions))
-        .map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (${versionInfo.summary})</a></div>`).join('');
-    const categoryIcons = obj.category.map(category => `<img title="${category}" src="${getCategoryIconURL(category)}" class="text-img circle"/>`).join(" ");
-
+function getElementFromModInfo(modInfo) {
+    const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file));
     return `<li>` +
                 //Mod Name & Version & Mod Loader
-                `<div class="collapsible-header light-font"><b${obj.warn ? ' style="opacity: 0.5"' : ""}>${obj.name}</b>${downloadBuild ? `<small style="padding-left: 0.5em;">(v${downloadBuild})</small>` : ''} ${categoryIcons}</div>` +
+                `<div class="collapsible-header light-font"><b>${modInfo.name}</b>${`<small style="padding-left: 0.5em;">(v${build.version.replace('v', '')})</small>`}</div>` +
 
                 `<div class="collapsible-body">` +
-                    //Allowed MC Versions
-                    `<div>Allowed & Available MC Versions<br><big class="light-font description">${obj.downloads.map(asset => asset.versions.join(", ")).join(", ")}</big></div>` +
-
                     //Mod Description
-                    (obj.description ? `<div>Description<br><small class="light-font description">${obj.description.replaceAll('\n', '<br>')}</small></div>` : '') +
-
-                    //Mod Warning
-                    (obj.warn ? `<div>WARNING!<br><small class="light-font description" style="text-decoration: underline">${obj.warn.replaceAll('\n', '<br>')}<br>If you didn't follow this warning, your run being may rejected.</small></div>` : '') +
+                    (modInfo.description ? `<div>Description<br><small class="light-font description">${modInfo.description.replaceAll('\n', '<br>')}</small></div>` : '') +
 
                     //Incompatible mod list
-                    (obj.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You must be only use one of these : <b>${obj.name}</b>, ${obj.incompatible.join(', ')}</small></div>` : '') +
+                    (modInfo.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You must be only use one of these : <b>${modInfo.name}</b>, ${modInfo.incompatible.join(', ')}</small></div>` : '') +
 
                     //Download Button
-                    getDownloadButtonHTML(obj, version) +
+                    (build.url ? `<div><a class="light-font waves-effect waves-light btn" href="${build.url}" target="_blank">Download</a></div>` : '') +
 
-                    //Advanced Downloads
-                    (advancedBuild ? `<div><details><summary style="cursor: pointer;">Advanced downloads</summary>${advancedBuild}</details></div>` : ``) +
+                    //Page Button
+                    (build.page ? `<div><a class="light-font waves-effect waves-light btn" href="${build.page}" target="_blank">Open Page</a></div>` : '') +
                 `</div>` +
             `</li>`;
 }
 
-
-// Return Category Icon Image URL
-function getCategoryIconURL(loader) {
-    switch (loader) {
-        case 'fabric':
-            return 'https://fabricmc.net/assets/logo.png';
-        case 'optifine':
-            return 'https://i.imgur.com/eKIfz6R.png';
-        case 'legacy-fabric':
-            return 'https://avatars.githubusercontent.com/u/62736781?s=200&v=4';
-        default:
-            return '';
+function satisfiesVersion(gv) {
+    const vp = gv.split(' ');
+    if (vp.length == 1) {
+        const va = vp[0].split('.');
+        if (va.length < 2) return false;
+        if (va[1].endsWith('-')) {
+            va[1] = va[1].substring(0, va[1].length - 1) + '.0';
+        }
+        if (va[1].includes('-alpha')) {
+            return typeOptions.version == vp[0].replace('=');
+        }
+    
+        const finalVersion = va.join('.');
+        try {
+            return satisfies(typeOptions.version, finalVersion);
+        } catch (e) {}
+    } else {
+        return vp.every(vpp => satisfiesVersion(vpp));
     }
 }
 
-// Return download buttons
-function getDownloadButtonHTML(obj, version) {
-    const availableBuilds = obj.downloads.filter(versionInfo => isContainsVersion(version, versionInfo.versions));
-    return availableBuilds.map(versionInfo => `<div><a class="light-font waves-effect waves-light btn" href="${versionInfo.url}" target="_blank">Download (for ${versionInfo.versions.filter(v => isContainsVersion(version, [v])).join(", ")}${versionInfo.summary ? ` / ${versionInfo.summary}` : ""})</a></div>`).join('');
-}
-
-// Check version compare
-// `versionNum` is number (middle of version name, ex] 0."2".0)
-// `versionArray` is comparable version array. (["0.1", "0.3+"])
-function isContainsVersion(versionNum, versionArray) {
-    for (const versionName of versionArray) {
-        if (versionName.split('.').length <= 1) continue;
-
-        const targetVersion = +(versionName.split('.')[1].replace(/[^0-9]/g, ''));
-        if (versionName.includes('+') && versionNum >= targetVersion) {
-            return true;
-        }
-        if (versionName.includes('~') && versionNum <= targetVersion) {
-            return true;
-        }
-        if (versionNum == targetVersion) {
-        return true;
-        }
+function rulesCheck(file) {
+    if (!file.rules) return true;
+    for (const rule of file.rules) {
+        const allow = rule.action == 'allow';
+        if (rule.properties['category']) return (rule.properties['category'] == typeOptions.run) == allow || typeOptions.run == 'all'
+        if (rule.properties['os']) return (typeOptions.os == rule.properties['os']) == allow
+        if (rule.properties['condition']) return (typeOptions[rule.properties['condition']]) == allow
     }
-
     return false;
 }
