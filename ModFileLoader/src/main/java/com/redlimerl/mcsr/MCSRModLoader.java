@@ -13,8 +13,8 @@ import java.nio.file.Paths;
 
 public class MCSRModLoader {
 
-    private static final Path MODS_JSON_PATH = Paths.get("../meta/v4/mods.json");
-    private static final Path RESULT_JSON_PATH = Paths.get("../meta/v4/files.json");
+    private static final Path MODS_JSON_PATH = Paths.get("./meta/v4/mods.json");
+    private static final Path RESULT_JSON_PATH = Paths.get("./meta/v4/files.json");
     public static final Gson GSON = new GsonBuilder().serializeNulls().disableHtmlEscaping().create();
     public static String GITHUB_TOKEN = "none";
 
