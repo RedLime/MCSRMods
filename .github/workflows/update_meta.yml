@@ -5,7 +5,7 @@ on:
     - cron: '0 * * * *'
   push:
     branches:
-      - master
+      - v4
 
 jobs:
   build:
@@ -18,10 +18,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Update latest meta file
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17' #
+
+      - name: (V3) Update latest meta file
         uses: ./
         with:
           github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+
+      - name: (V4) Update latest meta file
+        run: |
+          java -jar .\ModFileLoader\ModFileLoader-1.0-SNAPSHOT-all.jar ${{ secrets.CUSTOM_GITHUB_TOKEN_V4 }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
