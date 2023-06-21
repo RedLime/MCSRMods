@@ -92,7 +92,7 @@ public class FabricMod extends ModInfo {
                 if (add) list.add(modAsset);
             }
 
-            if (download.isRequireLatestOnly()) break;
+            if (list.size() > 0 && download.isRequireLatestOnly()) break;
         }
         return list;
     }
@@ -168,7 +168,7 @@ public class FabricMod extends ModInfo {
                 if (add) list.add(modAsset);
             }
 
-            if (download.isRequireLatestOnly()) break;
+            if (list.size() > 0 && download.isRequireLatestOnly()) break;
         }
 
         return list;

@@ -186,7 +186,8 @@
                         "version": "fabric-1.0.0-RC2-82ae5ca",
                         "game_versions": "1.16.x"
                     }
-                ]
+                ],
+                "latest_only": true
             },
             {
                 "versions": ">=1.17",
@@ -204,7 +205,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": "1.15.2 || >=1.16.2",
+                "versions": "1.15.x",
                 "type": "github",
                 "page_url": "https://github.com/CaffeineMC/phosphor-fabric/releases/",
                 "api_url": "https://api.github.com/repos/CaffeineMC/phosphor-fabric/releases",
@@ -213,13 +214,20 @@
                         "version": "0.6.0+build.7",
                         "game_versions": "1.15.x"
                     }
-                ]
+                ],
+                "latest_only": true
             },
             {
                 "versions": "1.16.1",
                 "type": "github",
                 "page_url": "https://github.com/mrmangohands/phosphor-fabric/releases/tag/mc1.16.1-0.7.2",
                 "api_url": "https://api.github.com/repos/mrmangohands/phosphor-fabric/releases"
+            },
+            {
+                "versions": ">=1.16.2",
+                "type": "modrinth",
+                "page_url": "https://modrinth.com/mod/phosphor/versions/",
+                "api_url": "https://api.modrinth.com/v2/project/phosphor/version"
             }
         ],
         "incompatible": ["Starlight"],
