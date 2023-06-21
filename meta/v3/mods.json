@@ -1142,14 +1142,14 @@
         "incompatible": [],
         "versions": [
             {
-                "buildVersion": "2.5.0",
-                "targetVersion": "1.19.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/HuwRuGXe/FabricProxy-Lite-2.5.0.jar",
-                "filename": "FabricProxy-Lite-2.5.0.jar"
+                "buildVersion": "2.6.0",
+                "targetVersion": "1.20.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/XJmDAnj5/FabricProxy-Lite-2.6.0.jar",
+                "filename": "FabricProxy-Lite-2.6.0.jar"
             },
             {
                 "buildVersion": "2.5.0",
-                "targetVersion": "1.20",
+                "targetVersion": "1.19.4",
                 "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/HuwRuGXe/FabricProxy-Lite-2.5.0.jar",
                 "filename": "FabricProxy-Lite-2.5.0.jar"
             },
