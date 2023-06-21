@@ -205,7 +205,7 @@
             }
         ],
         "incompatible": ["Starlight"],
-        "recommended": true
+        "recommended": false
     },
     {
         "name": "Lithium",
@@ -278,7 +278,7 @@
             }
         ],
         "incompatible": ["SleepBackground"],
-        "recommended": true
+        "recommended": false
     },
     {
         "name": "ServerSideRNG",
@@ -490,7 +490,7 @@
                 "api_url": "https://api.modrinth.com/v2/project/fabricproxy-lite/version"
             }
         ],
-        "recommended": true
+        "recommended": false
     },
     {
         "name": "LazyStronghold",
