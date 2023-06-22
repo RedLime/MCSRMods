@@ -599,40 +599,58 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": "1.13.2",
+                "versions": "1.13.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.13.2/releases",
+                "latest_only": true
             },
             {
-                "versions": "1.14.4",
+                "versions": "1.14.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.14.4/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.14.4/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.14.4/releases",
+                "latest_only": true
             },
             {
-                "versions": "1.15.2",
+                "versions": "1.15.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.15.2/releases",
+                "latest_only": true
             },
             {
                 "versions": "1.16.1",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.1/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.1/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.1/releases",
+                "override": [
+                    {
+                        "version": "4.0.0",
+                        "game_versions": "1.16.1"
+                    }
+                ],
+                "latest_only": true
             },
             {
                 "versions": "1.16.5",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.5/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.5/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.16.5/releases",
+                "override": [
+                    {
+                        "version": "1.0.0",
+                        "game_versions": "1.16.5"
+                    }
+                ],
+                "latest_only": true
             },
             {
-                "versions": "1.17.1 || 1.18.1",
+                "versions": ">=1.17- <=1.18.1",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antiresourcereload-1.17.1-1.18.1/releases",
+                "latest_only": true
             }
         ],
         "recommended": true
