@@ -472,7 +472,7 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ">=1.14-",
+                "versions": ">=1.14- <=1.19.2",
                 "type": "github",
                 "page_url": "https://github.com/DuncanRuns/Force-Port-Mod/releases/",
                 "api_url": "https://api.github.com/repos/DuncanRuns/Force-Port-Mod/releases"
@@ -680,7 +680,21 @@
                 "type": "github",
                 "page_url": "https://github.com/VoidXWalker/extra-options/releases",
                 "api_url": "https://api.github.com/repos/VoidXWalker/extra-options/releases",
-                "rules": [{"action": "allow", "properties": { "condition": "medical_issue" } }]
+                "rules": [{"action": "allow", "properties": { "condition": "medical_issue" } }],
+                "override": [
+                    {
+                        "version": "extra-options-1.0.0-1.14.jar",
+                        "game_versions": "1.14.x"
+                    },
+                    {
+                        "version": "extra-options-1.0.0-1.15.jar",
+                        "game_versions": "1.15.x"
+                    },
+                    {
+                        "version": "extra-options-1.0.0-1.16.jar",
+                        "game_versions": "1.16.x"
+                    }
+                ]
             }
         ],
         "recommended": false
