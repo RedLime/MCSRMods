@@ -133,7 +133,7 @@ function satisfiesVersion(gv) {
         const va = vp[0].split('.');
         if (va.length < 2) return false;
         if (va[1].endsWith('-')) {
-            va[1] = va[1].substring(0, va[1].length - 1) + '.0';
+            va[1] = va[1].substring(0, va[1].length - 1) + '.x';
         }
         if (va[1].includes('-alpha')) {
             return typeOptions.version == vp[0].replace('=');
