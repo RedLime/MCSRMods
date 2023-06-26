@@ -527,10 +527,11 @@
         "type": "fabric_mod",
         "downloads": [
             {
-                "versions": ">=1.14",
+                "versions": ">=1.14-",
                 "type": "github",
                 "page_url": "https://github.com/Gregor0410/LazyStronghold/releases",
-                "api_url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases"
+                "api_url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases",
+                "rules": [{"action": "disallow", "properties": { "category": "ssg" } }]
             }
         ],
         "recommended": true
