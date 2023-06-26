@@ -136,10 +136,14 @@ function satisfiesVersion(gv) {
             va[1] = va[1].substring(0, va[1].length - 1) + '.x';
         }
         if (va[1].includes('-alpha')) {
-            return typeOptions.version == vp[0].replace('=');
+            if (typeOptions.version == va[0].replace('=', '')) return true;
+            va[0] = va[0].replace('=', '');
+            va[1] = va[1].split('-alpha')[0] + '.0';
+            va.splice(2, 10);
         }
     
         const finalVersion = va.join('.');
+        console.log(finalVersion)
         try {
             return satisfies(typeOptions.version, finalVersion);
         } catch (e) {}
