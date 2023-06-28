@@ -47,7 +47,7 @@ public class Optifine extends ModInfo {
                 String[] modName = fileName.replace(".jar", "").replace(".zip", "").split("_");
                 ModAsset modAsset = new ModAsset(
                         String.join("_", modName).replace(modName[0] + "_", ""),
-                        VersionPredicateHelper.getFromStringArray(new String[] { modName[0] }),
+                        VersionPredicateHelper.getFromStringArray(download.getVersions()),
                         "OptiFine_" + fileName, null, downloadUrl
                 );
                 if (VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion()))
