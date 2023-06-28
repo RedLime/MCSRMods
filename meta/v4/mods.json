@@ -183,21 +183,14 @@
                 ]
             },
             {
-                "versions": "1.16.1",
+                "versions": "1.16.x",
                 "type": "github",
-                "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-starlight-1.16.1/releases/tag/1.0.0-RC2",
+                "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-starlight-1.16.1/releases/",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-starlight-1.16.1/releases",
-                "latest_only": true
-            },
-            {
-                "versions": ">=1.16.2 <1.17-",
-                "type": "github",
-                "page_url": "https://github.com/PaperMC/Starlight/releases/tag/1.0.0-RC2",
-                "api_url": "https://api.github.com/repos/PaperMC/Starlight/releases",
                 "override": [
                     {
-                        "version": "fabric-1.0.0-RC2-82ae5ca",
-                        "game_versions": ">=1.16.2 <1.17-"
+                        "version": "v7",
+                        "game_versions": "1.16.x"
                     }
                 ],
                 "latest_only": true
