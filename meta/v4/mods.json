@@ -39,7 +39,7 @@
                 "api_url": "http://optifine.net/adloadx?f=OptiFine_1.3.2_HD_U_B4.zip"
             },
             {
-                "versions": "1.4.6",
+                "versions": "1.4.6 || 1.4.7",
                 "type": "optifine_old",
                 "page_url": "http://optifine.net/adloadx?f=OptiFine_1.4.6_HD_U_D5.zip",
                 "api_url": "http://optifine.net/adloadx?f=OptiFine_1.4.6_HD_U_D5.zip"
