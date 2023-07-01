@@ -791,7 +791,7 @@
                 "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
-                "versions": "1.18.2",
+                "versions": "1.18.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.18-1.18.2/releases",
