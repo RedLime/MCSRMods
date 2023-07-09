@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.redlimerl.mcsr.MCSRModLoader;
 import com.redlimerl.mcsr.helper.HttpRequestHelper;
-import com.redlimerl.mcsr.helper.Sha1Helper;
+import com.redlimerl.mcsr.helper.ShaHelper;
 import com.redlimerl.mcsr.helper.VersionPredicateHelper;
 import com.redlimerl.mcsr.mod.abst.*;
 import net.fabricmc.loader.api.Version;
@@ -53,7 +53,8 @@ public class FabricMod extends ModInfo {
                 url[url.length - 1],
                 download.getApiUrl(),
                 null,
-                Sha1Helper.getFromInputStream(inputStream),
+                ShaHelper.getSha1FromInputStream(inputStream),
+                ShaHelper.getSha512FromInputStream(inputStream),
                 length,
                 download.getRules()
         );
@@ -83,6 +84,7 @@ public class FabricMod extends ModInfo {
                         fileName, fileData.get("url").getAsString(),
                         String.format("https://modrinth.com/mod/%s/version/%s", releaseData.get("project_id").getAsString(), releaseData.get("id").getAsString()),
                         fileData.getAsJsonObject("hashes").get("sha1").getAsString(),
+                        fileData.getAsJsonObject("hashes").get("sha512").getAsString(),
                         fileData.get("size").getAsInt(),
                         download.getRules()
                 );
@@ -131,7 +133,8 @@ public class FabricMod extends ModInfo {
                 JsonObject modJson = getFabricJsonFromInputStream(inputStream);
                 inputStream.reset();
                 if (modJson == null) continue;
-                String sha1Hash = Sha1Helper.getFromInputStream(inputStream);
+                String sha1Hash = ShaHelper.getSha1FromInputStream(inputStream);
+                String sha512Hash = ShaHelper.getSha512FromInputStream(inputStream);
 
                 String modVersion = modJson.get("version").getAsString();
                 String[] mcVersions = download.getVersions();
@@ -160,7 +163,7 @@ public class FabricMod extends ModInfo {
                         modVersion,
                         VersionPredicateHelper.getFromStringArray(mcVersions),
                         fileName, downloadUrl, pageUrl,
-                        sha1Hash, assetData.get("size").getAsInt(), download.getRules()
+                        sha1Hash, sha512Hash, assetData.get("size").getAsInt(), download.getRules()
                 );
                 if (modAsset.mcVersion().toString().isBlank() || modAsset.mcVersion().toString().contains("*") || !VersionPredicateHelper.getFromStringArray(download.getVersions()).test(modAsset.mcVersion().getMinVersion())) continue;
 

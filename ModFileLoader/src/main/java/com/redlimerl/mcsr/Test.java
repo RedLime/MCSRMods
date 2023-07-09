@@ -36,6 +36,7 @@ public class Test {
                         fileName, fileData.get("url").getAsString(),
                         String.format("https://modrinth.com/mod/%s/version/%s", releaseData.get("project_id").getAsString(), releaseData.get("id").getAsString()),
                         fileData.getAsJsonObject("hashes").get("sha1").getAsString(),
+                        fileData.getAsJsonObject("hashes").get("sha512").getAsString(),
                         fileData.get("size").getAsInt(),
                         null
                 ));
