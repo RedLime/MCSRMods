@@ -134,6 +134,7 @@ public class FabricMod extends ModInfo {
                 inputStream.reset();
                 if (modJson == null) continue;
                 String sha1Hash = ShaHelper.getSha1FromInputStream(inputStream);
+                inputStream.reset();
                 String sha512Hash = ShaHelper.getSha512FromInputStream(inputStream);
 
                 String modVersion = modJson.get("version").getAsString();
