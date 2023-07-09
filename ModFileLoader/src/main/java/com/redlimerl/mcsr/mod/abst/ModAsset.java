@@ -7,9 +7,9 @@ import com.redlimerl.mcsr.helper.OptionalVersionPredicate;
 
 import java.util.List;
 
-public record ModAsset(String modVersion, OptionalVersionPredicate<?> mcVersion, String fileName, String downloadUrl, String pageUrl, String sha1, int size, List<ModRule> rules) {
+public record ModAsset(String modVersion, OptionalVersionPredicate<?> mcVersion, String fileName, String downloadUrl, String pageUrl, String sha1, String sha512, int size, List<ModRule> rules) {
     public ModAsset(String modVersion, OptionalVersionPredicate<?> mcVersion, String fileName, String downloadUrl, String pageUrl) {
-        this(modVersion, mcVersion, fileName, downloadUrl, pageUrl, null, 0, null);
+        this(modVersion, mcVersion, fileName, downloadUrl, pageUrl, null, null, 0, null);
     }
 
     public JsonObject toJson() {
@@ -25,6 +25,7 @@ public record ModAsset(String modVersion, OptionalVersionPredicate<?> mcVersion,
         jsonObject.addProperty("url", downloadUrl());
         jsonObject.addProperty("page", pageUrl());
         jsonObject.addProperty("sha1", sha1());
+        jsonObject.addProperty("sha512", sha512());
         jsonObject.addProperty("size", size());
         if (rules() != null) jsonObject.add("rules", MCSRModLoader.GSON.toJsonTree(rules()));
         return jsonObject;
