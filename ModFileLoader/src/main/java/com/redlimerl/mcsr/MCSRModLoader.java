@@ -90,17 +90,29 @@ public class MCSRModLoader {
                 rankedModrinth.get("url").getAsString(),
                 rankedModrinth.get("size").getAsInt()
         );
+        Set<String> rankedBlocked = Set.of("ServerSideRNG", "WorldPreview", "Atum", "Force Port", "SleepBackground");
+        Set<String> rankedPro = Set.of("StandardSettings");
+        Set<String> rankedOptions = Set.of("", "Pro", "All");
         for (String os : osSet) {
-            Map<String, String> map = new HashMap<>();
-            map.put("os", os.toLowerCase(Locale.ROOT));
-            map.put("type", "rsg");
-            map.put("condition", "medical_issue");
-            JsonObject mrPack = MRPackHelper.convertPack("MCSR Ranked", "1.16.1", fabricLoader, modInfoList, map);
+            for (String rankedOption : rankedOptions) {
+                Map<String, String> map = new HashMap<>();
+                map.put("os", os.toLowerCase(Locale.ROOT));
+                map.put("type", "rsg");
+                map.put("condition", "medical_issue");
+                List<ModInfo> rankedMods = modInfoList.stream().filter(mod ->
+                        switch (rankedOption) {
+                            case "" -> !rankedBlocked.contains(mod.getName()) && !rankedPro.contains(mod.getName());
+                            case "Pro" -> !rankedBlocked.contains(mod.getName());
+                            default -> true;
+                        }
+                        ).toList();
+                JsonObject mrPack = MRPackHelper.convertPack("MCSR Ranked", "1.16.1", fabricLoader, rankedMods, map);
 
-            mrPack.getAsJsonArray("files").add(ranked);
+                mrPack.getAsJsonArray("files").add(ranked);
 
-            Path path = MODPACKS_PATH.resolve(String.format("MCSRRanked-%s-1.16.1.mrpack", os));
-            MRPackHelper.writeZipFile(path, GSON.toJson(mrPack));
+                Path path = MODPACKS_PATH.resolve(String.format("MCSRRanked-%s-1.16.1%s.mrpack", os, rankedOption.isBlank() ? "" : ("-" + rankedOption)));
+                MRPackHelper.writeZipFile(path, GSON.toJson(mrPack));
+            }
         }
     }
 }
