@@ -44,6 +44,9 @@ public class FabricMod extends ModInfo {
         int length = inputStream.available();
         JsonObject modJson = this.getFabricJsonFromInputStream(inputStream);
         inputStream.reset();
+        String sha1 = ShaHelper.getSha1FromInputStream(inputStream);
+        inputStream.reset();
+        String sha512 = ShaHelper.getSha512FromInputStream(inputStream);
         String[] url = download.getApiUrl().split("/");
 
         assert modJson != null;
@@ -53,8 +56,8 @@ public class FabricMod extends ModInfo {
                 url[url.length - 1],
                 download.getApiUrl(),
                 null,
-                ShaHelper.getSha1FromInputStream(inputStream),
-                ShaHelper.getSha512FromInputStream(inputStream),
+                sha1,
+                sha512,
                 length,
                 download.getRules()
         );
