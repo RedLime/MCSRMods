@@ -324,7 +324,7 @@
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases"
             }
         ],
-        "recommended": true
+        "recommended": false
     },
     {
         "name": "SpeedRunIGT",
@@ -740,7 +740,7 @@
                 "rules": [{"action": "allow", "properties": { "category": "ssg" } }]
             },
             {
-                "versions": "1.15.2",
+                "versions": "1.15.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.15.2/releases",
