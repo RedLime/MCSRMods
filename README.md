@@ -22,3 +22,5 @@ Basic format: `https://redlime.github.io/MCSRMods/modpacks/v4/MCSR-{VERSION}-{OS
 
 Example: 1.15.2 with Mac OS(OS X) for SSG\
 `https://redlime.github.io/MCSRMods/modpacks/v4/MCSR-1.15.2-OSX-SSG.mrpack`
+
+for MCSR Ranked: `https://redlime.github.io/MCSRMods/modpacks/v4/MCSRRanked-Windows-1.16.1.mrpack`
