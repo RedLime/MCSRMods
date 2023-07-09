@@ -91,7 +91,7 @@ public class MCSRModLoader {
                 rankedModrinth.get("size").getAsInt()
         );
         Set<String> rankedBlocked = Set.of("ServerSideRNG", "WorldPreview", "Atum", "Force Port", "SleepBackground");
-        Set<String> rankedPro = Set.of("StandardSettings");
+        Set<String> rankedPro = Set.of("StandardSettings", "antiresourcereload");
         Set<String> rankedOptions = Set.of("", "Pro", "All");
         for (String os : osSet) {
             for (String rankedOption : rankedOptions) {
