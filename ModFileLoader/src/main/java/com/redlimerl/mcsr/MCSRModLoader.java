@@ -58,17 +58,17 @@ public class MCSRModLoader {
          */
 
         Set<String> osSet = Set.of("Windows", "OSX", "Linux");
-        Set<String> typeSet = Set.of("RSG", "SSG");
+        Set<String> categorySet = Set.of("RSG", "SSG");
         Set<String> versionSet = Set.of("1.14.4", "1.15.2", "1.16.1", "1.16.5", "1.17.1");
 
         for (String os : osSet) {
-            for (String type : typeSet) {
+            for (String category : categorySet) {
                 for (String version : versionSet) {
                     Map<String, String> map = new HashMap<>();
                     map.put("os", os.toLowerCase(Locale.ROOT));
-                    map.put("type", type.toLowerCase(Locale.ROOT));
-                    JsonObject mrPack = MRPackHelper.convertPack("MCSR " + type, version, fabricLoader, modInfoList, map);
-                    Path path = MODPACKS_PATH.resolve(String.format("MCSR-%s-%s-%s.mrpack", version, os, type));
+                    map.put("category", category.toLowerCase(Locale.ROOT));
+                    JsonObject mrPack = MRPackHelper.convertPack("MCSR " + category, version, fabricLoader, modInfoList, map);
+                    Path path = MODPACKS_PATH.resolve(String.format("MCSR-%s-%s-%s.mrpack", version, os, category));
 
                     MRPackHelper.writeZipFile(path, GSON.toJson(mrPack));
                 }
@@ -97,7 +97,7 @@ public class MCSRModLoader {
             for (String rankedOption : rankedOptions) {
                 Map<String, String> map = new HashMap<>();
                 map.put("os", os.toLowerCase(Locale.ROOT));
-                map.put("type", "rsg");
+                map.put("category", "rsg");
                 map.put("condition", "medical_issue");
                 List<ModInfo> rankedMods = modInfoList.stream().filter(mod ->
                         switch (rankedOption) {
