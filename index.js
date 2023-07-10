@@ -210,8 +210,8 @@ function generateMRPack() {
         version: `${typeOptions.version}-${typeOptions.os}-${typeOptions.run}-custom`,
         name: `MCSR Custom Pack`,
         dependencies: {
-            "fabric-loader": "0.14.21",
-            "minecraft": "1.16.1"
+            "fabric-loader": ALLOW_MODS.find(mod => mod.name == 'Fabric Loader').files[0].version,
+            "minecraft": typeOptions.version
         },
         files: []
     };
