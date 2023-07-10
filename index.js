@@ -2,13 +2,15 @@ const ALLOW_VERSIONS = [];
 const ALLOW_MODS = [];
 
 const { compareVersions, compare, satisfies, validate } = window.compareVersions
+let needRefresh = false;
 
 const typeOptions = {
     version: null,
     type: 'mods',
     run: 'rsg',
     os: null,
-    medical_issue: false
+    medical_issue: false,
+    modpack_flag: 0
 }
 
 function initVersions() {
@@ -33,10 +35,22 @@ function initVersions() {
         else typeOptions.os = 'windows';
     }
     $("input[name='os-type'][value='" + typeOptions.os + "']").prop("checked", true);
+
+    if (params.has('modpack_flag')) typeOptions.modpack_flag = +params.get('modpack_flag');
 }
 
 function initResources() {
-    $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file))).map(mod => getElementFromModInfo(mod)).join(''));    
+    if (typeOptions.type == 'mods') {
+        $('#resources-tab').addClass('collapsible');
+        $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file))).map(mod => getElementFromModInfo(mod)).join(''));   
+    } else {
+        initModPack();
+        $('#resources-tab').removeClass('collapsible');
+        $('#resources-tab').html(ALLOW_MODS.filter(mod => mod.type == 'fabric_mod' && mod.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file))).map((mod, i) => getElementFromModPackInfo(mod, i)).join('') + 
+                                    `<div style="text-align: center;width: 100%;"><a class="waves-effect waves-light btn-large" onclick="generateMRPack()"><i class="material-icons left">archive</i>Generate Modpack</a></div>`);
+        typeOptions.modpack_flag = 0;
+        modPackCheckboxValidate();
+    }
 }
 
 $(document).ready(() => {
@@ -58,8 +72,6 @@ $(document).ready(() => {
                 initResources();
 
                 setInterval(() => {
-                    let needRefresh = false;
-
                     const currentVersion = $('#game-versions-select').val();
                     if (currentVersion != typeOptions.version && typeOptions.version != null) {
                         typeOptions.version = currentVersion;
@@ -91,8 +103,9 @@ $(document).ready(() => {
                     }
 
                     if (needRefresh) {
-                        history.replaceState(null, null, window.location.origin + window.location.pathname + "?version=" + typeOptions.version + "&type=" + typeOptions.type + "&run=" + typeOptions.run + "&os=" + typeOptions.os);
+                        history.replaceState(null, null, window.location.origin + window.location.pathname + "?version=" + typeOptions.version + "&type=" + typeOptions.type + "&run=" + typeOptions.run + "&os=" + typeOptions.os + (typeOptions.modpack_flag ? ('&modpack_flag=' + typeOptions.modpack_flag) : ''));
                         initResources();
+                        needRefresh = false;
                     }
                 }, 50);
             });
@@ -143,7 +156,6 @@ function satisfiesVersion(gv) {
         }
     
         const finalVersion = va.join('.');
-        console.log(finalVersion)
         try {
             return satisfies(typeOptions.version, finalVersion);
         } catch (e) {}
@@ -161,4 +173,80 @@ function rulesCheck(file) {
         if (rule.properties['condition']) return (typeOptions[rule.properties['condition']]) == allow
     }
     return false;
+}
+
+function modPackCheckboxValidate() {
+    $('.modpack-checkbox').each(function(i, obj) {
+        const objID = $(obj).attr('id').replaceAll('mod-', '');
+        const modInfo = ALLOW_MODS.find(mod => mod.name.toLowerCase().replaceAll(' ', '-') == objID);
+        if (modInfo.incompatible && 
+            modInfo.incompatible.map(inc => $('#mod-' + inc.toLowerCase().replaceAll(' ', '-'))).find(inc => inc.is(":checked"))) {
+            $(obj).prop("disabled", true);
+        } else {
+            $(obj).prop("disabled", false);
+        }
+    });
+}
+
+function initModPack() {
+    $(document).on("change", ".modpack-checkbox", () => {
+        modPackCheckboxValidate();
+    });
+}
+
+// Return Mod HTML String
+function getElementFromModPackInfo(modInfo, index) {
+    const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file));
+    return `<li>` +
+                `<p class="light-font"><label><input type="checkbox" class="filled-in modpack-checkbox" id="mod-${modInfo.name.toLowerCase().replaceAll(' ', '-')}" ${typeOptions.modpack_flag & (1 << index) ? 'checked': ''}/><span><b>${modInfo.name}</b>${`<small style="padding-left: 0.5em;">(v${build.version.replace('v', '')})</small>`}</label></span></p>` +
+            `</li>`;
+}
+
+function generateMRPack() {
+    let flagValue = 0;
+    const packData = {
+        formatVersion: 1,
+        game: 'minecraft',
+        version: `${typeOptions.version}-${typeOptions.os}-${typeOptions.run}-custom`,
+        name: `MCSR Custom Pack`,
+        dependencies: {
+            "fabric-loader": "0.14.21",
+            "minecraft": "1.16.1"
+        },
+        files: []
+    };
+    $('.modpack-checkbox').each(function(i, obj) {
+        if (!$(obj).is(":checked")) return;
+        const objID = $(obj).attr('id').replaceAll('mod-', '');
+        const modInfo = ALLOW_MODS.find(mod => mod.name.toLowerCase().replaceAll(' ', '-') == objID);
+        const build = modInfo.files.find(file => file.game_versions.find(gv => satisfiesVersion(gv)) && rulesCheck(file));
+        packData.files.push({
+            "path": "mods/" + build.name,
+            "hashes": {
+                "sha1": build.sha1,
+                "sha512": build.sha512
+            },
+            "env": {
+                "client": "required",
+                "server": "unsupported"
+            },
+            "downloads": [build.url],
+            "fileSize": build.size
+        });
+        flagValue += (1 << i);
+    });
+    typeOptions.modpack_flag = flagValue;
+    needRefresh = true;
+
+    // Generate the ZIP file
+    const zip = new JSZip();
+    zip.file("modrinth.index.json", JSON.stringify(packData, null, 4));
+
+    zip.generateAsync({ type: "blob" }).then((content) => {
+        // Create a download link
+        var link = document.createElement("a");
+        link.href = URL.createObjectURL(content);
+        link.download = `MCSR-${packData.version}.mrpack`;
+        link.click();
+    });
 }
