@@ -98,7 +98,6 @@ public class MCSRModLoader {
                 Map<String, String> map = new HashMap<>();
                 map.put("os", os.toLowerCase(Locale.ROOT));
                 map.put("category", "rsg");
-                map.put("condition", "medical_issue");
                 List<ModInfo> rankedMods = modInfoList.stream().filter(mod ->
                         switch (rankedOption) {
                             case "" -> !rankedBlocked.contains(mod.getName()) && !rankedPro.contains(mod.getName());
