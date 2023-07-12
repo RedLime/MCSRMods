@@ -537,6 +537,20 @@
                 "type": "github",
                 "page_url": "https://github.com/Gregor0410/LazyStronghold/releases",
                 "api_url": "https://api.github.com/repos/Gregor0410/LazyStronghold/releases",
+                "override": [
+                    {
+                        "version": "lazystronghold-1.1.3+1.16.1.jar",
+                        "game_versions": "1.16.1"
+                    },
+                    {
+                        "version": "lazystronghold-1.1.2+1.16.5.jar",
+                        "game_versions": "1.16.5"
+                    },
+                    {
+                        "version": "lazystronghold-1.1.2+1.16.1.jar",
+                        "game_versions": "1.16.1"
+                    }
+                ],
                 "rules": [{"action": "disallow", "properties": { "category": "ssg" } }]
             }
         ],
