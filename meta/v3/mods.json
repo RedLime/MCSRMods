@@ -1645,19 +1645,19 @@
             {
                 "buildVersion": "1.0.0",
                 "targetVersion": "1.16.1",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/latest/chunkcacher-1.16-1.17.1-2.0.0.jar",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/v2/chunkcacher-1.16-1.17.1-2.0.0.jar",
                 "filename": "chunkcacher-1.16-1.17.1-2.0.0.jar"
             },
             {
                 "buildVersion": "1.0.0",
                 "targetVersion": "1.16.5",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/latest/chunkcacher-1.16-1.17.1-2.0.0.jar",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/v2/chunkcacher-1.16-1.17.1-2.0.0.jar",
                 "filename": "chunkcacher-1.16-1.17.1-2.0.0.jar"
             },
             {
                 "buildVersion": "1.0.0",
                 "targetVersion": "1.17.1",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/latest/chunkcacher-1.16-1.17.1-2.0.0.jar",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-chunkcacher-1.16-1.17.1/releases/download/v2/chunkcacher-1.16-1.17.1-2.0.0.jar",
                 "filename": "chunkcacher-1.16-1.17.1-2.0.0.jar"
             },
             {
