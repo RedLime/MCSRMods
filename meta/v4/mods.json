@@ -313,20 +313,6 @@
         "recommended": false
     },
     {
-        "name": "ServerSideRNG",
-        "description": "Helps to ensure the legitimacy of Minecraft Speedruns",
-        "type": "fabric_mod",
-        "downloads": [
-            {
-                "versions": "1.16.1",
-                "type": "github",
-                "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-serversiderng-1.16.1/releases"
-            }
-        ],
-        "recommended": false
-    },
-    {
         "name": "SpeedRunIGT",
         "description": "In-game Timer for Minecraft Speedrun",
         "type": "fabric_mod",
