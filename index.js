@@ -129,7 +129,7 @@ function getElementFromModInfo(modInfo) {
                     (modInfo.description ? `<div>Description<br><small class="light-font description">${modInfo.description.replaceAll('\n', '<br>')}</small></div>` : '') +
 
                     //Incompatible mod list
-                    (modInfo.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You must be only use one of these : <b>${modInfo.name}</b>, ${modInfo.incompatible.join(', ')}</small></div>` : '') +
+                    (modInfo.incompatible?.length ? `<div>Incompatible Mods<br><small class="light-font description">You can't use it with one of these : ${modInfo.incompatible.join(', ')}</small></div>` : '') +
 
                     //Download Button
                     (build.url ? `<div><a class="light-font waves-effect waves-light btn" href="${build.url}" target="_blank">Download</a></div>` : '') +
