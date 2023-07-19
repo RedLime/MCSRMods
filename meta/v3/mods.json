@@ -185,8 +185,8 @@
             {
                 "buildVersion": "1.0.0",
                 "targetVersion": "1.16.x",
-                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC2/starlight-fabric-1.0.0-RC2-1.16.x.jar",
-                "filename": "starlight-fabric-1.0.0-RC2-1.16.x.jar"
+                "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC1/starlight-fabric-1.0.0-RC1-1.16.x.jar",
+                "filename": "starlight-fabric-1.0.0-RC1-1.16.x.jar"
             },
             {
                 "buildVersion": "1.0.0",
