@@ -770,6 +770,12 @@
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases",
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.16.1/releases",
                 "rules": [{"action": "allow", "properties": { "category": "ssg" } }],
+                "override": [
+                    {
+                        "version": "*",
+                        "game_versions": "1.16.1"
+                    }
+                ],
                 "latest_only": true
             },
             {
@@ -780,7 +786,7 @@
                 "rules": [{"action": "allow", "properties": { "category": "ssg" } }],
                 "override": [
                     {
-                        "version": "setspawnmod-1.16.5-v2.jar",
+                        "version": "*",
                         "game_versions": "1.16.5"
                     }
                 ],

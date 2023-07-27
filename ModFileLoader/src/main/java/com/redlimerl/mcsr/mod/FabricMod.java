@@ -156,7 +156,7 @@ public class FabricMod extends ModInfo {
                 }
                 if (download.getOverride() != null) {
                     for (VersionOverride versionOverride : download.getOverride()) {
-                        if (modVersion.equals(versionOverride.getVersion()) || fileName.equals(versionOverride.getVersion())) {
+                        if (versionOverride.getVersion().equals("*") || modVersion.equals(versionOverride.getVersion()) || fileName.equals(versionOverride.getVersion())) {
                             mcVersions = versionOverride.getGameVersions();
                             break;
                         }
