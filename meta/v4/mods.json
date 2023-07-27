@@ -388,7 +388,14 @@
                 "versions": "1.8.x",
                 "type": "github",
                 "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases",
-                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases"
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-anchiale-1.8-1.8.9/releases",
+                "override": [
+                    {
+                        "version": "3.0.0",
+                        "game_versions": "1.8.x"
+                    }
+                ],
+                "latest_only": true
             }
         ],
         "recommended": true
@@ -705,7 +712,7 @@
                     },
                     {
                         "version": "extra-options-1.0.0-1.16.jar",
-                        "game_versions": "1.16.x"
+                        "game_versions": "1.16.1"
                     }
                 ]
             }
