@@ -1530,10 +1530,10 @@
                 "filename": "standardsettings-1.2.2+1.9.4.jar"
             },
             {
-                "buildVersion": "1.2.1.1",
+                "buildVersion": "1.2.2",
                 "targetVersion": "20w14infinite",
-                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.1.1/standardsettings-1.2.1.1%2B20w14infinite.jar",
-                "filename": "standardsettings-1.2.1.1+20w14infinite.jar"
+                "downloadUrl": "https://github.com/KingContaria/StandardSettings/releases/download/v1.2.2/standardsettings-1.2.2%2B20w14infinite.jar",
+                "filename": "standardsettings-1.2.2+20w14infinite.jar"
             }
         ]
     },
