@@ -835,6 +835,30 @@
                 "targetVersion": "1.8.9",
                 "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.8.9/releases/download/v4/worldpreview-1.8.9-4.0.0.jar",
                 "filename": "worldpreview-1.8.9-4.0.0.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "20w14infinite",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/JFDkTCa2/worldpreview-2.3.3%2B20w14infinite.jar",
+                "filename": "worldpreview-2.3.3+20w14infinite.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/zL0kzULM/worldpreview-2.3.3%2B1.17.1.jar",
+                "filename": "worldpreview-2.3.3+1.17.1.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/vBgg8ZKY/worldpreview-2.3.3%2B1.16.5.jar",
+                "filename": "worldpreview-2.3.3+1.16.5.jar"
+            },
+            {
+                "buildVersion": "2.3.3",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/tKUU4TXD/versions/dMOmyR71/worldpreview-2.3.3%2B1.14.4.jar",
+                "filename": "worldpreview-2.3.3+1.14.4.jar"
             }
         ]
     },
