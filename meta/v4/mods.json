@@ -246,9 +246,9 @@
         "downloads": [
             {
                 "versions": "1.15.2",
-                "type": "curseforge",
-                "page_url": "https://www.curseforge.com/minecraft/mc-mods/lithium/files/2904300",
-                "api_url": "https://api.curseforge.com/v1/mods/360438/files"
+                "type": "direct",
+                "page_url": "https://www.curseforge.com/api/v1/mods/360438/files/2904300/download",
+                "api_url": "https://www.curseforge.com/api/v1/mods/360438/files/2904300/download"
             },
             {
                 "versions": "1.16.1",
@@ -257,7 +257,7 @@
                 "api_url": "https://api.github.com/repos/mrmangohands/lithium-fabric/releases"
             },
             {
-                "versions": ">=1.16.5",
+                "versions": ">=1.16.2",
                 "type": "modrinth",
                 "page_url": "https://modrinth.com/mod/lithium/versions/",
                 "api_url": "https://api.modrinth.com/v2/project/lithium/version"
