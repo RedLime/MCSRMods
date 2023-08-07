@@ -1,5 +1,6 @@
 package com.redlimerl.mcsr.helper;
 
+import com.google.common.collect.Sets;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.redlimerl.mcsr.MCSRModLoader;
@@ -13,14 +14,14 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class MRPackHelper {
+
+    private static final Set<String> WHITELISTED_NOT_RECOMMENDED = Sets.newHashSet("StandardSettings");
+
     public static JsonObject convertPack(String name, String gameVersion, ModInfo loader, Collection<ModInfo> mods, Map<String, String> rules) throws Throwable {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("formatVersion", 1);
@@ -31,7 +32,7 @@ public class MRPackHelper {
         JsonArray jsonArray = new JsonArray();
         for (ModInfo mod : mods) {
             if (!Objects.equals(mod.getType(), "fabric_mod")) continue;
-            if (!mod.isRecommended()) continue;
+            if (!mod.isRecommended() && !WHITELISTED_NOT_RECOMMENDED.contains(mod.getName())) continue;
             assetCheck: for (ModAsset modAsset : mod.getAssetsResult()) {
                 if (!modAsset.mcVersion().test(Version.parse(gameVersion))) continue;
                 if (modAsset.sha1() == null || modAsset.sha512() == null) continue;

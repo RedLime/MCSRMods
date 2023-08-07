@@ -493,7 +493,13 @@
                 "versions": ">=1.14- <=1.16-",
                 "type": "github",
                 "page_url": "https://github.com/modmuss50/Voyager/releases",
-                "api_url": "https://api.github.com/repos/modmuss50/Voyager/releases"
+                "api_url": "https://api.github.com/repos/modmuss50/Voyager/releases",
+                "override": [
+                    {
+                        "version": "1.0.0",
+                        "game_versions": ">=1.14 <=1.16.5"
+                    }
+                ]
             }
         ],
         "recommended": true
