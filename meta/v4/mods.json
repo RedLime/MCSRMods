@@ -246,9 +246,9 @@
         "downloads": [
             {
                 "versions": "1.15.2",
-                "type": "curseforge",
-                "page_url": "https://www.curseforge.com/minecraft/mc-mods/lithium/files/2904300",
-                "api_url": "https://api.curseforge.com/v1/mods/360438/files"
+                "type": "direct",
+                "page_url": "https://www.curseforge.com/api/v1/mods/360438/files/2904300/download",
+                "api_url": "https://www.curseforge.com/api/v1/mods/360438/files/2904300/download"
             },
             {
                 "versions": "1.16.1",
@@ -257,7 +257,7 @@
                 "api_url": "https://api.github.com/repos/mrmangohands/lithium-fabric/releases"
             },
             {
-                "versions": ">=1.16.5",
+                "versions": ">=1.16.2",
                 "type": "modrinth",
                 "page_url": "https://modrinth.com/mod/lithium/versions/",
                 "api_url": "https://api.modrinth.com/v2/project/lithium/version"
@@ -294,7 +294,22 @@
                 "versions": ">=1.7 <=1.8.9",
                 "type": "github",
                 "page_url": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases",
-                "api_url": "https://api.github.com/repos/RedLime/Pre1.9-Dynamic-FPS/releases"
+                "api_url": "https://api.github.com/repos/RedLime/Pre1.9-Dynamic-FPS/releases",
+                "override": [
+                    {
+                        "version": "mangodfps-1.0.1-SNAPSHOT+1.7.x.jar",
+                        "game_versions": "1.7.x"
+                    },
+                    {
+                        "version": "mangodfps-1.0.1-SNAPSHOT+1.8.jar",
+                        "game_versions": "1.8"
+                    },
+                    {
+                        "version": "mangodfps-1.0.1-SNAPSHOT+1.8.9.jar",
+                        "game_versions": "1.8.9"
+                    }
+                ],
+                "latest_only": true
             },
             {
                 "versions": "1.15.2",
@@ -351,7 +366,25 @@
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases"
             },
             {
-                "versions": ">=1.9",
+                "versions": "1.11.2",
+                "type": "direct",
+                "page_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.11.2.jar",
+                "api_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.11.2.jar"
+            },
+            {
+                "versions": "1.12.2",
+                "type": "direct",
+                "page_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.12.2.jar",
+                "api_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.12.2.jar"
+            },
+            {
+                "versions": "1.13.2",
+                "type": "direct",
+                "page_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.13.2.jar",
+                "api_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.13.2.jar"
+            },
+            {
+                "versions": ">=1.14.4",
                 "type": "modrinth",
                 "page_url": "https://modrinth.com/mod/atum/versions",
                 "api_url": "https://api.modrinth.com/v2/project/atum/version"
@@ -460,7 +493,13 @@
                 "versions": ">=1.14- <=1.16-",
                 "type": "github",
                 "page_url": "https://github.com/modmuss50/Voyager/releases",
-                "api_url": "https://api.github.com/repos/modmuss50/Voyager/releases"
+                "api_url": "https://api.github.com/repos/modmuss50/Voyager/releases",
+                "override": [
+                    {
+                        "version": "1.0.0",
+                        "game_versions": ">=1.14 <=1.16.5"
+                    }
+                ]
             }
         ],
         "recommended": true
