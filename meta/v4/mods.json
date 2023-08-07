@@ -301,8 +301,8 @@
                         "game_versions": "1.7.x"
                     },
                     {
-                        "version": "mangodfps-1.0.1-SNAPSHOT+1.8.jar",
-                        "game_versions": "1.8.0"
+                        "version": "mangodfps-1.0.2-SNAPSHOT+1.8.jar",
+                        "game_versions": "1.8"
                     },
                     {
                         "version": "mangodfps-1.0.1-SNAPSHOT+1.8.9.jar",
