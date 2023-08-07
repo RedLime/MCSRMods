@@ -366,7 +366,25 @@
                 "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases"
             },
             {
-                "versions": ">=1.9",
+                "versions": "1.11.2",
+                "type": "direct",
+                "page_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.11.2.jar",
+                "api_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.11.2.jar"
+            },
+            {
+                "versions": "1.12.2",
+                "type": "direct",
+                "page_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.12.2.jar",
+                "api_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.12.2.jar"
+            },
+            {
+                "versions": "1.13.2",
+                "type": "direct",
+                "page_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.13.2.jar",
+                "api_url": "https://github.com/VoidXWalker/Atum/releases/download/v1.1.2/atum-1.0.5+1.13.2.jar"
+            },
+            {
+                "versions": ">=1.14.4",
                 "type": "modrinth",
                 "page_url": "https://modrinth.com/mod/atum/versions",
                 "api_url": "https://api.modrinth.com/v2/project/atum/version"
