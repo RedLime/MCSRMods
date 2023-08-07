@@ -1354,6 +1354,36 @@
             },
             {
                 "buildVersion": "3.8",
+                "targetVersion": "1.12.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.11.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.10.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.9.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.8.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.8.x-1.12.x.jar",
+                "filename": "sleepbackground-3.8-1.8.x-1.12.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
                 "targetVersion": "1.7.x",
                 "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.7.x.jar",
                 "filename": "sleepbackground-3.8-1.7.x.jar"
