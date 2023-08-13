@@ -96,10 +96,10 @@
                 "filename": "sodium-1.16.1-v2.jar"
             },
             {
-                "buildVersion": "0.5.0",
+                "buildVersion": "0.5.1",
                 "targetVersion": "1.20.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/hiO9bwqc/sodium-fabric-mc1.20.1-0.5.0.jar",
-                "filename": "sodium-fabric-mc1.20.1-0.5.0.jar"
+                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/OkwCNtFH/sodium-fabric-mc1.20.1-0.5.1.jar",
+                "filename": "sodium-fabric-mc1.20.1-0.5.1.jar"
             },
             {
                 "buildVersion": "0.4.10",
