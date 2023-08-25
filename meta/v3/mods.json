@@ -1622,7 +1622,7 @@
             {
                 "buildVersion": "v3",
                 "targetVersion": "1.17.1",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases/download/v3/setspawnmod-1.17.1-v3.jar",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.17.1/releases/download/latest/setspawnmod-1.17.1-v3.jar",
                 "filename": "setspawnmod-1.17.1-v3.jar"
             }
         ]
