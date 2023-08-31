@@ -670,6 +670,96 @@
                 "targetVersion": "1.8.9",
                 "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-atum-1.8.9/releases/download/v5/atum-1.8.9-5.0.0.jar",
                 "filename": "atum-1.8.9-5.0.0.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "22w13oneblockatatime",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/A45jqJ8j/atum-1.1.3%2B22w13oneblockatatime.jar",
+                "filename": "atum-1.1.3+22w13oneblockatatime.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "20w14infinite",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/gTuJcytY/atum-1.1.3%2B20w14infinite.jar",
+                "filename": "atum-1.1.3+20w14infinite.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "15w14a",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/4EGjmsns/atum-1.1.3%2B15w14a.jar",
+                "filename": "atum-1.1.3+15w14a.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.9.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/Pi9ulf2s/atum-1.1.3%2B1.9.4.jar",
+                "filename": "atum-1.1.3+1.9.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/HZVNOw4q/atum-1.1.3%2B1.19.2.jar",
+                "filename": "atum-1.1.3+1.19.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/RF2t8L2C/atum-1.1.3%2B1.18.2.jar",
+                "filename": "atum-1.1.3+1.18.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/tGr3P1je/atum-1.1.3%2B1.17.1.jar",
+                "filename": "atum-1.1.3+1.17.1.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/TilzJg8a/atum-1.1.3%2B1.16.5.jar",
+                "filename": "atum-1.1.3+1.16.5.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/9lusl9ec/atum-1.1.3%2B1.16.1.jar",
+                "filename": "atum-1.1.3+1.16.1.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/wivMNeFa/atum-1.1.3%2B1.15.2.jar",
+                "filename": "atum-1.1.3+1.15.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/9kgyhSnQ/atum-1.1.3%2B1.14.4.jar",
+                "filename": "atum-1.1.3+1.14.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.13.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/bIDYzzVo/atum-1.1.3%2B1.13.2.jar",
+                "filename": "atum-1.1.3+1.13.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.12.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/UY9uOFyC/atum-1.1.3%2B1.12.2.jar",
+                "filename": "atum-1.1.3+1.12.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.11.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/6OkTnX3V/atum-1.1.3%2B1.11.2.jar",
+                "filename": "atum-1.1.3+1.11.2.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.10.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/PNEi3GLK/versions/bKxSEmF7/atum-1.1.3%2B1.10.2.jar",
+                "filename": "atum-1.1.3+1.10.2.jar"
             }
         ]
     },
