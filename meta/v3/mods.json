@@ -1023,7 +1023,26 @@
         "name": "Voyager",
         "description": "Fixes a rare CME (ConcurrentModificationException) when using java 11+",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.14.x",
+                "downloadUrl": "https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar",
+                "filename": "voyager-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.15.x",
+                "downloadUrl": "https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar",
+                "filename": "voyager-1.0.0.jar"
+            },
+            {
+                "buildVersion": "1.0.0",
+                "targetVersion": "1.16.x",
+                "downloadUrl": "https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar",
+                "filename": "voyager-1.0.0.jar"
+            }
+        ]
     },
     {
         "name": "Force Port",
