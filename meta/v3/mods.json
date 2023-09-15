@@ -1252,10 +1252,10 @@
         "incompatible": [],
         "versions": [
             {
-                "buildVersion": "1.3",
+                "buildVersion": "1.4",
                 "targetVersion": "1.16.5+",
-                "downloadUrl": "https://github.com/RedLime/BiomeThreadLocalFix/releases/download/1.3/BiomeThreadLocalFix-1.3.jar",
-                "filename": "BiomeThreadLocalFix-1.3.jar"
+                "downloadUrl": "https://github.com/RedLime/BiomeThreadLocalFix/releases/download/1.4/BiomeThreadLocalFix-1.4.jar",
+                "filename": "BiomeThreadLocalFix-1.4.jar"
             }
         ]
     },
