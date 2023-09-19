@@ -715,6 +715,21 @@
         "recommended": true
     },
     {
+        "name": "antigone",
+        "description": "Fixes a rare server thread crash involving an interaction with striders and chicken jockeys. This will remove most/all causes of the infamous 'ghost nether'/'phantom nether'.",
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": "1.16.1",
+                "type": "github",
+                "page_url": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-antigone-1.16.1/releases",
+                "api_url": "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/mcsr-antigone-1.16.1/releases",
+                "latest_only": true
+            }
+        ],
+        "recommended": true,
+    },
+    {
         "name": "StandardSettings",
         "description": "Defaults settings to a standard set by the player when creating a new World for macros\n<b>Note!</b> If you are using this mod for the first time, please read the <a href='https://github.com/KingContaria/StandardSettings/blob/1.16.1/README.md' target='_blank'>README</a> before use it.",
         "type": "fabric_mod",
