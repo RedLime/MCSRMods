@@ -727,7 +727,7 @@
                 "latest_only": true
             }
         ],
-        "recommended": true,
+        "recommended": true
     },
     {
         "name": "StandardSettings",
