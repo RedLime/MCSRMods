@@ -428,12 +428,6 @@
                 "filename": "krypton-1.16.1-backport-0.1.3-SNAPSHOT+2021-02-20.jar"
             },
             {
-                "buildVersion": "0.1.2",
-                "targetVersion": "1.16.5",
-                "downloadUrl": "https://github.com/astei/krypton/releases/download/0.1.2/krypton-0.1.2.jar",
-                "filename": "krypton-0.1.2.jar"
-            },
-            {
                 "buildVersion": "0.1.4",
                 "targetVersion": "1.17.1",
                 "downloadUrl": "https://github.com/astei/krypton/releases/download/v0.1.4/krypton-0.1.4.jar",
