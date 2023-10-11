@@ -1590,18 +1590,6 @@
         ],
         "versions": [
             {
-                "buildVersion": "3.0.0",
-                "targetVersion": "1.6.4",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.6.4/releases/download/v3/setspawn-1.6.4-3.0.0.jar",
-                "filename": "setspawn-1.6.4-3.0.0.jar"
-            },
-            {
-                "buildVersion": "4.0.0",
-                "targetVersion": "1.7.10",
-                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.7.10/releases/download/v4/setspawn-1.7.10-4.0.0.jar",
-                "filename": "setspawn-1.7.10-4.0.0.jar"
-            },
-            {
                 "buildVersion": "2.0.0",
                 "targetVersion": "1.8.x",
                 "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-set-spawn-1.8-1.8.9/releases/download/v2/setspawnmod-1.8.x-2.0.0.jar",
