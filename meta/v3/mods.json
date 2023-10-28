@@ -1160,6 +1160,12 @@
         "incompatible": [],
         "versions": [
             {
+                "buildVersion": "2.7.0",
+                "targetVersion": "1.20.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/Mxw3Cbsk/FabricProxy-Lite-2.7.0.jar",
+                "filename": "FabricProxy-Lite-2.7.0.jar"
+            },
+            {
                 "buildVersion": "2.6.0",
                 "targetVersion": "1.20.1",
                 "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/XJmDAnj5/FabricProxy-Lite-2.6.0.jar",
