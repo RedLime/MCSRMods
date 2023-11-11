@@ -288,10 +288,10 @@
                 "filename": "phosphor-fabric-mc1.15.2-0.5.2+build.6.jar"
             },
             {
-                "buildVersion": "0.7.2",
+                "buildVersion": "0.7.1",
                 "targetVersion": "1.16.1",
-                "downloadUrl": "https://github.com/mrmangohands/phosphor-fabric/releases/download/mc1.16.1-0.7.2/phosphor-1.16.1-backport-fabric-0.7.2.jar",
-                "filename": "phosphor-1.16.1-backport-fabric-0.7.2.jar"
+                "downloadUrl": "https://github.com/mrmangohands/phosphor-fabric/releases/download/mc1.16.1-0.7.1-SNAPSHOT%2B2021-02-13/phosphor-1.16.1-backport-fabric-0.7.1-SNAPSHOT%2B2021-02-13.jar",
+                "filename": "phosphor-1.16.1-backport-fabric-0.7.1-SNAPSHOT+2021-02-13.jar"
             },
             {
                 "buildVersion": "0.8.0",
