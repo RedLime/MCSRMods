@@ -450,12 +450,6 @@
                 "targetVersion": "1.18.2",
                 "downloadUrl": "https://github.com/astei/krypton/releases/download/v0.1.9/krypton-0.1.9.jar",
                 "filename": "krypton-0.1.9.jar"
-            },
-            {
-                "buildVersion": "0.2.1",
-                "targetVersion": "1.19.x",
-                "downloadUrl": "https://github.com/astei/krypton/releases/download/v0.2.1/krypton-0.2.1.jar",
-                "filename": "krypton-0.2.1.jar"
             }
         ]
     },
@@ -1357,6 +1351,12 @@
                 "targetVersion": "1.18.x",
                 "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.16.x-1.18.x.jar",
                 "filename": "sleepbackground-3.8-1.16.x-1.18.x.jar"
+            },
+            {
+                "buildVersion": "3.8",
+                "targetVersion": "1.15.x",
+                "downloadUrl": "https://github.com/RedLime/SleepBackground/releases/download/3.8/sleepbackground-3.8-1.15.x.jar",
+                "filename": "sleepbackground-3.8-1.15.x.jar"
             },
             {
                 "buildVersion": "3.8",
