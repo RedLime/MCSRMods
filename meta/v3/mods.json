@@ -892,6 +892,120 @@
         "incompatible": [],
         "versions": [
             {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.14.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.15",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.15.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.15.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.17",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.18",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.18.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
+                "buildVersion": "0.1.2",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar",
+                "filename": "lazydfu-0.1.2.jar"
+            },
+            {
                 "buildVersion": "0.1.3",
                 "targetVersion": "1.19",
                 "downloadUrl": "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar",
@@ -1050,7 +1164,74 @@
         "name": "FabricProxy-Lite",
         "description": "Support forward player data from \"Velocity\" proxy",
         "incompatible": [],
-        "versions": []
+        "versions": [
+            {
+                "buildVersion": "2.7.0",
+                "targetVersion": "1.20.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/Mxw3Cbsk/FabricProxy-Lite-2.7.0.jar",
+                "filename": "FabricProxy-Lite-2.7.0.jar"
+            },
+            {
+                "buildVersion": "2.6.0",
+                "targetVersion": "1.20.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/XJmDAnj5/FabricProxy-Lite-2.6.0.jar",
+                "filename": "FabricProxy-Lite-2.6.0.jar"
+            },
+            {
+                "buildVersion": "2.5.0",
+                "targetVersion": "1.19.4",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/HuwRuGXe/FabricProxy-Lite-2.5.0.jar",
+                "filename": "FabricProxy-Lite-2.5.0.jar"
+            },
+            {
+                "buildVersion": "2.4.0",
+                "targetVersion": "1.19.3",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/rCwKd1CC/FabricProxy-Lite-2.4.0.jar",
+                "filename": "FabricProxy-Lite-2.4.0.jar"
+            },
+            {
+                "buildVersion": "2.3.0",
+                "targetVersion": "1.19.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.3.0/FabricProxy-Lite-2.3.0.jar",
+                "filename": "FabricProxy-Lite-2.3.0.jar"
+            },
+            {
+                "buildVersion": "2.3.0",
+                "targetVersion": "1.19.2",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.3.0/FabricProxy-Lite-2.3.0.jar",
+                "filename": "FabricProxy-Lite-2.3.0.jar"
+            },
+            {
+                "buildVersion": "2.1.1",
+                "targetVersion": "1.19",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.1.1/FabricProxy-Lite-2.1.1.jar",
+                "filename": "FabricProxy-Lite-2.1.1.jar"
+            },
+            {
+                "buildVersion": "1.1.6",
+                "targetVersion": "1.18",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.6/FabricProxy-Lite-1.1.6.jar",
+                "filename": "FabricProxy-Lite-1.1.6.jar"
+            },
+            {
+                "buildVersion": "1.1.5",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.5/FabricProxy-Lite-1.1.5.jar",
+                "filename": "FabricProxy-Lite-1.1.5.jar"
+            },
+            {
+                "buildVersion": "1.1.4",
+                "targetVersion": "1.17",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.4/FabricProxy-Lite-1.1.4.jar",
+                "filename": "FabricProxy-Lite-1.1.4.jar"
+            },
+            {
+                "buildVersion": "1.1.3",
+                "targetVersion": "1.16.5",
+                "downloadUrl": "https://cdn.modrinth.com/data/8dI2tmqs/versions/v1.1.3/FabricProxy-Lite-1.1.3.jar",
+                "filename": "FabricProxy-Lite-1.1.3.jar"
+            }
+        ]
     },
     {
         "name": "LazyStronghold",
