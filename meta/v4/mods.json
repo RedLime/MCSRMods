@@ -730,6 +730,20 @@
         "recommended": true
     },
     {
+        "name": "Chunkumulator",
+        "description": "Optimizes chunk sending for worse quality connections to the server, allowing them to start playing as soon as they join.",
+        "type": "fabric_mod",
+        "downloads": [
+            {
+                "versions": ">=1.15-",
+                "type": "modrinth",
+                "page_url": "https://modrinth.com/mod/chunkumulator/versions",
+                "api_url": "https://api.modrinth.com/v2/project/chunkumulator/version"
+            }
+        ],
+        "recommended": true
+    },
+    {
         "name": "StandardSettings",
         "description": "Defaults settings to a standard set by the player when creating a new World for macros\n<b>Note!</b> If you are using this mod for the first time, please read the <a href='https://github.com/KingContaria/StandardSettings/blob/1.16.1/README.md' target='_blank'>README</a> before use it.",
         "type": "fabric_mod",
