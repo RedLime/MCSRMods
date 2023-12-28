@@ -207,7 +207,7 @@ function generateMRPack() {
     const packData = {
         formatVersion: 1,
         game: 'minecraft',
-        version: `${typeOptions.version}-${typeOptions.os}-${typeOptions.run}-custom`,
+        versionId: `${typeOptions.version}-${typeOptions.os}-${typeOptions.run}-custom`,
         name: `MCSR Custom Pack`,
         dependencies: {
             "fabric-loader": ALLOW_MODS.find(mod => mod.name == 'Fabric Loader').files[0].version,
