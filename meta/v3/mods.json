@@ -855,6 +855,12 @@
         "incompatible": [],
         "versions": [
             {
+                "buildVersion": "1.16.1",
+                "targetVersion": "4.0.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases/download/v4.0.1/worldpreview-4.0.1%2B1.16.1.jar",
+                "filename": "worldpreview-4.0.1+1.16.1.jar"
+            },
+            {
                 "buildVersion": "4.0.0",
                 "targetVersion": "1.16.1",
                 "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-worldpreview-1.16.1/releases/download/v4/worldpreview-1.16.1-4.0.0.jar",
