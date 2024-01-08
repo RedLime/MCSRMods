@@ -1,5 +1,6 @@
 package com.redlimerl.mcsr.mod;
 
+import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -125,7 +126,11 @@ public class FabricMod extends ModInfo {
             if (releaseData.get("prerelease").getAsBoolean() && !shouldCheckPreRelease) continue;
 
             String pageUrl = releaseData.get("html_url").getAsString();
-            for (JsonElement asset : releaseData.getAsJsonArray("assets")) {
+            List<JsonElement> assetList = Lists.newArrayList();
+            for (JsonElement asset : releaseData.getAsJsonArray("assets")) assetList.add(asset);
+            assetList.sort(Collections.reverseOrder(Comparator.comparing(element -> element.getAsJsonObject().get("name").getAsString())));
+
+            for (JsonElement asset : assetList) {
                 JsonObject assetData = asset.getAsJsonObject();
                 String fileName = assetData.get("name").getAsString();
                 String downloadUrl = assetData.get("browser_download_url").getAsString();
