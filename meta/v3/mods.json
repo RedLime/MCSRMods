@@ -241,42 +241,6 @@
                 "targetVersion": "21w10a",
                 "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-21w10a.jar",
                 "filename": "starlight-fabric-0.0.3-21w10a.jar"
-            },
-            {
-                "buildVersion": "1.0.2",
-                "targetVersion": "1.18.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.0.2%2B1.18.2/starlight-1.0.2%2Bfabric.89b8d9f.jar",
-                "filename": "starlight-1.0.2+fabric.89b8d9f.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
             }
         ]
     },
