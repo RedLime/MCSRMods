@@ -665,10 +665,10 @@
                 "filename": "SpeedRunIGT-13.6+1.20.jar"
             },
             {
-                "buildVersion": "14.0",
+                "buildVersion": "14.1",
                 "targetVersion": "1.16.1",
-                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.6/SpeedRunIGT-14.0%2B1.16.1.jar",
-                "filename": "SpeedRunIGT-14.0+1.16.1.jar"
+                "downloadUrl": "https://github.com/RedLime/SpeedRunIGT/releases/download/13.6/SpeedRunIGT-14.1%2B1.16.1.jar",
+                "filename": "SpeedRunIGT-14.1+1.16.1.jar"
             },
             {
                 "buildVersion": "7.2.1",
