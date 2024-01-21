@@ -1325,10 +1325,10 @@
         "incompatible": [],
         "versions": [
             {
-                "buildVersion": "1.3",
+                "buildVersion": "1.2",
                 "targetVersion": "~1.14.4",
-                "downloadUrl": "https://github.com/RedLime/LegacyPlanarFog/releases/download/1.3/z-buffer-fog-1.3.jar",
-                "filename": "z-buffer-fog-1.3.jar"
+                "downloadUrl": "https://github.com/RedLime/LegacyPlanarFog/releases/download/1.2/z-buffer-fog-1.2.jar",
+                "filename": "z-buffer-fog-1.2.jar"
             }
         ]
     },
