@@ -491,6 +491,24 @@
         ],
         "versions": [
             {
+                "buildVersion": "1.0.1",
+                "targetVersion": "1.7.x",
+                "downloadUrl": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/download/1.0.1/mangodfps-1.0.1-SNAPSHOT%2B1.7.x.jar",
+                "filename": "mangodfps-1.0.1-SNAPSHOT+1.7.x.jar"
+            },
+            {
+                "buildVersion": "1.0.1",
+                "targetVersion": "1.8.9",
+                "downloadUrl": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/download/1.0.1/mangodfps-1.0.1-SNAPSHOT%2B1.8.9.jar",
+                "filename": "mangodfps-1.0.1-SNAPSHOT+1.8.9.jar"
+            },
+            {
+                "buildVersion": "1.0.2",
+                "targetVersion": "1.8.0",
+                "downloadUrl": "https://github.com/RedLime/Pre1.9-Dynamic-FPS/releases/download/1.0.1/mangodfps-1.0.2-SNAPSHOT%2B1.8.jar",
+                "filename": "mangodfps-1.0.2-SNAPSHOT+1.8.jar"
+            },
+            {
                 "buildVersion": "2.0.4",
                 "targetVersion": "1.15.2",
                 "downloadUrl": "https://cdn.discordapp.com/attachments/816880312415027280/926260415900561408/dynamic-fps-2.0.4-but-different.jar",
