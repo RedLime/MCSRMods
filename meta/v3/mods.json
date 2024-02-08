@@ -328,12 +328,6 @@
                 "targetVersion": "1.18.x",
                 "downloadUrl": "https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.18.x-0.8.1/phosphor-fabric-mc1.18.x-0.8.1.jar",
                 "filename": "phosphor-fabric-mc1.18.x-0.8.1.jar"
-            },
-            {
-                "buildVersion": "0.8.1",
-                "targetVersion": "1.19.x",
-                "downloadUrl": "https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.19.x-0.8.1/phosphor-fabric-mc1.19.x-0.8.1.jar",
-                "filename": "phosphor-fabric-mc1.19.x-0.8.1.jar"
             }
         ]
     },
