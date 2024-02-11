@@ -96,106 +96,22 @@
                 "filename": "sodium-1.16.1-v2.jar"
             },
             {
-                "buildVersion": "1.20.4",
-                "targetVersion": "0.5.8",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/4GyXKCLd/sodium-fabric-0.5.8%2Bmc1.20.4.jar",
-                "filename": "sodium-fabric-0.5.8+mc1.20.4.jar"
-            },
-            {
-                "buildVersion": "1.20.3",
-                "targetVersion": "0.5.7",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/Wzzjm5lQ/sodium-fabric-0.5.7%2Bmc1.20.3.jar",
-                "filename": "sodium-fabric-0.5.7+mc1.20.3.jar"
-            },
-            {
-                "buildVersion": "1.20.3",
-                "targetVersion": "0.5.6",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/xNJ0Mpbx/sodium-fabric-0.5.6%2Bmc1.20.3.jar",
-                "filename": "sodium-fabric-0.5.6+mc1.20.3.jar"
-            },
-            {
-                "buildVersion": "0.5.5",
-                "targetVersion": "1.20.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/pmgeU5yX/sodium-fabric-mc1.20.2-0.5.5.jar",
-                "filename": "sodium-fabric-mc1.20.2-0.5.5.jar"
-            },
-            {
-                "buildVersion": "0.5.5",
-                "targetVersion": "1.20.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/InGKdfel/sodium-fabric-mc1.20.3-0.5.5.jar",
-                "filename": "sodium-fabric-mc1.20.3-0.5.5.jar"
-            },
-            {
-                "buildVersion": "0.5.3",
-                "targetVersion": "1.20.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/4OZL6q9h/sodium-fabric-mc1.20.1-0.5.3.jar",
-                "filename": "sodium-fabric-mc1.20.1-0.5.3.jar"
-            },
-            {
-                "buildVersion": "0.4.10",
-                "targetVersion": "1.20.0",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/vgceLbdH/sodium-fabric-mc1.20-0.4.10%2Bbuild.27.jar",
-                "filename": "sodium-fabric-mc1.20-0.4.10+build.27.jar"
-            },
-            {
-                "buildVersion": "0.4.10",
-                "targetVersion": "1.19.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/b4hTi3mo/sodium-fabric-mc1.19.4-0.4.10%2Bbuild.24.jar",
-                "filename": "sodium-fabric-mc1.19.4-0.4.10+build.24.jar"
-            },
-            {
-                "buildVersion": "0.4.9",
-                "targetVersion": "1.19.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/idtcaIVT/sodium-fabric-mc1.19.3-0.4.9%2Bbuild.23.jar",
-                "filename": "sodium-fabric-mc1.19.3-0.4.9+build.23.jar"
-            },
-            {
-                "buildVersion": "0.4.4",
-                "targetVersion": "1.19.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/rAfhHfow/sodium-fabric-mc1.19.2-0.4.4%2Bbuild.18.jar",
-                "filename": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar"
-            },
-            {
-                "buildVersion": "0.4.2",
-                "targetVersion": "1.19",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.19-0.4.2/sodium-fabric-mc1.19-0.4.2%2Bbuild.16.jar",
-                "filename": "sodium-fabric-mc1.19-0.4.2+build.16.jar"
-            },
-            {
-                "buildVersion": "0.4.1",
-                "targetVersion": "1.18.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.2-0.4.1/sodium-fabric-mc1.18.2-0.4.1%2Bbuild.15.jar",
-                "filename": "sodium-fabric-mc1.18.2-0.4.1+build.15.jar"
-            },
-            {
-                "buildVersion": "0.4.0",
-                "targetVersion": "1.18.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.1-0.4.0-alpha6/sodium-fabric-mc1.18.1-0.4.0-alpha6%2Bbuild.14.jar",
-                "filename": "sodium-fabric-mc1.18.1-0.4.0-alpha6+build.14.jar"
-            },
-            {
-                "buildVersion": "0.3.4",
-                "targetVersion": "1.17.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.17.1-0.3.4/sodium-fabric-mc1.17.1-0.3.4%2Bbuild.13.jar",
-                "filename": "sodium-fabric-mc1.17.1-0.3.4+build.13.jar"
-            },
-            {
-                "buildVersion": "0.4.0",
-                "targetVersion": "1.18",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18-0.40-alpha5/sodium-fabric-mc1.18-0.4.0-alpha5%2Bbuild.9.jar",
-                "filename": "sodium-fabric-mc1.18-0.4.0-alpha5+build.9.jar"
-            },
-            {
-                "buildVersion": "0.2.0",
+                "buildVersion": "v1",
                 "targetVersion": "1.16.5",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.16.5-0.2.0/sodium-fabric-mc1.16.5-0.2.0%2Bbuild.4.jar",
-                "filename": "sodium-fabric-mc1.16.5-0.2.0+build.4.jar"
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.16.5/releases/download/v1/sodium-1.16.5-v1.jar",
+                "filename": "sodium-1.16.5-v1.jar"
             },
             {
-                "buildVersion": "0.1.0",
-                "targetVersion": "1.16.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.16.3-0.1.0/sodium-fabric-mc1.16.3-0.1.0.jar",
-                "filename": "sodium-fabric-mc1.16.3-0.1.0.jar"
+                "buildVersion": "v1",
+                "targetVersion": "1.17.1",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.17.1/releases/download/v1/sodium-1.17.1-v1.jar",
+                "filename": "sodium-1.17.1-v1.jar"
+            },
+            {
+                "buildVersion": "v1",
+                "targetVersion": "1.18.2",
+                "downloadUrl": "https://github.com/Minecraft-Java-Edition-Speedrunning/mcsr-sodium-1.18.2/releases/download/v1/sodium-1.18.2-v1.jar",
+                "filename": "sodium-1.18.2-v1.jar"
             }
         ]
     },
@@ -259,42 +175,6 @@
                 "targetVersion": "21w10a",
                 "downloadUrl": "https://github.com/PaperMC/Starlight/releases/download/0.0.3/starlight-fabric-0.0.3-21w10a.jar",
                 "filename": "starlight-fabric-0.0.3-21w10a.jar"
-            },
-            {
-                "buildVersion": "1.0.2",
-                "targetVersion": "1.18.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.0.2%2B1.18.2/starlight-1.0.2%2Bfabric.89b8d9f.jar",
-                "filename": "starlight-1.0.2+fabric.89b8d9f.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
-            },
-            {
-                "buildVersion": "1.1.1",
-                "targetVersion": "1.19.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1%2B1.19/starlight-1.1.1%2Bfabric.ae22326.jar",
-                "filename": "starlight-1.1.1+fabric.ae22326.jar"
             }
         ]
     },
@@ -347,108 +227,6 @@
                 "targetVersion": "1.16.1",
                 "downloadUrl": "https://github.com/mrmangohands/lithium-fabric/releases/download/mc1.16.1-0.6.6/lithium-1.16.1-backport-fabric-0.6.6.jar",
                 "filename": "lithium-1.16.1-backport-fabric-0.6.6.jar"
-            },
-            {
-                "buildVersion": "0.12.1",
-                "targetVersion": "1.20.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/nMhjKWVE/lithium-fabric-mc1.20.4-0.12.1.jar",
-                "filename": "lithium-fabric-mc1.20.4-0.12.1.jar"
-            },
-            {
-                "buildVersion": "0.12.1",
-                "targetVersion": "1.20.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/WzQmxYRa/lithium-fabric-mc1.20.3-0.12.1.jar",
-                "filename": "lithium-fabric-mc1.20.3-0.12.1.jar"
-            },
-            {
-                "buildVersion": "0.12.0",
-                "targetVersion": "1.20.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/qdzL5Hkg/lithium-fabric-mc1.20.2-0.12.0.jar",
-                "filename": "lithium-fabric-mc1.20.2-0.12.0.jar"
-            },
-            {
-                "buildVersion": "0.11.2",
-                "targetVersion": "1.20.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/ZSNsJrPI/lithium-fabric-mc1.20.1-0.11.2.jar",
-                "filename": "lithium-fabric-mc1.20.1-0.11.2.jar"
-            },
-            {
-                "buildVersion": "0.11.2",
-                "targetVersion": "1.20",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/2KMrj5c1/lithium-fabric-mc1.20-0.11.2.jar",
-                "filename": "lithium-fabric-mc1.20-0.11.2.jar"
-            },
-            {
-                "buildVersion": "0.11.1",
-                "targetVersion": "1.19.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/14hWYkog/lithium-fabric-mc1.19.4-0.11.1.jar",
-                "filename": "lithium-fabric-mc1.19.4-0.11.1.jar"
-            },
-            {
-                "buildVersion": "0.11.1",
-                "targetVersion": "1.19.3",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/53cwYYb1/lithium-fabric-mc1.19.3-0.11.1.jar",
-                "filename": "lithium-fabric-mc1.19.3-0.11.1.jar"
-            },
-            {
-                "buildVersion": "0.11.1",
-                "targetVersion": "1.19.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/m6sVgAi6/lithium-fabric-mc1.19.2-0.11.1.jar",
-                "filename": "lithium-fabric-mc1.19.2-0.11.1.jar"
-            },
-            {
-                "buildVersion": "0.10.3",
-                "targetVersion": "1.18.2",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/ALnv7Npy/lithium-fabric-mc1.18.2-0.10.3.jar",
-                "filename": "lithium-fabric-mc1.18.2-0.10.3.jar"
-            },
-            {
-                "buildVersion": "0.8.3",
-                "targetVersion": "1.19.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.19.1-0.8.3/lithium-fabric-mc1.19.1-0.8.3.jar",
-                "filename": "lithium-fabric-mc1.19.1-0.8.3.jar"
-            },
-            {
-                "buildVersion": "0.8.1",
-                "targetVersion": "1.19",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.19-0.8.1/lithium-fabric-mc1.19-0.8.1.jar",
-                "filename": "lithium-fabric-mc1.19-0.8.1.jar"
-            },
-            {
-                "buildVersion": "0.7.8",
-                "targetVersion": "1.18.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.1-0.7.8/lithium-fabric-mc1.18.1-0.7.8.jar",
-                "filename": "lithium-fabric-mc1.18.1-0.7.8.jar"
-            },
-            {
-                "buildVersion": "0.7.6",
-                "targetVersion": "1.18",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18-0.7.6-rc1/lithium-fabric-mc1.18-0.7.6-rc1.jar",
-                "filename": "lithium-fabric-mc1.18-0.7.6-rc1.jar"
-            },
-            {
-                "buildVersion": "0.7.5",
-                "targetVersion": "1.17.1",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.17.1-0.7.5/lithium-fabric-mc1.17.1-0.7.5.jar",
-                "filename": "lithium-fabric-mc1.17.1-0.7.5.jar"
-            },
-            {
-                "buildVersion": "0.7.2",
-                "targetVersion": "1.17",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.17-0.7.2/lithium-fabric-mc1.17-0.7.2.jar",
-                "filename": "lithium-fabric-mc1.17-0.7.2.jar"
-            },
-            {
-                "buildVersion": "0.6.6",
-                "targetVersion": "1.16.5",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.16.5-0.6.6/lithium-fabric-mc1.16.5-0.6.6.jar",
-                "filename": "lithium-fabric-mc1.16.5-0.6.6.jar"
-            },
-            {
-                "buildVersion": "0.6.0",
-                "targetVersion": "1.16.4",
-                "downloadUrl": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.16.4-0.6.0/lithium-fabric-mc1.16.4-0.6.0.jar",
-                "filename": "lithium-fabric-mc1.16.4-0.6.0.jar"
             }
         ]
     },
