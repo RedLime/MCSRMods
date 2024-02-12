@@ -1,13 +1,11 @@
 package com.redlimerl.mcsr.helper;
 
-import com.google.common.collect.Sets;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.redlimerl.mcsr.MCSRModLoader;
-import com.redlimerl.mcsr.mod.abst.ModAsset;
-import com.redlimerl.mcsr.mod.abst.ModInfo;
-import com.redlimerl.mcsr.mod.abst.ModRule;
-import net.fabricmc.loader.api.Version;
+import com.redlimerl.mcsr.mod.FabricLoader;
+import com.redlimerl.mcsr.mod.ModInfo;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,14 +13,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class MRPackHelper {
 
-    private static final Set<String> WHITELISTED_NOT_RECOMMENDED = Sets.newHashSet("StandardSettings");
-
-    public static JsonObject convertPack(String name, String gameVersion, ModInfo loader, Collection<ModInfo> mods, Map<String, String> rules) throws Throwable {
+    public static JsonObject convertPack(String name, String gameVersion, FabricLoader loader, Collection<ModInfo> mods, Map<String, String> rules) throws Throwable {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("formatVersion", 1);
         jsonObject.addProperty("game", "minecraft");
@@ -30,38 +27,29 @@ public class MRPackHelper {
         jsonObject.addProperty("name", name + " (for " + gameVersion + ")");
 
         JsonArray jsonArray = new JsonArray();
-        for (ModInfo mod : mods) {
-            if (!Objects.equals(mod.getType(), "fabric_mod")) continue;
-            if (!mod.isRecommended() && !WHITELISTED_NOT_RECOMMENDED.contains(mod.getName())) continue;
-            assetCheck: for (ModAsset modAsset : mod.getAssetsResult()) {
-                if (!modAsset.mcVersion().test(Version.parse(gameVersion))) continue;
-                if (modAsset.sha1() == null || modAsset.sha512() == null) continue;
-                if (modAsset.rules() != null && !modAsset.rules().isEmpty()) {
-                    for (ModRule rule : modAsset.rules()) {
-                        boolean result = false;
-                        for (Map.Entry<String, String> entry : rule.properties().entrySet()) {
-                            if (!rules.containsKey(entry.getKey())) {
-                                result = false;
-                                break;
-                            } else if (!rules.get(entry.getKey()).equals(entry.getValue())) {
-                                result = false;
-                                break;
-                            } else {
-                                result = true;
-                            }
+        mod: for (ModInfo mod : mods) {
+            for (String trait : mod.traits()) {
+                if (trait.equals("mac-only") && !rules.getOrDefault("os", "").equals("osx")) continue mod;
+            }
+
+            for (ModInfo.ModVersion version : mod.versions()) {
+                for (String s : version.target_version()) {
+                    if (s.equals("1.16.1")) {
+                        if (version.url().startsWith("https://github.com")) {
+                            jsonArray.add(getGithubMeta(version.url(), version.hash()));
                         }
-                        if (result != Objects.equals(rule.action(), "allow")) continue assetCheck;
+                        if (version.url().startsWith("https://cdn.modrinth.com")) {
+                            jsonArray.add(getModrinthMeta(version.hash()));
+                        }
+                        continue mod;
                     }
                 }
-
-                jsonArray.add(getFileObject(modAsset.fileName(), modAsset.sha1(), modAsset.sha512(), modAsset.downloadUrl(), modAsset.size()));
-                break;
             }
         }
         jsonObject.add("files", jsonArray);
 
         JsonObject dependencies = new JsonObject();
-        dependencies.addProperty("fabric-loader", loader.getAssetsResult().get(0).modVersion());
+        dependencies.addProperty("fabric-loader", loader.version());
         dependencies.addProperty("minecraft", gameVersion);
         jsonObject.add("dependencies", dependencies);
 
@@ -92,5 +80,39 @@ public class MRPackHelper {
         out.write(packData.getBytes(StandardCharsets.UTF_8));
         out.closeEntry();
         out.close();
+    }
+
+    private static final Map<String, JsonElement> cachedApi = new HashMap<>();
+    private static final Map<String, String> cachedSha1 = new HashMap<>();
+    public static JsonObject getGithubMeta(String url, String sha512) throws IOException {
+        Map.Entry<String, String> apiVersion = Map.entry("X-GitHub-Api-Version", "2022-11-28");
+        Map.Entry<String, String> githubToken = Map.entry("Authorization", "token " + MCSRModLoader.GITHUB_TOKEN);
+
+        url = url.replace("https://github.com/Minecraft-Java-Edition-Speedrunning/legal-mods/raw/main/", "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/legal-mods/contents/");
+        url = Arrays.stream(url.split("/")).filter(path -> !path.endsWith(".jar")).collect(Collectors.joining("/")) + "?ref=main";
+        JsonArray jsonArray = cachedApi.containsKey(url) ? cachedApi.get(url).getAsJsonArray() : HttpRequestHelper.getJsonFromUrl(url, apiVersion, githubToken).getAsJsonArray();
+        cachedApi.putIfAbsent(url, jsonArray);
+
+        for (JsonElement jsonElement : jsonArray) {
+            JsonObject data = jsonElement.getAsJsonObject();
+            String download = data.get("download_url").getAsString();
+            String sha1 = cachedSha1.containsKey(download) ? cachedSha1.get(download) : ShaHelper.getSha1FromInputStream(HttpRequestHelper.getInputStreamFromUrl(download));
+            cachedSha1.putIfAbsent(download, sha1);
+            return getFileObject(data.get("name").getAsString(), sha1, sha512, data.get("download_url").getAsString(), data.get("size").getAsInt());
+        }
+
+        return null;
+    }
+    public static JsonObject getModrinthMeta(String sha512) throws IOException {
+        String url = "https://api.modrinth.com/v2/version_file/" + sha512 + "?algorithm=sha512";
+        JsonObject jsonObject = cachedApi.containsKey(url) ? cachedApi.get(url).getAsJsonObject() : HttpRequestHelper.getJsonFromUrl(url).getAsJsonObject();
+        cachedApi.putIfAbsent(url, jsonObject);
+
+        for (JsonElement jsonElement : jsonObject.getAsJsonArray("files")) {
+            JsonObject data = jsonElement.getAsJsonObject();
+            return getFileObject(data.get("filename").getAsString(), data.getAsJsonObject("hashes").get("sha1").getAsString(), sha512, data.get("url").getAsString(), data.get("size").getAsInt());
+        }
+
+        return null;
     }
 }
