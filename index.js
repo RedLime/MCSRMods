@@ -1,3 +1,5 @@
+location.href = 'https://mods.tildejustin.dev/'
+
 const ALLOW_VERSIONS = [];
 const ALLOW_MODS = [];
 
