@@ -23,12 +23,7 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17' #
 
-      - name: (V3) Update latest meta file
-        uses: ./
-        with:
-          github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
-
-      - name: (V4) Update latest meta file
+      - name: Generate MCSR Ranked Modpacks
         run: |
           java -jar ./ModFileLoader/ModFileLoader-1.0-SNAPSHOT-all.jar ${{ secrets.CUSTOM_GITHUB_TOKEN_V4 }}
 
