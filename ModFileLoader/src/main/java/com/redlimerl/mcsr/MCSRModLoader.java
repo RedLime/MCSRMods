@@ -1,15 +1,15 @@
 package com.redlimerl.mcsr;
 
-import com.google.common.collect.Sets;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import com.redlimerl.mcsr.helper.HttpRequestHelper;
 import com.redlimerl.mcsr.helper.MRPackHelper;
-import com.redlimerl.mcsr.mod.FabricLoader;
-import com.redlimerl.mcsr.mod.ModInfo;
+import com.redlimerl.mcsr.mod.FabricMod;
+import com.redlimerl.mcsr.mod.Loader;
+import com.redlimerl.mcsr.mod.Optifine;
+import com.redlimerl.mcsr.mod.abst.ModInfo;
 
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
@@ -17,36 +17,63 @@ import java.util.*;
 public class MCSRModLoader {
 
     public static final String VERSION = "v4";
+    private static final Path MODS_JSON_PATH = Paths.get("./meta/" + VERSION + "/mods.json");
+    private static final Path RESULT_JSON_PATH = Paths.get("./meta/" + VERSION + "/files.json");
     private static final Path MODPACKS_PATH = Paths.get("./modpacks/" + VERSION);
     public static final Gson GSON = new GsonBuilder().serializeNulls().disableHtmlEscaping().create();
     public static String GITHUB_TOKEN = "none";
 
     public static void main(String[] args) throws Throwable {
         GITHUB_TOKEN = args[0];
+        JsonArray modList = JsonParser.parseString(Files.readString(MODS_JSON_PATH)).getAsJsonArray();
+        JsonArray jsonArray = new JsonArray();
         List<ModInfo> modInfoList = new ArrayList<>();
-        FabricLoader fabricLoader = null;
+        ModInfo fabricLoader = null;
 
-        mod: for (JsonElement jsonElement : HttpRequestHelper.getJsonFromUrl("https://raw.githubusercontent.com/tildejustin/mcsr-meta/main/mods.json").getAsJsonObject().getAsJsonArray("mods")) {
-            ModInfo modInfo = GSON.fromJson(jsonElement, ModInfo.class);
-            for (ModInfo.ModVersion version : modInfo.versions()) {
-                for (String s : version.target_version()) {
-                    if (s.equals("1.16.1")) {
-                        modInfoList.add(modInfo);
-                        continue mod;
-                    }
-                }
+        for (JsonElement jsonElement : modList) {
+            String type = jsonElement.getAsJsonObject().get("type").getAsString();
+            ModInfo modInfo = null;
+            switch (type) {
+                case "mod_loader" -> modInfo = GSON.fromJson(jsonElement, Loader.class);
+                case "optifine" -> modInfo = GSON.fromJson(jsonElement, Optifine.class);
+                case "fabric_mod" -> modInfo = GSON.fromJson(jsonElement, FabricMod.class);
             }
+
+            if (modInfo == null) continue;
+
+            System.out.printf("Start downloading '%s'...%n", modInfo.getName());
+            modInfoList.add(modInfo);
+            jsonArray.add(modInfo.toJson());
+            System.out.printf("Done with download '%s'%n", modInfo.getName());
+
+            if (Objects.equals(modInfo.getName(), "Fabric Loader")) fabricLoader = modInfo;
         }
-        for (JsonElement jsonElement : HttpRequestHelper.getJsonFromUrl("https://meta.fabricmc.net/v2/versions/loader/").getAsJsonArray()) {
-            FabricLoader loader = GSON.fromJson(jsonElement, FabricLoader.class);
-            if (loader.stable()) {
-                fabricLoader = loader;
-                break;
-            }
-        }
+
+        Files.writeString(RESULT_JSON_PATH, GSON.toJson(jsonArray), StandardCharsets.UTF_8);
 
         if (fabricLoader == null) return;
 
+        /*
+          For generate .mrpack files
+         */
+
+        Set<String> osSet = Set.of("Windows", "OSX", "Linux");
+        Set<String> categorySet = Set.of("RSG", "SSG");
+        Set<String> versionSet = Set.of("1.14.4", "1.15.2", "1.16.1", "1.16.5", "1.17.1");
+
+        for (String os : osSet) {
+            for (String category : categorySet) {
+                for (String version : versionSet) {
+                    Map<String, String> map = new HashMap<>();
+                    map.put("os", os.toLowerCase(Locale.ROOT));
+                    map.put("category", category.toLowerCase(Locale.ROOT));
+                    JsonObject mrPack = MRPackHelper.convertPack("MCSR " + category, version, fabricLoader, modInfoList, map);
+                    Path path = MODPACKS_PATH.resolve(String.format("MCSR-%s-%s-%s.mrpack", version, os, category));
+
+                    MRPackHelper.writeZipFile(path, GSON.toJson(mrPack));
+                }
+            }
+        }
 
 
         /*
@@ -63,23 +90,19 @@ public class MCSRModLoader {
                 rankedModrinth.get("url").getAsString(),
                 rankedModrinth.get("size").getAsInt()
         );
-        Set<String> osSet = Set.of("Windows", "OSX", "Linux");
-        Set<String> whitelist = Set.of("antigone", "fastreset", "krypton", "lazydfu", "lazystronghold", "lithium", "sodium", "starlight", "voyager");
-        Set<String> proWhitelist = Sets.newHashSet("standardsettings", "antiresourcereload");
-        proWhitelist.addAll(whitelist);
-        Set<String> allWhitelist = Sets.newHashSet("atum", "state-output", "worldpreview", "forceport", "sleepbackground", "speedrunigt");
-        allWhitelist.addAll(proWhitelist);
+        Set<String> rankedBlocked = Set.of("ServerSideRNG", "WorldPreview", "Atum", "Force Port", "SleepBackground");
+        Set<String> rankedPro = Set.of("StandardSettings", "antiresourcereload");
         Set<String> rankedOptions = Set.of("", "Pro", "All");
-        
         for (String os : osSet) {
             for (String rankedOption : rankedOptions) {
                 Map<String, String> map = new HashMap<>();
                 map.put("os", os.toLowerCase(Locale.ROOT));
+                map.put("category", "rsg");
                 List<ModInfo> rankedMods = modInfoList.stream().filter(mod ->
                         switch (rankedOption) {
-                            case "" -> whitelist.contains(mod.modid());
-                            case "Pro" -> proWhitelist.contains(mod.modid());
-                            default -> allWhitelist.contains(mod.modid());
+                            case "" -> !rankedBlocked.contains(mod.getName()) && !rankedPro.contains(mod.getName());
+                            case "Pro" -> !rankedBlocked.contains(mod.getName());
+                            default -> true;
                         }
                         ).toList();
                 JsonObject mrPack = MRPackHelper.convertPack("MCSR Ranked", "1.16.1", fabricLoader, rankedMods, map);
