@@ -88,7 +88,7 @@ public class MRPackHelper {
         Map.Entry<String, String> apiVersion = Map.entry("X-GitHub-Api-Version", "2022-11-28");
         Map.Entry<String, String> githubToken = Map.entry("Authorization", "token " + MCSRModLoader.GITHUB_TOKEN);
 
-        url = url.replace("https://github.com/Minecraft-Java-Edition-Speedrunning/legal-mods/raw/main/", "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/legal-mods/contents/");
+        url = url.replaceAll("https://github.com/Minecraft-Java-Edition-Speedrunning/legal-mods/raw/(\\w*)/", "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/legal-mods/contents/");
         url = Arrays.stream(url.split("/")).filter(path -> !path.endsWith(".jar")).collect(Collectors.joining("/")) + "?ref=main";
         JsonArray jsonArray = cachedApi.containsKey(url) ? cachedApi.get(url).getAsJsonArray() : HttpRequestHelper.getJsonFromUrl(url, apiVersion, githubToken).getAsJsonArray();
         cachedApi.putIfAbsent(url, jsonArray);
