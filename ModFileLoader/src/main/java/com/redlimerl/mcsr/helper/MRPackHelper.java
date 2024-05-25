@@ -7,6 +7,7 @@ import com.redlimerl.mcsr.MCSRModLoader;
 import com.redlimerl.mcsr.mod.FabricLoader;
 import com.redlimerl.mcsr.mod.ModInfo;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -36,7 +37,7 @@ public class MRPackHelper {
                 for (String s : version.target_version()) {
                     if (s.equals("1.16.1")) {
                         if (version.url().startsWith("https://github.com")) {
-                            jsonArray.add(getGithubMeta(version.url(), version.hash()));
+                            jsonArray.add(getGithubMeta(version.url()));
                         }
                         if (version.url().startsWith("https://cdn.modrinth.com")) {
                             jsonArray.add(getModrinthMeta(version.hash()));
@@ -84,7 +85,8 @@ public class MRPackHelper {
 
     private static final Map<String, JsonElement> cachedApi = new HashMap<>();
     private static final Map<String, String> cachedSha1 = new HashMap<>();
-    public static JsonObject getGithubMeta(String url, String sha512) throws IOException {
+    private static final Map<String, String> cachedSha512 = new HashMap<>();
+    public static JsonObject getGithubMeta(String url) throws IOException {
         Map.Entry<String, String> apiVersion = Map.entry("X-GitHub-Api-Version", "2022-11-28");
         Map.Entry<String, String> githubToken = Map.entry("Authorization", "token " + MCSRModLoader.GITHUB_TOKEN);
 
@@ -96,8 +98,12 @@ public class MRPackHelper {
         for (JsonElement jsonElement : jsonArray) {
             JsonObject data = jsonElement.getAsJsonObject();
             String download = data.get("download_url").getAsString();
-            String sha1 = cachedSha1.containsKey(download) ? cachedSha1.get(download) : ShaHelper.getSha1FromInputStream(HttpRequestHelper.getInputStreamFromUrl(download));
+            ByteArrayInputStream fileInputStream = HttpRequestHelper.getInputStreamFromUrl(download);
+            String sha1 = cachedSha1.containsKey(download) ? cachedSha1.get(download) : ShaHelper.getSha1FromInputStream(fileInputStream);
+            fileInputStream.reset();
             cachedSha1.putIfAbsent(download, sha1);
+            String sha512 = cachedSha512.containsKey(download) ? cachedSha512.get(download) : ShaHelper.getSha512FromInputStream(fileInputStream);
+            cachedSha512.putIfAbsent(download, sha512);
             return getFileObject(data.get("name").getAsString(), sha1, sha512, data.get("download_url").getAsString(), data.get("size").getAsInt());
         }
 
