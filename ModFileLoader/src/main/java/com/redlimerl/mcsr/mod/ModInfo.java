@@ -23,7 +23,7 @@ public final class ModInfo {
     }
 
     public List<String> traits() {
-        return traits;
+        return Objects.requireNonNullElse(traits, List.of());
     }
 
     @Override
