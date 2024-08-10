@@ -26,7 +26,7 @@ public class MCSRModLoader {
         List<ModInfo> modInfoList = new ArrayList<>();
         FabricLoader fabricLoader = null;
 
-        mod: for (JsonElement jsonElement : HttpRequestHelper.getJsonFromUrl("https://raw.githubusercontent.com/tildejustin/mcsr-meta/main/mods.json").getAsJsonObject().getAsJsonArray("mods")) {
+        mod: for (JsonElement jsonElement : HttpRequestHelper.getJsonFromUrl("https://raw.githubusercontent.com/tildejustin/mcsr-meta/schema-6/mods.json").getAsJsonObject().getAsJsonArray("mods")) {
             ModInfo modInfo = GSON.fromJson(jsonElement, ModInfo.class);
             for (ModInfo.ModVersion version : modInfo.versions()) {
                 for (String s : version.target_version()) {
