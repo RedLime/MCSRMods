@@ -3,10 +3,7 @@ package com.redlimerl.mcsr.helper;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
@@ -30,7 +27,7 @@ public class HttpRequestHelper {
     @SafeVarargs
     public static JsonElement getJsonFromUrl(String u, Map.Entry<String, String>... entries) throws IOException {
         InputStreamReader input = new InputStreamReader(getConnection(u, entries).getInputStream());
-        JsonElement result = JsonParser.parseReader(input);
+        JsonElement result = JsonParser.parseReader(new BufferedReader(input));
         input.close();
         return result;
     }
