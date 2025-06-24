@@ -64,7 +64,7 @@ public class MCSRModLoader {
                 rankedModrinth.get("size").getAsInt()
         );
         Set<String> osSet = Set.of("Windows", "OSX", "Linux");
-        Set<String> whitelist = Set.of("antigone", "fast_reset", "krypton", "lazydfu", "lazystronghold", "lithium", "sodium", "starlight", "voyager", "speedrunapi");
+        Set<String> whitelist = Set.of("antigone", "fast_reset", "krypton", "lazydfu", "lazystronghold", "lithium", "sodium", "starlight", "voyager", "speedrunapi", "antiresourcereload", "state-output");
         Set<String> proWhitelist = Sets.newHashSet("standardsettings", "antiresourcereload");
         proWhitelist.addAll(whitelist);
         Set<String> allWhitelist = Sets.newHashSet("atum", "state-output", "worldpreview", "forceport", "sleepbackground", "speedrunigt");
