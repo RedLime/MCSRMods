@@ -64,14 +64,17 @@ public class MCSRModLoader {
                 rankedModrinth.get("size").getAsInt()
         );
         Set<String> osSet = Set.of("Windows", "OSX", "Linux");
-        Set<String> whitelist = Set.of("antigone", "fast_reset", "krypton", "lazydfu", "lazystronghold", "lithium", "sodium", "starlight", "voyager", "speedrunapi", "antiresourcereload", "state-output");
-        Set<String> proWhitelist = Sets.newHashSet("standardsettings", "antiresourcereload");
-        proWhitelist.addAll(whitelist);
-        Set<String> allWhitelist = Sets.newHashSet("atum", "state-output", "worldpreview", "forceport", "sleepbackground", "speedrunigt");
-        allWhitelist.addAll(proWhitelist);
-        Set<String> rankedOptions = Set.of("", "Pro", "All");
         
         for (String os : osSet) {
+            Set<String> whitelist = Sets.newHashSet("antigone", "fast_reset", "krypton", "lazydfu", "lazystronghold", "lithium", "starlight", "voyager", "speedrunapi", "state-output");
+            whitelist.add("OSX".equals(os) ? "sodiummac" : "sodium");
+
+            Set<String> proWhitelist = Sets.newHashSet("standardsettings", "antiresourcereload");
+            proWhitelist.addAll(whitelist);
+            Set<String> allWhitelist = Sets.newHashSet("atum", "state-output", "worldpreview", "forceport", "sleepbackground", "speedrunigt");
+            allWhitelist.addAll(proWhitelist);
+            Set<String> rankedOptions = Set.of("", "Pro", "All");
+
             for (String rankedOption : rankedOptions) {
                 Map<String, String> map = new HashMap<>();
                 map.put("os", os.toLowerCase(Locale.ROOT));
