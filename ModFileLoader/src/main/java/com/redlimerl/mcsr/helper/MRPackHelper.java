@@ -1,20 +1,17 @@
 package com.redlimerl.mcsr.helper;
 
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.redlimerl.mcsr.MCSRModLoader;
 import com.redlimerl.mcsr.mod.FabricLoader;
 import com.redlimerl.mcsr.mod.ModInfo;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
+import java.nio.file.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -36,12 +33,7 @@ public class MRPackHelper {
             for (ModInfo.ModVersion version : mod.versions()) {
                 for (String s : version.target_version()) {
                     if (s.equals("1.16.1")) {
-                        if (version.url().startsWith("https://github.com")) {
-                            jsonArray.add(getGithubMeta(version.url()));
-                        }
-                        if (version.url().startsWith("https://cdn.modrinth.com")) {
-                            jsonArray.add(getModrinthMeta(version.hash()));
-                        }
+                        jsonArray.add(getFileObject(version.url().substring(version.url().lastIndexOf("/") + 1), version.sha1(), version.sha512(), version.url(), version.size()));
                         continue mod;
                     }
                 }
@@ -76,49 +68,11 @@ public class MRPackHelper {
     }
 
     public static void writeZipFile(Path path, String packData) throws IOException {
+        Files.createDirectories(path.getParent());
         ZipOutputStream out = new ZipOutputStream(new FileOutputStream(path.toFile()));
         out.putNextEntry(new ZipEntry("modrinth.index.json"));
         out.write(packData.getBytes(StandardCharsets.UTF_8));
         out.closeEntry();
         out.close();
-    }
-
-    private static final Map<String, JsonElement> cachedApi = new HashMap<>();
-    private static final Map<String, String> cachedSha1 = new HashMap<>();
-    private static final Map<String, String> cachedSha512 = new HashMap<>();
-    public static JsonObject getGithubMeta(String url) throws IOException {
-        Map.Entry<String, String> apiVersion = Map.entry("X-GitHub-Api-Version", "2022-11-28");
-        Map.Entry<String, String> githubToken = Map.entry("Authorization", "token " + MCSRModLoader.GITHUB_TOKEN);
-
-        url = url.replaceAll("https://github.com/Minecraft-Java-Edition-Speedrunning/legal-mods/raw/(\\w*)/", "https://api.github.com/repos/Minecraft-Java-Edition-Speedrunning/legal-mods/contents/");
-        url = Arrays.stream(url.split("/")).filter(path -> !path.endsWith(".jar")).collect(Collectors.joining("/")) + "?ref=main";
-        JsonArray jsonArray = cachedApi.containsKey(url) ? cachedApi.get(url).getAsJsonArray() : HttpRequestHelper.getJsonFromUrl(url, apiVersion, githubToken).getAsJsonArray();
-        cachedApi.putIfAbsent(url, jsonArray);
-
-        for (JsonElement jsonElement : jsonArray) {
-            JsonObject data = jsonElement.getAsJsonObject();
-            String download = data.get("download_url").getAsString();
-            ByteArrayInputStream fileInputStream = HttpRequestHelper.getInputStreamFromUrl(download);
-            String sha1 = cachedSha1.containsKey(download) ? cachedSha1.get(download) : ShaHelper.getSha1FromInputStream(fileInputStream);
-            fileInputStream.reset();
-            cachedSha1.putIfAbsent(download, sha1);
-            String sha512 = cachedSha512.containsKey(download) ? cachedSha512.get(download) : ShaHelper.getSha512FromInputStream(fileInputStream);
-            cachedSha512.putIfAbsent(download, sha512);
-            return getFileObject(data.get("name").getAsString(), sha1, sha512, data.get("download_url").getAsString(), data.get("size").getAsInt());
-        }
-
-        return null;
-    }
-    public static JsonObject getModrinthMeta(String sha512) throws IOException {
-        String url = "https://api.modrinth.com/v2/version_file/" + sha512 + "?algorithm=sha512";
-        JsonObject jsonObject = cachedApi.containsKey(url) ? cachedApi.get(url).getAsJsonObject() : HttpRequestHelper.getJsonFromUrl(url).getAsJsonObject();
-        cachedApi.putIfAbsent(url, jsonObject);
-
-        for (JsonElement jsonElement : jsonObject.getAsJsonArray("files")) {
-            JsonObject data = jsonElement.getAsJsonObject();
-            return getFileObject(data.get("filename").getAsString(), data.getAsJsonObject("hashes").get("sha1").getAsString(), sha512, data.get("url").getAsString(), data.get("size").getAsInt());
-        }
-
-        return null;
     }
 }

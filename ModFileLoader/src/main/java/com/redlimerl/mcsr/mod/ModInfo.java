@@ -52,12 +52,16 @@ public final class ModInfo {
     public static final class ModVersion {
         private List<String> target_version;
         private String url;
-        private String hash;
+        private String sha1;
+        private String sha512;
+        private int size;
 
-        public ModVersion(List<String> target_version, String url, String hash) {
+        public ModVersion(List<String> target_version, String url, String sha1, String sha512, int size) {
             this.target_version = target_version;
             this.url = url;
-            this.hash = hash;
+            this.sha1 = sha1;
+            this.sha512 = sha512;
+            this.size = size;
         }
 
         public List<String> target_version() {
@@ -68,8 +72,16 @@ public final class ModInfo {
             return url;
         }
 
-        public String hash() {
-            return hash;
+        public String sha1() {
+            return sha1;
+        }
+
+        public String sha512() {
+            return sha512;
+        }
+
+        public int size() {
+            return size;
         }
 
         @Override
@@ -79,12 +91,14 @@ public final class ModInfo {
             var that = (ModVersion) obj;
             return Objects.equals(this.target_version, that.target_version) &&
                     Objects.equals(this.url, that.url) &&
-                    Objects.equals(this.hash, that.hash);
+                    Objects.equals(this.sha1, that.sha1) &&
+                    Objects.equals(this.sha512, that.sha512) &&
+                    this.size == that.size;
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(target_version, url, hash);
+            return Objects.hash(target_version, url, sha1, sha512, size);
         }
 
         @Override
@@ -92,7 +106,9 @@ public final class ModInfo {
             return "ModVersion[" +
                     "target_version=" + target_version + ", " +
                     "url=" + url + ", " +
-                    "hash=" + hash + ']';
+                    "sha1=" + sha1 + ", " +
+                    "sha512=" + sha512 + ", " +
+                    "size=" + size + ']';
         }
 
         }

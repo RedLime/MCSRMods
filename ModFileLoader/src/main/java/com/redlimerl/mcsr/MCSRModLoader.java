@@ -17,16 +17,14 @@ import java.util.*;
 public class MCSRModLoader {
 
     public static final String VERSION = "v4";
-    private static final Path MODPACKS_PATH = Paths.get("./modpacks/" + VERSION);
+    private static final Path MODPACKS_PATH = Paths.get("modpacks/" + VERSION);
     public static final Gson GSON = new GsonBuilder().serializeNulls().disableHtmlEscaping().create();
-    public static String GITHUB_TOKEN = "none";
 
     public static void main(String[] args) throws Throwable {
-        GITHUB_TOKEN = args[0];
         List<ModInfo> modInfoList = new ArrayList<>();
         FabricLoader fabricLoader = null;
 
-        mod: for (JsonElement jsonElement : HttpRequestHelper.getJsonFromUrl("https://raw.githubusercontent.com/tildejustin/mcsr-meta/schema-6/mods.json").getAsJsonObject().getAsJsonArray("mods")) {
+        mod: for (JsonElement jsonElement : HttpRequestHelper.getJsonFromUrl("https://raw.githubusercontent.com/tildejustin/mcsr-meta/schema-7/mods.json").getAsJsonObject().getAsJsonArray("mods")) {
             ModInfo modInfo = GSON.fromJson(jsonElement, ModInfo.class);
             for (ModInfo.ModVersion version : modInfo.versions()) {
                 for (String s : version.target_version()) {
@@ -66,12 +64,12 @@ public class MCSRModLoader {
         Set<String> osSet = Set.of("Windows", "OSX", "Linux");
         
         for (String os : osSet) {
-            Set<String> whitelist = Sets.newHashSet("antigone", "fast_reset", "krypton", "lazydfu", "lazystronghold", "lithium", "starlight", "voyager", "speedrunapi", "state-output");
+            Set<String> whitelist = Sets.newHashSet("antigone", "antiresourcereload", "boundlesswindow", "fast_reset", "krypton", "lazydfu", "lazystronghold", "lithium", "speedrunapi", "starlight", "state-output", "voyager");
             whitelist.add("OSX".equals(os) ? "sodiummac" : "sodium");
 
-            Set<String> proWhitelist = Sets.newHashSet("standardsettings", "antiresourcereload");
+            Set<String> proWhitelist = Sets.newHashSet("standardsettings");
             proWhitelist.addAll(whitelist);
-            Set<String> allWhitelist = Sets.newHashSet("atum", "state-output", "worldpreview", "forceport", "sleepbackground", "speedrunigt");
+            Set<String> allWhitelist = Sets.newHashSet("atum", "chunkumulator", "forceport", "mcsrfairplay", "seedqueue", "sleepbackground", "speedrunigt", "worldpreview");
             allWhitelist.addAll(proWhitelist);
             Set<String> rankedOptions = Set.of("", "Pro", "All");
 
