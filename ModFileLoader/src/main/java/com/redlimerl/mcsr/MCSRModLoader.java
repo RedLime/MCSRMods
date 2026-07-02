@@ -69,17 +69,17 @@ public class MCSRModLoader {
 
             Set<String> proWhitelist = Sets.newHashSet("standardsettings");
             proWhitelist.addAll(whitelist);
-            Set<String> allWhitelist = Sets.newHashSet("atum", "chunkumulator", "forceport", "mcsrfairplay", "seedqueue", "sleepbackground", "speedrunigt", "worldpreview");
+            Set<String> allWhitelist = Sets.newHashSet("atum", "chunkumulator", "forceport", "mcsrfairplay", "seedqueue", "sleepbackground", "speedrunigt", "worldpreview", "hermes", "hermes-core");
             allWhitelist.addAll(proWhitelist);
-            Set<String> rankedOptions = Set.of("", "Pro", "All");
+            Set<String> rankedOptions = Set.of("Basic", "Basic-w-SS", "RSG");
 
             for (String rankedOption : rankedOptions) {
                 Map<String, String> map = new HashMap<>();
                 map.put("os", os.toLowerCase(Locale.ROOT));
                 List<ModInfo> rankedMods = modInfoList.stream().filter(mod ->
                         switch (rankedOption) {
-                            case "" -> whitelist.contains(mod.modid());
-                            case "Pro" -> proWhitelist.contains(mod.modid());
+                            case "Basic" -> whitelist.contains(mod.modid());
+                            case "Basic-w-SS" -> proWhitelist.contains(mod.modid());
                             default -> allWhitelist.contains(mod.modid());
                         }
                         ).toList();
